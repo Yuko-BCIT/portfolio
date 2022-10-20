@@ -1,0 +1,32 @@
+// header and nav styling
+header {
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    margin: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  nav {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    ul {
+      flex-direction: column;
+    }
+    li {
+      margin: 5rem 1rem;
+    }
+  }
+}
