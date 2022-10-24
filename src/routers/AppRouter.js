@@ -10,8 +10,7 @@ import '../styles/styles.scss';
 function AppRouter() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
+      <div className="app">
         <Nav />
         <Routes>
           <Route path="/" exact element={<PageHome />} />

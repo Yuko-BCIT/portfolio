@@ -4,5 +4,9 @@
 @use './base/reset';
 
 // components
+@use './components/header';
 
 // pages
+@use './pages/home';
+@use './pages/about';
+@use './pages/work';

@@ -1,0 +1,57 @@
+.work p {
+  text-align: center;
+}
+
+.button-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8rem;
+  background-color: orangered;
+  border-radius: 10px;
+}
+
+.work figure {
+  position: relative;
+  margin: 0 1rem 4rem;
+  img {
+    border-radius: 10px;
+  }
+  figcaption {
+    text-align: center;
+  }
+}
+
+// image layout on different screen size
+@media (min-width: 400px) {
+  .work figure {
+    margin: 0 2rem 4rem;
+  }
+}
+
+@media (min-width: 700px) {
+    .work-links {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      padding: 0 1rem;
+    }
+    
+    .work figure {
+      margin: 0 0 3rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .work-links {
+      gap: 2rem;
+      padding: 0 2rem;
+    }}  
+
+  @media (min-width: 1100px) {
+    .work-links {
+        padding: 0 3rem;
+        gap: 3rem;
+    }
+  }

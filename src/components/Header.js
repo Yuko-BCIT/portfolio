@@ -2,7 +2,7 @@
 const Header = () => {
     return(
         <header>
-            <p>Yuko Web Works</p>
+            <p>Yuko Kitahata</p>
         </header>
     )
 };

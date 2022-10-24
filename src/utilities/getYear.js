@@ -4,4 +4,4 @@ function getYear() {
     const day = new Date();
     return day.getFullYear();
 }
-export { getYear }
+export { getYear };
