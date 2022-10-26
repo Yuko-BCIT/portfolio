@@ -1,9 +1,9 @@
-import { getYear } from '../utilities/getYear';
+import { getYear } from "../utilities/getYear";
 
 const Footer = () => {
   return (
     <footer>
-      <p>Yuko Web Works &copy;{ getYear() }</p>
+      <p>Yuko Web Works &copy;{getYear()}</p>
     </footer>
   );
 };
