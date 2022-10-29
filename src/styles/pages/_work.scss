@@ -3,11 +3,12 @@
 }
 
 .button {
-  background-color: orangered;
+  background-color: darkorange;
   border-radius: 8px;
   text-align: center;
   width: max-content;
   padding: 0.5rem;
+  margin: auto;
 }
 
 .work figure {
@@ -15,7 +16,7 @@
   margin: 0 1rem 4rem;
   img {
     border-radius: 10px;
-    border: 1.5px solid darkorange;
+    border: 2px solid white;
   }
   figcaption {
     text-align: center;
@@ -56,6 +57,19 @@
   }
 }
 
+// single work pages styling
+.work-details {
+  padding: 0 1rem 2rem;
+}
+
+.work-details h1 {
+  border-bottom: 2px dotted #7b3041;
+}
+
+.icon-tool {
+  margin: 0.7rem;
+  width: 2rem;
+}
 .single-work-button {
   background-color: purple;
   width: 8rem;
@@ -65,18 +79,4 @@
 .external-links {
   display: flex;
   justify-content: space-evenly;
-}
-
-.icon-tool {
-  margin: 0.7rem;
-  width: 2rem;
-}
-
-.work-details {
-    padding: 0 1rem 2rem;
-
-}
-
-.work-details h1 {
-  border-bottom: 3px dotted #7b3041;
 }

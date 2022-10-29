@@ -1,4 +1,10 @@
-// header and nav styling
+// header and nav related styling (see _body.scss for header style changes by screen sizes)
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .icon {
   fill: white;
   display: none;
@@ -28,28 +34,16 @@
     visibility: hidden;
   }
 }
-// 
-
-
-
-@media (min-width: 1000px) {
-    .icon {
-        width: 1.2rem;
-        fill: #312f2f;
-      }
-      .icon-nav {
-        fill: #312f2f;
-      }
-}
-
-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 @media (min-width: 1000px) {
   nav a {
     flex-direction: row;
+  }
+  .icon {
+    width: 1.2rem;
+    fill: #312f2f;
+  }
+  .icon-nav {
+    fill: #312f2f;
   }
 }

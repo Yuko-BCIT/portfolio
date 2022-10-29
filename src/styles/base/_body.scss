@@ -1,3 +1,4 @@
+// grid styling
 .app {
   display: grid;
   grid-template-columns: auto;
@@ -5,19 +6,6 @@
   background-color: #e6ddde;
   min-height: 100vh;
   color: #312f2f;
-}
-
-h1 {
-  padding: 2rem;
-}
-
-h2 {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: #e6ddde;
 }
 
 header {
@@ -37,7 +25,7 @@ header {
     margin: 0;
   }
   li {
-    margin: 0.5rem 1rem;
+    margin: 1rem;
   }
 }
 
@@ -64,7 +52,7 @@ footer {
   }
 }
 
-// desktop grid styling
+// desktop size styling
 @media (min-width: 1000px) {
   .app {
     grid-template-columns: 10rem auto;
@@ -96,11 +84,6 @@ footer {
 
     a {
     color: #312f2f;
-
-    }
-
-    .active {
-      color: orangered;
     }
   }
 
@@ -113,9 +96,4 @@ footer {
     grid-row: 2/3;
     grid-column: 2/3;
   }
-}
-// end of desktop grid styling
-
-.active {
-  color: darkorange;
 }

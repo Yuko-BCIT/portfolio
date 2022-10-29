@@ -1,6 +1,7 @@
 .about {
     padding: 0 2rem;
-    font-size: 1.2rem;
+    background-color:#E6DDDE;
+    color: #312f2f;
 }
 
 @media (min-width: 800px) {
@@ -15,11 +16,6 @@
     border-radius: 50%;
     width: 10rem;
     margin: 0.5rem;
-}
-
-.about {
-    background-color:#E6DDDE;
-    color: #312f2f;
 }
 
 .icon-wrapper {

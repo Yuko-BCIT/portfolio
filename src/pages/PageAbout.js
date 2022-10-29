@@ -5,7 +5,6 @@ import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Email } from "../images/email.svg";
 
 const PageAbout = () => (
-
   <main className="about">
     <section>
       <h1>About</h1>
@@ -16,10 +15,11 @@ const PageAbout = () => (
           Yuko means "sweet lady" in Japanese. Oppsed to my gentle and calm
           character, I like adventures and challanges, open minded and like
           seeing the world that gives me different perspective of life. My motto
-          is <strong>"It's never too late to start something new."</strong> Learned Japanese
-          Archery in university since my favorite manga character played it. In
-          2020, I re-started snowboarding and took classes at Cypress. And in
-          2022, I decided to jump into the world of web development.
+          is <strong>"It's never too late to start something new."</strong>{" "}
+          Learned Japanese Archery in university since my favorite manga
+          character played it. In 2020, I re-started snowboarding and took
+          classes at Cypress. And in 2022, I decided to jump into the world of
+          web development.
         </p>
         <p>
           Why web development? I always wanted to make a website for my father's
@@ -34,6 +34,9 @@ const PageAbout = () => (
         </p>
         <p>I like ...dogs cats archery English to Japanese translation</p>
       </article>
+      <NavLink to="/work">
+        <p className="button ">See my work</p>
+      </NavLink>
     </section>
 
     <section>
@@ -54,10 +57,6 @@ const PageAbout = () => (
           <Email className="icon icon-about" aria-label="email icon" />
         </a>
       </div>
-
-      <NavLink to="/work">
-          <p className="button ">See my work</p>
-        </NavLink>
     </section>
   </main>
 );
