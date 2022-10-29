@@ -4,18 +4,20 @@ import Footer from "../components/Footer";
 import PageHome from "../pages/PageHome";
 import PageAbout from "../pages/PageAbout";
 import PageWork from "../pages/PageWork";
-import "../styles/styles.scss";
 import PageWorkCapstone from "../pages/PageWorkCapstone";
 import PageWorkPortfolio from "../pages/PageWorkPortfolio";
 import PageWorkMovie from "../pages/PageWorkMovie";
 import PageWorkGame from "../pages/PageWorkGame";
+import "../styles/styles.scss";
 
 function AppRouter() {
+  
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app" >
         <Header />
         <Routes>
+          {/* put all the internal links, regardless of NavLink or not */}
           <Route path="/" exact element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/work" element={<PageWork />} />
@@ -23,7 +25,6 @@ function AppRouter() {
           <Route path="/work/portfolio" element={<PageWorkPortfolio />} />
           <Route path="/work/movie" element={<PageWorkMovie />} />
           <Route path="/work/game" element={<PageWorkGame />} />
-          {/* ナビにリンクがあるなし関係なくここに Link 入れてよい */}
         </Routes>
         <Footer />
       </div>

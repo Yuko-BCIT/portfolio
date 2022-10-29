@@ -1,43 +1,50 @@
 import { Link } from "react-router-dom";
-import laptop from "../images/laptop.jpg";
+import capstone from "../images/capstone.jpeg";
+import portfolio from "../images/portfolio.png";
 import movie from "../images/movie.png";
 import highlow from "../images/highlow.jpeg";
 import shopify from "../images/shopify.png";
 
 function PageWork() {
+
   return (
     <main className="work">
       <h1>Work</h1>
+      <h2>Click the images to see the details</h2>
+      <p>I equally enjoy working on React, CSS and design!</p>
       <section className="work-links">
         <figure>
-          <img src={ laptop } alt="screen shot of a bakery website" />
-          <p className="button button-details">See Details</p>
+          <Link to="/work/capstone">
+            <img src={ capstone } alt="screen shot of a bakery website" />
+          </Link>
           <figcaption>Capstone Project - Twilling Bakery</figcaption>
         </figure>
 
         <figure>
-          <img src={ laptop } alt="screen shot of a portfolio website" />
-          <p className="button button-details">See Details</p>
+          <Link to="/work/portfolio">
+            <img src={ portfolio } alt="screen shot of a portfolio website" />
+          </Link>
           <figcaption>Portfolio - Yuko Web Works</figcaption>
         </figure>
 
         <figure>
-          <img src={ movie } alt="screen shot of a movie database website" />
           <Link to="/work/movie">
-            <p className="button button-details">See Details</p>
+            <img src={ movie } alt="screen shot of a movie database website" />
           </Link>
           <figcaption>React App - Preview</figcaption>
         </figure>
 
         <figure>
-          <img src={ highlow } alt="screen shot of a game website" />
-          <p className="button button-details">See Details</p>
-          <figcaption>JavaScript Gsme - High Low</figcaption>
+          <Link to="/work/game">
+            <img src={ highlow } alt="screen shot of a game website" />
+          </Link>
+          <figcaption>JavaScript Game - High Low</figcaption>
         </figure>
 
-      <figure>
-          <img src={ shopify } alt="screen shot of a shopify website" />
-          <p className="button button-details">See Details</p>
+        <figure>
+          <Link to="/work/shopify">
+            <img src={ shopify } alt="screen shot of a shopify website" />
+          </Link>
           <figcaption>Shopify - Cafe JavaScript</figcaption>
         </figure>
       </section>
@@ -45,9 +52,7 @@ function PageWork() {
       <section>
         <h2>Upcoming Projects</h2>
         <p>
-          I'm working on a senior daycare center website based in Tokyo. Check
-          it out here in early 2023! Interested in my work? Feel free to contact
-          me through emails.
+          I'm working on a senior daycare center website based in Tokyo. Check it out here in early 2023!
         </p>
       </section>
     </main>

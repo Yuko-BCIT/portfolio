@@ -17,6 +17,7 @@
   font-size: 1rem;
 }
 
+// ヘッダからSNS消したい場合は以下を削除
 @media (min-width: 600px) {
   .icon {
     display: inline;
@@ -24,12 +25,20 @@
 
   .author {
     display: inline;
+    visibility: hidden;
   }
 }
+// 
+
+
 
 @media (min-width: 1000px) {
     .icon {
         width: 1.2rem;
+        fill: #312f2f;
+      }
+      .icon-nav {
+        fill: #312f2f;
       }
 }
 

@@ -1,10 +1,11 @@
 @use './others';
-
-// reset
+// base
 @use './base/reset';
+@use './base/typography';
 
 // components
 @use './components/header';
+@use './components/footer';
 
 // pages
 @use './pages/home';

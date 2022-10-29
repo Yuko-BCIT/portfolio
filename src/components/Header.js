@@ -4,11 +4,11 @@ import { ReactComponent as Linkedin } from "../images/linkedin.svg";
 import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Email } from "../images/email.svg";
 
-const Header = () => {
+function Header() {
+
   return (
     <header>
       <p className="author">Yuko Kitahata</p>
-
       <Nav />
 
       <div className="icon-wrapper">

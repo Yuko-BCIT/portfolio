@@ -3,12 +3,12 @@ import { ReactComponent as Home } from "../images/home.svg";
 import { ReactComponent as About } from "../images/about.svg";
 import { ReactComponent as Work } from "../images/work.svg";
 
-const Nav = () => {
+function Nav() {
   return (
     <nav>
       <ul>
         <li>
-          <NavLink to="/">
+          <NavLink to="/" end >
             <Home className="icon-nav" aria-label="home icon" />
             Home
           </NavLink>

@@ -1,3 +1,11 @@
+.home h1 {
+    position: relative;
+    top: 10rem;
+    // font-size: 3rem;
+    padding: 0;
+    z-index: 10;
+}
+
 @media (min-width: 600px) {
     .home-image {
       width: 100%;
@@ -11,15 +19,26 @@
     position: relative;
 }
 
+.home {
+    position: relative;
+}
+
+.round-image {
+    width: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 10;
+}
 
 .button-seemywork {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // width: max-content;
     background-color: darkcyan;
-    margin: 2rem auto;
+    // margin: 2rem auto;
 }
 
 @media (min-width: 1000px) {
