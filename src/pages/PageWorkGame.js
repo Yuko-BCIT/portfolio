@@ -1,4 +1,4 @@
-import highlow from "../images/highlow.jpeg";
+import highlow from "../images/highlow.png";
 
 import { ReactComponent as Html } from "../images/html.svg";
 import { ReactComponent as Css } from "../images/css.svg";

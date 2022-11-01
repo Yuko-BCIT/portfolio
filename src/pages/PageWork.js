@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import capstone from "../images/capstone.jpeg";
 import portfolio from "../images/portfolio.png";
 import movie from "../images/movie.png";
-import highlow from "../images/highlow.jpeg";
+import highlow from "../images/highlow.png";
 import shopify from "../images/shopify.png";
 
 function PageWork() {

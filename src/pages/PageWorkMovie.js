@@ -8,7 +8,7 @@ function PageWorkMovie() {
     <main className="work-details">
       <h1>React App</h1>
       <section>
-        <h2>Preview the Movie Database</h2>
+        <h2>Preview - the Movie Database</h2>
         <figure>
           <img src={ movie } alt="screen shot of a movie database website" />
         </figure>
@@ -24,16 +24,16 @@ function PageWorkMovie() {
         </article>
       </section>
 
-      <section>
+      <section className="project">
         <h2>The project</h2>
         <article>
           <h3>Overview</h3>
-        <p>Preview is a movie database React App. この作品は、リアクトを使った初めてのアプリでした。previous intake の生徒が、大変な作業なのでグループでやった方が良いが、リアクトを全くかかないで終わってしまった生徒もいたと聞き、リアクトを学びたかった私は全部自分でやって理解を深めるためにソロで挑みました。ジャバスクリプトとかなり違うのに戸惑い、一人で始めたことで「大変な事に足をつっこんでしまった」、と焦り、果たして仕上げられるのか不安でしたが先生やクラスメートの助けを借りて納得のいく作品に仕上げることができました。</p>
+        <p>This was my first application using React, and after hearing from previous intakes that some students worked in groups ended up not working on React at all, so I took on the challenge solo that I had no choice but learning. I was overwhelmed by the fact that it was quite different from JavaScript, but with the help of my instructors and classmates, I was able to create a work that I was proud of.</p>
         </article>
 
         <article>
           <h3>Design</h3>
-          <p>デザインに時間と労力を注ぎ込んだので、自分の作品をドロップしたくなかったのもソロで挑んだ理由のひとつです。まずAdobe XD を使ってwireframe をつくり、サイトの構造とページ構成を考えました。モバイルファーストで作りはじめ、そのあとデスクトップに移行しました。そのあとインタラクティブ・プロトタイプに変換し実際に映画のポスターを入れ、色をつけ、完成したサイトのイメージができたところで、ナビゲーションやボタンをクリックしたらどこへ飛ぶかを再現しました。</p>
+          <p>First I created a wireframe using Adobe XD to come up with the structure and page layout for the site. Then I converted it to an interactive prototype, added the actual movie poster, colors, and once I had an idea of the finished site, I recreated the navigation and where the buttons would link to when clicked.</p>
           <div className="external-links">
             <a className="button" href="https://xd.adobe.com/view/8bcd39d0-15d3-445d-9493-72215eb1d95b-de9e/">XD wireframe</a>
             <a className="button" href="https://xd.adobe.com/view/6b7a9b19-7cbc-433d-b27b-1c58bfb77296-3e29/">XD prototype</a>
@@ -42,19 +42,18 @@ function PageWorkMovie() {
 
         <article>
           <h3>Development</h3>
-          <p>Create React Appを使い、まずヘッダー、フッター、そしてページごとにコンポーネンツを作った。そして、TMDBからAPIで映画の情報を引っ張ってきてポスター、概要、評価などを表示。そしてお気に入りに追加して、クライアントサイドに情報が保存されるようにReduxを導入し、クッキーが削除されるまでお気に入りに残るようにした。SASSでデザインを作っていく中でモックアップとは少し変えてみたくなり、デザインを少しアレンジしましたが、実物の方が気に入っています。</p>
+          <p>Using Create React App, I first created a header, footer, and components for each page. Then pulled movie information via API to display posters, summaries, ratings, etc. Then I created a function to add to favorites, and implemented Redux so that the information is stored on client-side until the cookie is deleted. While styling with Sass, I rearranged the design, but I like the final version better.</p>
         </article>
 
         <article>
           <h3>Takeaways</h3>
-          <p>ホームページのコンポーネントがコンテンツヘビーになってしまい、コードがとても長くなってしまったが、小さいコンテンツに分けようとするとサイトが壊れてしまったため放置。もっと知識が増えたらコンポーネンツに小分けする予定です。デスクトップ版から作りはじめてしまったので、画面を縮小すると画面からコンテンツがあふれだし、直すのに苦労した。モバイルファーストという言葉の重みを実感し、経験を活かし、次からモバイルを先に作ろうと決心しました。ソロでやりましたが、全部のタスクを自分でやる経験ができたので、リアクトの理解を深められてよかったですし、やりきった自分を誇りに思います。</p>
+          <p>The home component have become content heavy and the code has become very long, but I left it because the site broke down when I broke it up into smaller components. I will fix it when I gain more knowledge. Since I started building the site from the desktop version, when I shrunk the screen, the content overflowed the container, and I had a hard time fixing it. I realized the weight of the term "mobile first" and decided to use the experience and develop mobile first on the next project. I did it solo, but I am glad I had the experience of doing all the tasks myself so I could deepen my understanding of React and proud of myself.</p>
         </article>
-
       </section>
 
       <div className="external-links">
-            <a className="button single-work-button" href="https://yukowebworks.com/movie-database">Live Site</a>
-            <a className="button single-work-button" href="">GitHub</a>
+            <a className="button single-work-button livesite" href="https://yukowebworks.com/movie-database">Live Site</a>
+            <a className="button single-work-button github" href="">GitHub</a>
           </div>
     </main>
   );

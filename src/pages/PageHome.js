@@ -6,9 +6,9 @@ import fish from "../images/fish.jpg";
 function PageHome() {
   return (
     <main className="home">
-      <h1>Yuko Kitahata Web Developer</h1>
 
-      <section>
+      <section className="image-container">
+      <h1>Yuko Kitahata Web Developer</h1>
         <figure>
           <img
             className="home-image"
@@ -17,16 +17,15 @@ function PageHome() {
           />
         </figure>
 
-        {/* <figure className="round-image">
-          <img src={ lotus } alt="" />
-        </figure>
-        <figure className="round-image">
-          <img src={ fish } alt="" />
-        </figure> */}
-
         <NavLink to="/work">
-          <p className="button button-seemywork">See my work</p>
+        <figure className="round-image lotus">
+          <img src={ lotus } alt="lotus" />
+          <figcaption>See my work</figcaption>
+        </figure>
         </NavLink>
+        {/* <figure className="round-image koi">
+          <img src={ fish } alt="koi fish" />
+        </figure> */}
       </section>
     </main>
   );

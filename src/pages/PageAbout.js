@@ -15,8 +15,7 @@ const PageAbout = () => (
           Yuko means "sweet lady" in Japanese. Oppsed to my gentle and calm
           character, I like adventures and challanges, open minded and like
           seeing the world that gives me different perspective of life. My motto
-          is <strong>"It's never too late to start something new."</strong>{" "}
-          Learned Japanese Archery in university since my favorite manga
+          is <strong>"It's never too late to start something new." </strong>Learned Japanese Archery in university since my favorite manga
           character played it. In 2020, I re-started snowboarding and took
           classes at Cypress. And in 2022, I decided to jump into the world of
           web development.
@@ -47,14 +46,14 @@ const PageAbout = () => (
       </p>
 
       <div className="icon-wrapper">
-        <a href="https://github.com/Yuko-BCIT">
-          <Github className="icon icon-about" aria-label="github icon" />
+        <a href="mailto:yukoool@hotmail.com">
+          <Email className="icon icon-about" aria-label="email icon" />
         </a>
         <a href="https://www.linkedin.com/in/yuko-k-224247184/">
           <Linkedin className="icon icon-about" aria-label="linkedin icon" />
         </a>
-        <a href="mailto:yukoool@hotmail.com">
-          <Email className="icon icon-about" aria-label="email icon" />
+        <a href="https://github.com/Yuko-BCIT">
+          <Github className="icon icon-about" aria-label="github icon" />
         </a>
       </div>
     </section>

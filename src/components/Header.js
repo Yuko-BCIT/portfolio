@@ -12,14 +12,14 @@ function Header() {
       <Nav />
 
       <div className="icon-wrapper">
-        <a href="https://github.com/Yuko-BCIT">
-          <Github className="icon" aria-label="github icon" />
+        <a href="mailto:yukoool@hotmail.com">
+          <Email className="icon" aria-label="email icon" />
         </a>
         <a href="https://www.linkedin.com/in/yuko-k-224247184/">
           <Linkedin className="icon" aria-label="linkedin icon" />
         </a>
-        <a href="mailto:yukoool@hotmail.com">
-          <Email className="icon" aria-label="email icon" />
+        <a href="https://github.com/Yuko-BCIT">
+          <Github className="icon" aria-label="github icon" />
         </a>
       </div>
     </header>

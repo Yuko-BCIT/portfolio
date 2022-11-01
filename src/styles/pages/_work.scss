@@ -71,12 +71,22 @@
   width: 2rem;
 }
 .single-work-button {
-  background-color: purple;
   width: 8rem;
-  text-align: center;
+}
+
+.livesite {
+  background-color: green;
+}
+
+.github {
+  background-color: #5656da;
 }
 
 .external-links {
   display: flex;
   justify-content: space-evenly;
+}
+
+.project {
+  margin: 1rem;
 }
