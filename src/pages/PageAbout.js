@@ -12,37 +12,50 @@ const PageAbout = () => (
       <article>
         <img className="me" src={me} alt="smiling lady" />
         <p>
-          Yuko means "sweet lady" in Japanese. Oppsed to my gentle and calm
-          character, I like adventures and challanges, open minded and like
-          seeing the world that gives me different perspective of life. My motto
-          is <strong>"It's never too late to start something new." </strong>Learned Japanese Archery in university since my favorite manga
-          character played it. In 2020, I re-started snowboarding and took
-          classes at Cypress. And in 2022, I decided to jump into the world of
-          web development.
+          <strong>Yuko</strong> means "sweet lady" in Japanese. Despite my
+          gentle and down-to-earth manners, I like adventures and challenges,
+          and often surprise friends and family with my bold and daring actions.
+          I worked hard, saved up money, and came to Canada to study for just
+          one year, and I found myself immigrating here. My motto is "It's never
+          too late to start something new." Started Japanese archery at university since my favorite manga character played in it. Restarted snowboarding and took
+          lessons at Cypress in 2020. And in 2022, I decided to jump into the
+          world of web development.
         </p>
         <p>
-          Why web development? I always wanted to make a website for my father's
-          company, since they do great work but not many people are aware of his
-          business. And I asked my brother who is a programmer, but he said he
-          specialized in back-end, not front-end. So I decided, if nobody does
-          it, I will do it! And that's how I started studying online and I got
-          hooked in fun of web development. I also like to help small business
-          grow. Before I took BCIT's front end web development program, I
-          designed, developed, and deployed a functional website by just
-          learning through online courses and I'm proud of myself!
+          <strong>Why</strong> web development? I always wanted to make a
+          website for my father's company, since they do great work but not many
+          people are aware of his business. When I asked my brother, a
+          programmer, to build a website for him, he told me that he specializes
+          in back-end, not front-end. I didn't even understand what that meant.
+          But I decided, if no one else will do it, I will. And once I started
+          studying online, I got hooked on the fun of building a website from
+          scratch, and that's how my journey began. 
+          {/* Before I took BCIT's front
+          end web development program, I designed, developed, and deployed a
+          fully functional website by just learning through online courses and
+          I'm proud of myself! */}
         </p>
-        <p>I like ...dogs cats archery English to Japanese translation</p>
+        <p>
+          <strong>Customer service</strong> has been my background and I've been
+          enjoying interacting with my customers. Now my passion has shifted to
+          using the experience and knowledge to create websites that bring out
+          what clients want, go above and beyond, and help businesses grow.
+        </p>
+        <p>
+          <strong>My favorites</strong> dogs cats archery English to Japanese
+          translation 絵文字入れる
+        </p>
       </article>
-      <NavLink to="/work">
-        <p className="button ">See my work</p>
+      <NavLink to="/works">
+        <p className="button ">See my works</p>
       </NavLink>
     </section>
 
     <section>
       <h2>Contact Me</h2>
       <p>
-        Interested in working with me? Please contact me through email,
-        LinkedIn, or GitHub. Looking forward to hearing from you!
+        Interested in working with me? Contact me through email, LinkedIn, or
+        GitHub. Looking forward to hearing from you!
       </p>
 
       <div className="icon-wrapper">

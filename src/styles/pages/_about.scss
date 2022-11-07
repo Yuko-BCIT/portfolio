@@ -1,29 +1,45 @@
 .about {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 @media (min-width: 800px) {
-    .about {
-        padding: 0 4rem;
-    }
+  .about {
+    padding: 0 4rem;
+  }
 }
 
 .me {
-    float: right;
-    border: 1.5px solid white;
-    border-radius: 50%;
-    width: 10rem;
-    margin: 0.5rem;
+  float: right;
+  border-radius: 10px;
+  width: 40vw;
+  margin: 0.5rem;
+}
+
+@media (min-width: 500px) {
+  .me {
+    width: 15rem;
+  }
+}
+
+
+.about h2 + p {
+    margin: 3rem 0;
 }
 
 .icon-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .about .icon-wrapper {
+    display: none;
+  }
 }
 
 .icon-about {
-    display: inline;
-    fill: #312f2f;
-    width: 1.5rem;
-    margin: 1.5rem;
+  display: inline;
+  fill: #312f2f;
+  width: 1.5rem;
+  margin: 1.5rem;
 }

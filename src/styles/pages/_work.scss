@@ -1,3 +1,4 @@
+// styling for work page and individual work pages
 .work p {
   text-align: center;
 }
@@ -62,10 +63,10 @@
   padding: 0 1rem 2rem;
 }
 
-.work-details h1 {
-  border-bottom: 2px dotted #7b3041;
+.tools {
+  display: flex;
+  justify-content: space-between;
 }
-
 .icon-tool {
   margin: 0.7rem;
   width: 2rem;
@@ -85,8 +86,4 @@
 .external-links {
   display: flex;
   justify-content: space-evenly;
-}
-
-.project {
-  margin: 1rem;
 }

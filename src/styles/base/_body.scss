@@ -1,4 +1,4 @@
-// site structure (grid)
+// site structure
 .app {
   display: grid;
   grid-template-columns: auto;
@@ -42,7 +42,6 @@ footer {
   align-items: center;
 }
 
-// ヘッダからSNSとか消したい場合は以下を削除
 @media (min-width: 600px) {
   
   header ul {
@@ -97,5 +96,10 @@ footer {
   footer {
     grid-row: 2/3;
     grid-column: 2/3;
+  }
+
+  .about {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }

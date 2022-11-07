@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Home } from "../images/home.svg";
 import { ReactComponent as About } from "../images/about.svg";
-import { ReactComponent as Work } from "../images/work.svg";
+import { ReactComponent as Works } from "../images/works.svg";
 
 function Nav() {
   return (
@@ -20,9 +20,9 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/work">
-            <Work className="icon-nav" aria-label="work icon" />
-            Work
+          <NavLink to="/works">
+            <Works className="icon-nav" aria-label="works icon" />
+            Works
           </NavLink>
         </li>
       </ul>
