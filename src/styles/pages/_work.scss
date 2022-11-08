@@ -59,8 +59,9 @@
 }
 
 // single work pages styling
-.work-details {
-  padding: 0 1rem 2rem;
+.work-details, .about {
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 .tools {

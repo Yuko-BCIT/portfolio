@@ -22,11 +22,10 @@ function PageWorkCapstone() {
         <article>
           <h3>Overview</h3>
           <p>
-            Tweeling Bakery is a fictional business website, developed using the
+            Tweeling Bakery is a fictional business website, developed using
             Woocommerce online store features. Our team of 4 worked together to
-            create the structure, content, and design of the website, which was
-            requested by the owners(twin brother and sister) to allow more local
-            customers to learn about their business and to be able to browse and
+            create the structure, content, and design of the website, requested by the clients to allow more local
+            customers to learn about their business and products to be able to browse and
             sort products, place orders, and get them delivered to their doors.
             Then we developed the website using WordPress and languages such as
             PHP, Javascript, CSS, and HTML.

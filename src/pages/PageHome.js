@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import laptop from "../images/laptop.jpg";
 import lotus from "../images/lotus.jpg";
-import ramen from "../images/ramen.jpg";
 
 function PageHome() {
   return (

@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import { ReactComponent as Linkedin } from "../images/linkedin.svg";
 import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Email } from "../images/email.svg";
+import Themes from "../utilities/themes";
 
 function Header() {
 
@@ -10,7 +11,8 @@ function Header() {
     <header>
       <p className="author">Yuko Kitahata</p>
       <Nav />
-
+      {/* ボタンをコンポーネンツにして  themes.jsから呼ぶ */}
+      <Themes />
       <div className="icon-wrapper">
         <a href="mailto:yukoool@hotmail.com">
           <Email className="icon" aria-label="email icon" />

@@ -28,7 +28,7 @@ function PageWorkPortfolio() {
           <p>
             I have included my favorite work from BCIT's many projects in my
             portfolio using React. A dark and light mode is included, allowing
-            users to switch between background and font colors.
+            users to switch between background and font colors. And typewriter effect.
           </p>
         </article>
 
@@ -76,7 +76,7 @@ function PageWorkPortfolio() {
             project management class, when time is limited, "nice-to-have
             features" should come last and do what matters most in the early
             stages of the project. In the next project, I would like to proceed
-            in the following order: content, styling, and features.
+            in the following order: content, styling, and nice-to-have features.
           </p>
         </article>
 

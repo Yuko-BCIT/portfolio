@@ -8,11 +8,29 @@
   color: #312f2f;
 }
 
+// dark mode(put any selector you want to change with dark mode under .darkmode)
+.darkmode {
+  background-color: #312f2f;
+  color: #e6ddde;
+
+  a {
+    color: #e6ddde;
+  }
+
+  .icon,
+  .icon-nav {
+    fill: #e6ddde;
+  }
+  
+  .active {
+    color: orangered;
+  }
+}
+
 header {
   grid-row: 3/4;
   grid-column: 1/2;
   position: fixed;
-  background-color: #7b3041;
   bottom: 0;
   right: 0;
   left: 0;
@@ -43,7 +61,6 @@ footer {
 }
 
 @media (min-width: 600px) {
-  
   header ul {
     display: flex;
     justify-content: space-between;
@@ -71,7 +88,6 @@ footer {
     bottom: 0;
     width: 10rem;
     height: auto;
-    background-color: #e6ddde;
 
     ul {
       flex-direction: column;
@@ -84,7 +100,7 @@ footer {
     }
 
     a {
-    color: #312f2f;
+      color: #312f2f;
     }
   }
 
@@ -97,9 +113,8 @@ footer {
     grid-row: 2/3;
     grid-column: 2/3;
   }
+}
 
-  .about {
-    max-width: 80%;
-    margin: 0 auto;
-  }
+main:not(.home) p {
+  margin-bottom: 5rem;
 }

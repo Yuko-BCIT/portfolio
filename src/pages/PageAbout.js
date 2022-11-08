@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ReactComponent as Linkedin } from "../images/linkedin.svg";
 import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Email } from "../images/email.svg";
+import fish from "../images/fish.jpg";
 
 const PageAbout = () => (
   <main className="about">
@@ -10,7 +11,7 @@ const PageAbout = () => (
       <h1>About</h1>
       {/* use float around image */}
       <article>
-        <img className="me" src={me} alt="smiling lady" />
+        <img className="me" src={ me } alt="smiling lady" />
         <p>
           <strong>Yuko</strong> means "sweet lady" in Japanese. Despite my
           gentle and down-to-earth manners, I like adventures and challenges,
@@ -42,13 +43,15 @@ const PageAbout = () => (
           what clients want, go above and beyond, and help businesses grow.
         </p>
         <p>
-          <strong>My favorites</strong> dogs cats archery English to Japanese
-          translation 絵文字入れる
+          <strong>My favorites</strong>
         </p>
       </article>
       <NavLink to="/works">
-        <p className="button ">See my works</p>
-      </NavLink>
+          <figure className="round-image fish">
+            <img src={ fish } alt="koi fish illustration" />
+            <figcaption>See My Works</figcaption>
+          </figure>
+        </NavLink>
     </section>
 
     <section>
