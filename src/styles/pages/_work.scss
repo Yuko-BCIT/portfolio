@@ -59,11 +59,29 @@
 }
 
 // single work pages styling
-.work-details, .about {
-  max-width: 60%;
+.work-details,
+.about {
+  max-width: 90%;
   margin: 0 auto;
 }
 
+@media (min-width: 500px) {
+  .work-details,
+  .about {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 700px) {
+  .work-details,
+  .about {
+    max-width: 70%;
+  }
+}
+
+.work-details figure img {
+  border-radius: 10px;
+}
 .tools {
   display: flex;
   justify-content: space-between;
@@ -87,4 +105,24 @@
 .external-links {
   display: flex;
   justify-content: space-evenly;
+}
+
+.other-works .active {
+  display: none;
+}
+
+.other-works a {
+  color: darkcyan;
+}
+
+.other-works a:hover {
+  color: orangered;
+}
+
+.see-other, .other-works {
+  text-align: center;
+}
+
+.see-other {
+  margin-top: 4rem;
 }

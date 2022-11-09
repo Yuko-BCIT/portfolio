@@ -4,11 +4,11 @@ import portfolio from "../images/portfolio.png";
 import movie from "../images/movie.png";
 import highlow from "../images/highlow.png";
 
-function PageWork() {
+function PageWorks() {
 
   return (
     <main className="work">
-      <h1>Work</h1>
+      <h1>Works</h1>
       <h2>Click the images to see the details</h2>
       <section className="work-links">
         <figure>
@@ -51,4 +51,4 @@ function PageWork() {
   );
 }
 
-export default PageWork;
+export default PageWorks;

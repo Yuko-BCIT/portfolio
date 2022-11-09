@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { ReactComponent as Sun } from "../images/sun.svg";
+import { ReactComponent as Moon } from "../images/moon.svg";
 
 // setting dark/ light toggle
 function Themes() {
@@ -19,9 +21,9 @@ function Themes() {
   });
 
   return (
-    <div>
-      <button onClick={handleClick}>{darkTheme ? "Light" : "Dark"}</button>
-    </div>
+    <>
+      <span onClick={handleClick}>{darkTheme ? <Sun className="sun" /> : <Moon className="moon" />}</span>
+    </>
   );
 }
 

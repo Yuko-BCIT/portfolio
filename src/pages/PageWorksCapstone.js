@@ -1,4 +1,10 @@
 import capstone from "../images/capstone.jpeg";
+import { ReactComponent as PHP } from "../images/php.svg";
+import { ReactComponent as Js } from "../images/js.svg";
+import { ReactComponent as CSS } from "../images/css.svg";
+import { ReactComponent as Woo } from "../images/woo.svg";
+import { ReactComponent as Xd } from "../images/xd.svg";
+import OtherWorks from "../components/OtherWorks";
 
 function PageWorkCapstone() {
   return (
@@ -11,8 +17,14 @@ function PageWorkCapstone() {
         </figure>
 
         <div className="tools">
-          <h3>Main tools</h3>
-          <div></div>
+          <h3>Tools</h3>
+          <div>
+          <PHP className="icon-tool" />
+          <Js className="icon-tool" />
+          <CSS className="icon-tool" />
+          <Woo className="icon-tool" />
+          <Xd className="icon-tool" />
+          </div>
         </div>
       </section>
 
@@ -45,14 +57,14 @@ function PageWorkCapstone() {
           </p>
         </article>
 
-        <div className="external-links">
+        <nav className="external-links">
           <a className="button" href="">
             XD wireframe
           </a>
           <a className="button" href="">
             XD prototype
           </a>
-        </div>
+        </nav>
 
         <article>
           <h3>Development</h3>
@@ -60,12 +72,11 @@ function PageWorkCapstone() {
             Using Trello, a project management tool, we divided tasks into
             bite-size pieces and basically had one person in charge of one page
             to avoid merge conflicts. When a task was completed, the task was
-            dragged to "Done" and the next task was moved to "doing." This
-            repetitive process made it easy to see who was currently working on
-            what. We used GihHub to share code, pushed and merge edits when the
+            dragged to "Done" and the next task was moved to "Doing." This
+             process made it easy to see who was currently working on
+            what. We used GitHub to share code, pushed and merged when the
             edits were finished to some extent, and notified members via Slack.
-            When we wanted to edit pages other than our own, we asked for
-            permission and made sure that no two people edited the same file at
+            When we wanted to edit pages other than our own, we made sure that no two people edited the same file at
             the same time for smooth merging.After writing the content for the
             site and making sure the functionality worked properly, we began the
             styling process.
@@ -108,14 +119,17 @@ function PageWorkCapstone() {
           </p>
         </article>
 
-        <div className="external-links">
+        <nav className="external-links">
           <a className="button single-work-button livesite" href="">
             Live Site
           </a>
           <a className="button single-work-button github" href="">
             GitHub
           </a>
-        </div>
+        </nav>
+
+        <OtherWorks />
+
       </section>
     </main>
   );

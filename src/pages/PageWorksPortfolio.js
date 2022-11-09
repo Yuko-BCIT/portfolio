@@ -1,5 +1,9 @@
 import portfolio from "../images/portfolio.png";
 import { ReactComponent as React } from "../images/react.svg";
+import { ReactComponent as Js } from "../images/js.svg";
+import { ReactComponent as Css } from "../images/css.svg";
+import { ReactComponent as Xd } from "../images/xd.svg";
+import OtherWorks from "../components/OtherWorks";
 
 function PageWorkPortfolio() {
   return (
@@ -13,9 +17,12 @@ function PageWorkPortfolio() {
         </figure>
 
         <div className="tools">
-          <h3>Main tools</h3>
+          <h3>Tools</h3>
           <div>
             <React className="icon-tool" />
+            <Js className="icon-tool" />
+            <Css className="icon-tool" />
+            <Xd className="icon-tool" />
           </div>
         </div>
       </section>
@@ -88,6 +95,9 @@ function PageWorkPortfolio() {
             GitHub
           </a>
         </nav>
+
+        <OtherWorks />
+
       </section>
     </main>
   );

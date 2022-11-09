@@ -16,10 +16,8 @@ const PageAbout = () => (
           <strong>Yuko</strong> means "sweet lady" in Japanese. Despite my
           gentle and down-to-earth manners, I like adventures and challenges,
           and often surprise friends and family with my bold and daring actions.
-          I worked hard, saved up money, and came to Canada to study for just
-          one year, and I found myself immigrating here. My motto is "It's never
-          too late to start something new." Started Japanese archery at university since my favorite manga character played in it. Restarted snowboarding and took
-          lessons at Cypress in 2020. And in 2022, I decided to jump into the
+          My motto is "It's never
+          too late to start something new." And in 2022, I decided to jump into the
           world of web development.
         </p>
         <p>
@@ -27,7 +25,7 @@ const PageAbout = () => (
           website for my father's company, since they do great work but not many
           people are aware of his business. When I asked my brother, a
           programmer, to build a website for him, he told me that he specializes
-          in back-end, not front-end. I didn't even understand what that meant.
+          in back-end, not front-end. I didn't even understand what that meant at that time.
           But I decided, if no one else will do it, I will. And once I started
           studying online, I got hooked on the fun of building a website from
           scratch, and that's how my journey began. 

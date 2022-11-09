@@ -13,7 +13,6 @@ function Footer() {
 
   return (
     <footer className={location === '/about' ? 'footer-about' : null}  >
-      { console.log(location) }
       <p>Yuko Web Works &copy;{getYear()}</p>
     </footer>
   );

@@ -1,10 +1,10 @@
 import highlow from "../images/highlow.png";
-
 import { ReactComponent as Html } from "../images/html.svg";
 import { ReactComponent as Css } from "../images/css.svg";
 import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Bootstrap } from "../images/bootstrap.svg";
 import { ReactComponent as Jquery } from "../images/jquery.svg";
+import OtherWorks from "../components/OtherWorks";
 
 function PageWorkGame() {
   return (
@@ -17,7 +17,7 @@ function PageWorkGame() {
         </figure>
 
         <div className="tools">
-          <h3>Main tools</h3>
+          <h3>Tools</h3>
           <div>
             <Html className="icon-tool" />
             <Css className="icon-tool" />
@@ -54,14 +54,14 @@ function PageWorkGame() {
           </p>
         </article>
 
-        <div className="external-links">
+        <nav className="external-links">
           <a className="button" href="">
             XD wireframe
           </a>
           <a className="button" href="">
             Content Plan
           </a>
-        </div>
+        </nav>
 
         <article>
           <h3>Development</h3>
@@ -95,14 +95,17 @@ function PageWorkGame() {
           </p>
         </article>
 
-        <div className="external-links">
+        <nav className="external-links">
           <a className="button single-work-button livesite" href="">
             Live Site
           </a>
           <a className="button single-work-button github" href="">
             GitHub
           </a>
-        </div>
+        </nav>
+
+        <OtherWorks />
+
       </section>
     </main>
   );

@@ -47,3 +47,18 @@ nav a {
     visibility: hidden;
   }
 }
+
+.sun {
+  fill: gold;
+  width: 2rem;
+  height: 2rem;
+  // show pointer on hover
+  cursor: pointer;
+}
+
+.moon {
+  fill: #6672c5;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}

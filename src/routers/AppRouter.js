@@ -8,6 +8,7 @@ import PageWorksCapstone from "../pages/PageWorksCapstone";
 import PageWorksPortfolio from "../pages/PageWorksPortfolio";
 import PageWorksMovie from "../pages/PageWorksMovie";
 import PageWorksGame from "../pages/PageWorksGame";
+import Scroll from "../utilities/scroll";
 import "../styles/styles.scss";
 
 function AppRouter() {
@@ -15,6 +16,7 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <div className="app" >
+        <Scroll />
         <Header />
         <Routes>
           {/* put all the internal links, regardless of NavLink or not */}

@@ -1,7 +1,10 @@
 import movie from "../images/movie.png";
 import { ReactComponent as React } from "../images/react.svg";
+import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Xd } from "../images/xd.svg";
 import { ReactComponent as Redux } from "../images/redux.svg";
+import { ReactComponent as CSS } from "../images/css.svg";
+import OtherWorks from "../components/OtherWorks";
 
 function PageWorkMovie() {
   return (
@@ -16,13 +19,15 @@ function PageWorkMovie() {
         </figure>
 
         <div className="tools">
-          <h3>Main tools</h3>
+          <h3>Tools</h3>
 
           {/* icons */}
           <div>
             <React className="icon-tool" />
-            <Xd className="icon-tool" />
             <Redux className="icon-tool" />
+            <Js className="icon-tool" />
+            <CSS className="icon-tool" />
+            <Xd className="icon-tool" />
           </div>
         </div>
       </section>
@@ -111,6 +116,9 @@ function PageWorkMovie() {
             GitHub
           </a>
         </nav>
+
+        <OtherWorks />
+        
       </section>
     </main>
   );
