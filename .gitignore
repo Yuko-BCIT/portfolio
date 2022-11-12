@@ -15,6 +15,7 @@
 /src/images
 /src/media
 /public/favicons
+/public/.htaccess
 
 # misc
 .DS_Store

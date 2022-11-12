@@ -10,7 +10,7 @@ const PageAbout = () => (
   <main className="about">
     <Helmet>
       <title>About</title>
-      <meta name="description" content="About Yuko Kitahata" />
+      <meta name="description" content="About me" />
     </Helmet>
     <section>
       <h1>About</h1>

@@ -78,22 +78,6 @@ function PageWorkMovie() {
           </figure>
         </article>
 
-        {/* use nav for group of links */}
-        {/* <nav className="external-links">
-          <a
-            className="button"
-            href="https://xd.adobe.com/view/8bcd39d0-15d3-445d-9493-72215eb1d95b-de9e/"
-          >
-            XD wireframe
-          </a>
-          <a
-            className="button"
-            href="https://xd.adobe.com/view/6b7a9b19-7cbc-433d-b27b-1c58bfb77296-3e29/"
-          >
-            XD prototype
-          </a>
-        </nav> */}
-
         <article>
           <h3>Development</h3>
           <p>

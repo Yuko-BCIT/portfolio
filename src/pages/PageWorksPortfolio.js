@@ -64,15 +64,6 @@ function PageWorkPortfolio() {
           </figure>
         </article>
 
-        {/* <nav className="external-links">
-          <a className="button" href="">
-            XD wireframe
-          </a>
-          <a className="button" href="">
-            XD prototype
-          </a>
-        </nav> */}
-
         <article>
           <h3>Development</h3>
           <p>
