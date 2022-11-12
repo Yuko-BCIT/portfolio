@@ -11,8 +11,10 @@
 # production
 /build
 
-# images
+# images and videos
 /src/images
+/src/media
+/public/favicons
 
 # misc
 .DS_Store

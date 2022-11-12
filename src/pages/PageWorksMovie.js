@@ -1,4 +1,7 @@
-import movie from "../images/movie.png";
+import Helmet from "react-helmet";
+import movie from "../images/movie.jpg";
+import moviexd from "../images/moviexd.jpg";
+import previewVideo from "../media/preview.mp4";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Xd } from "../images/xd.svg";
@@ -9,7 +12,10 @@ import OtherWorks from "../components/OtherWorks";
 function PageWorkMovie() {
   return (
     <main className="work-details">
-      <h1>React App</h1>
+      <Helmet>
+      <title>React Movie App</title>
+    </Helmet>
+      <h1>React Movie App</h1>
 
       <section>
         <h2>Preview - the Movie Database</h2>
@@ -40,8 +46,17 @@ function PageWorkMovie() {
           <p>
             Preview is a React application that pulls in movie information via
             API and allows users to sort movies, add them to favorites, view
-            details, and find movies they want to watch.
+            details, and find movies they want to watch. I also added a
+            simulated email subscription page without sending or storing user
+            information.
           </p>
+
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={previewVideo} type="video/mp4" />
+              Preview Video
+            </video>
+          </figure>
         </article>
 
         <article>
@@ -54,10 +69,17 @@ function PageWorkMovie() {
             buttons interactive so that a fictional client can click and jump to
             pages.
           </p>
+
+          <figure className="wireframe">
+            <img
+              src={moviexd}
+              alt="wireframe of a movie database website with color"
+            />
+          </figure>
         </article>
 
         {/* use nav for group of links */}
-        <nav className="external-links">
+        {/* <nav className="external-links">
           <a
             className="button"
             href="https://xd.adobe.com/view/8bcd39d0-15d3-445d-9493-72215eb1d95b-de9e/"
@@ -70,7 +92,7 @@ function PageWorkMovie() {
           >
             XD prototype
           </a>
-        </nav>
+        </nav> */}
 
         <article>
           <h3>Development</h3>
@@ -88,20 +110,28 @@ function PageWorkMovie() {
         <article>
           <h3>Takeaways</h3>
           <p>
-            This was my first app using React, and fter hearing from previous
+            This was my first app using React, and after hearing from previous
             intakes that some students worked in groups ended up not working on
             React at all, I took on the challenge solo so I had no choice but
-            doing everything with my responsibility. The home component have become content heavy and the
-            code has become very long, but I left it because the site broke down
-            when I broke it up into smaller components. I will fix it when I
-            gain more knowledge. Since I started building the site from the
-            desktop version, when I shrunk the screen, the content overflowed
-            the container, and I had a hard time fixing it. I realized the
-            weight of the term "mobile first" and decided to use the experience
-            and develop mobile first on the next project. Even though I was overwhelmed by the
-            fact that it was quite different from JavaScript, but with the help
-            of my instructors and classmates, I was able to create a work that I
-            was proud of and I was able to deepen my understanding of React.
+            doing everything with my responsibility.
+          </p>
+
+          <p>
+            The home component have become content heavy and the code has become
+            very long, but I left it because the site broke down when I broke it
+            up into smaller components. I will fix it when I gain more
+            knowledge. Since I started building the site from the desktop
+            version, when I shrunk the screen, the content overflowed the
+            container, and I had a hard time fixing it. I realized the weight of
+            the term "mobile first" and decided to use the experience and
+            develop mobile first on the next project.
+          </p>
+
+          <p>
+            Even though I was overwhelmed by the fact that it was quite
+            different from JavaScript, but with the help of my instructors and
+            classmates, I was able to create a work that I was proud of and I
+            was able to deepen my understanding of React.
           </p>
         </article>
 
@@ -112,13 +142,15 @@ function PageWorkMovie() {
           >
             Live Site
           </a>
-          <a className="button single-work-button github" href="">
+          <a
+            className="button single-work-button github"
+            href="https://github.com/Yuko-BCIT/React-MovieDatabase-app"
+          >
             GitHub
           </a>
         </nav>
 
         <OtherWorks />
-        
       </section>
     </main>
   );

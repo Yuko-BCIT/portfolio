@@ -1,16 +1,17 @@
 import Nav from "./Nav";
+import logo from "../images/logo.png";
 // SVGs can be imported as components
 import { ReactComponent as Linkedin } from "../images/linkedin.svg";
 import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Email } from "../images/email.svg";
 import Themes from "../utilities/themes";
 
-
 function Header() {
-
   return (
     <header>
-      <p className="author">Yuko Kitahata</p>
+      <div className="author">
+        <img className="mylogo" src={logo} alt="logo of Yuko Web Works" />
+      </div>
       <Nav />
       {/* ボタンをコンポーネンツにして  themes.jsから呼ぶ */}
       <Themes />
@@ -27,6 +28,6 @@ function Header() {
       </div>
     </header>
   );
-};
+}
 
 export default Header;

@@ -1,4 +1,7 @@
-import highlow from "../images/highlow.png";
+import Helmet from "react-helmet";
+import highlow from "../images/highlow.jpg";
+import gameplan from "../images/gameplan.jpg";
+import highlowVideo from "../media/highlow.mp4";
 import { ReactComponent as Html } from "../images/html.svg";
 import { ReactComponent as Css } from "../images/css.svg";
 import { ReactComponent as Js } from "../images/js.svg";
@@ -9,6 +12,9 @@ import OtherWorks from "../components/OtherWorks";
 function PageWorkGame() {
   return (
     <main className="work-details">
+      <Helmet>
+        <title>JavaScript Game</title>
+      </Helmet>
       <h1>JavaScript Game</h1>
       <section>
         <h2>High Low</h2>
@@ -40,38 +46,40 @@ function PageWorkGame() {
             the game, a different image and message are displayed depending on
             whether the player wins or loses.
           </p>
+
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={highlowVideo} type="video/mp4" />
+              High Low Video
+            </video>
+          </figure>
         </article>
 
         <article>
           <h3>Design</h3>
           <p>
             Designed simple, bold layout for each screen of the game with large
-            text and buttons for accessibility, and the colors were decided
-            after the game features were completed. After experimenting with
-            various colors, I decided on a gradient of red and blue for the
+            text and buttons for accessibility. After experimenting with various
+            colors, I decided on a gradient of red(High) and blue(Low) for the
             background color, in reference to the game title, and a contrasting
-            button and font color with the background color.
+            button and font color with the background color. And I made a
+            detailed game plan assuming a variety of user input and scenarios, I
+            set up detailed conditions to decide the game's functionality.
           </p>
-        </article>
 
-        <nav className="external-links">
-          <a className="button" href="">
-            XD wireframe
-          </a>
-          <a className="button" href="">
-            Content Plan
-          </a>
-        </nav>
+          <figure className="wireframe">
+            <img src={gameplan} alt="documented plan for a JavaScript game" />
+          </figure>
+        </article>
 
         <article>
           <h3>Development</h3>
           <p>
-            Assuming a variety of user input patterns, I set up detailed
-            conditions. Using javascript and jQuery, we wrote funcitons that
-            would generate appropriate error messages for missing or invalid
-            input, and for valid input, we further divided the funcitons into
-            different conditions and displayed the appropriate message for each
-            case. When I got stuck in writing code, I had one-on-one zoom
+            Using javascript and jQuery, based on the game plan, I wrote
+            funcitons that would generate appropriate error messages for missing
+            or invalid input, and for valid input, further divided the funcitons
+            into different conditions and displayed the appropriate message for
+            each case. When I got stuck in writing code, I had one-on-one zoom
             meetings with the instructor to ensure that I solved the code
             problems one by one and understand why it has to be done that way.
           </p>
@@ -80,32 +88,30 @@ function PageWorkGame() {
         <article>
           <h3>Takeaways</h3>
           <p>
-            In the first half, I wrote all the functions at once at the
-            beginning and then tested them, which made it very difficult to find
-            out which code was causing the error, and the instructor warned me
-            about it. Learning from that lesson, in the second half, I changed
-            the procedure to test with console.log() as soon as I wrote one
-            function, and if there was no problem, I moved on to the next
-            function. It was valuable for me to experience firsthand how
-            important this approach is for saving time and efficient
-            development. I am proud to say that the game I created for the first
-            time in my life was simple, but I paid attention to every detail of
-            the game, and it was completed to a high degree of quality. Creating
-            the game helped me deepen my understanding of conditionals.
+            In the first half, I wrote all the functions at once and then tested
+            them, which made it very difficult to find out which code was
+            causing the error, and the instructor warned me about it. Learning
+            from that lesson, in the second half, I changed the procedure to
+            test with console.log() as soon as I wrote one function, and if
+            there was no problem, I moved on to the next function. It was
+            valuable for me to experience firsthand how important this approach
+            is for saving time and efficient development. The game I created for
+            the first time in my life was simple, but I paid attention to every
+            detail of the game and helped me deepen my understanding of
+            conditionals.
           </p>
         </article>
 
         <nav className="external-links">
-          <a className="button single-work-button livesite" href="">
+          <a
+            className="button single-work-button livesite"
+            href="https://yukowebworks.com/game"
+          >
             Live Site
-          </a>
-          <a className="button single-work-button github" href="">
-            GitHub
           </a>
         </nav>
 
         <OtherWorks />
-
       </section>
     </main>
   );

@@ -1,5 +1,5 @@
 // header and nav related styling (see _body.scss for header style changes by screen sizes)
-nav a {
+header nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +31,7 @@ nav a {
 }
 
 @media (min-width: 1000px) {
-  nav a {
+  header nav a {
     flex-direction: row;
   }
   .icon {
@@ -44,21 +44,28 @@ nav a {
   }
   .author {
     display: inline;
-    visibility: hidden;
+    width: 4rem;
+    margin: 5rem 0 3rem;
   }
 }
 
 .sun {
   fill: gold;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   // show pointer on hover
   cursor: pointer;
+  margin-left: 2rem;
 }
 
 .moon {
   fill: #6672c5;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
+  margin-left: 2rem;
+}
+
+.mylogo {
+  color: white;
 }

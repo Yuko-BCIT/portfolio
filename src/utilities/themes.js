@@ -22,7 +22,7 @@ function Themes() {
 
   return (
     <>
-      <span onClick={handleClick}>{darkTheme ? <Sun className="sun" /> : <Moon className="moon" />}</span>
+      <span className="icon-theme" onClick={ handleClick }>{darkTheme ? <Sun className="sun" /> : <Moon className="moon" />}</span>
     </>
   );
 }

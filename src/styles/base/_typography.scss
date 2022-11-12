@@ -13,10 +13,6 @@ h1 {
   }
 }
 
-.home h1 {
-  font-size: calc(1.5rem + 2vw);
-}
-
 h2 {
   text-align: center;
 }
@@ -33,6 +29,10 @@ a {
 
 a:hover {
   color: darkcyan;
+}
+
+.external-links a:hover {
+  color: #e6ddde;
 }
 
 a:active {

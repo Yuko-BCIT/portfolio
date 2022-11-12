@@ -9,12 +9,18 @@ import PageWorksPortfolio from "../pages/PageWorksPortfolio";
 import PageWorksMovie from "../pages/PageWorksMovie";
 import PageWorksGame from "../pages/PageWorksGame";
 import Scroll from "../utilities/scroll";
+import Helmet from "react-helmet";
 import "../styles/styles.scss";
 
 function AppRouter() {
   
   return (
     <BrowserRouter>
+    {/* Helmet for meta tag on each pages */}
+      <Helmet>
+        <title>Yuko Web Works</title>
+        <meta name="description" content="I am a front-end web developer who got hands-on training at BCIT's Intense program. I enjoy working with React, CSS and design, and this portfolio website is a selection of my works that I have created." />
+      </Helmet>
       <div className="app" >
         <Scroll />
         <Header />

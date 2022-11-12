@@ -3,8 +3,12 @@
   text-align: center;
 }
 
+.work h2 + p {
+  margin: 2rem 2rem 5rem;
+}
+
 .button {
-  background-color: darkorange;
+  background-color: orangered;
   border-radius: 8px;
   text-align: center;
   width: max-content;
@@ -17,7 +21,7 @@
   margin: 0 1rem 4rem;
   img {
     border-radius: 10px;
-    border: 2px solid white;
+    border: 1px solid white;
   }
   figcaption {
     text-align: center;
@@ -58,7 +62,9 @@
   }
 }
 
+
 // single work pages styling
+
 .work-details,
 .about {
   max-width: 90%;
@@ -75,21 +81,40 @@
 @media (min-width: 700px) {
   .work-details,
   .about {
-    max-width: 70%;
+    max-width: 60%;
   }
 }
 
 .work-details figure img {
   border-radius: 10px;
 }
+
+.project h2 {
+  margin: 3rem 0;
+}
+
 .tools {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
 .icon-tool {
-  margin: 0.7rem;
-  width: 2rem;
+  margin: 0.5rem;
+  width: 1rem;
 }
+
+@media (min-width: 500px) {
+  .icon-tool {
+    margin: 0.7rem;
+    width: 2rem;
+  }
+}
+
+.work-details .wireframe img {
+  border-radius: 0;
+}
+
 .single-work-button {
   width: 8rem;
 }
@@ -107,22 +132,50 @@
   justify-content: space-evenly;
 }
 
+.other-works {
+  margin: 2rem;
+}
+
 .other-works .active {
   display: none;
 }
 
 .other-works a {
-  color: darkcyan;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  padding: 2rem 0;
+  margin: 1rem;
+  text-align: center;
+  color: #312f2f;
+  border-radius: 43px;
+  background: linear-gradient(315deg, #cfc5c6, #f6eaeb);
+  box-shadow: -5px -5px 20px #bab1b2, 5px 5px 20px #ffffff;
+}
+
+@media (min-width: 600px) {
+  .other-works a {
+    display: inline-block;
+  }
 }
 
 .other-works a:hover {
   color: orangered;
 }
 
-.see-other, .other-works {
+.see-other,
+.other-works {
   text-align: center;
 }
 
 .see-other {
   margin-top: 4rem;
+}
+
+.portfolio-hero img {
+  border: 0.5px solid #312f2f;
+}
+
+.project figure {
+  margin-bottom: 6rem;
 }
