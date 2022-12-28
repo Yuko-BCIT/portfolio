@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import capstoneVideo from "../media/capstone.mp4";
 import capstone from "../images/capstone.jpg";
 import capxd1 from "../images/capxd1.jpg";
 import capxd2 from "../images/capxd2.jpg";
@@ -42,6 +43,12 @@ function PageWorkCapstone() {
 
         <article>
           <h3>Overview</h3>
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={capstoneVideo} type="video/mp4" />
+              High Low Video
+            </video>
+          </figure>
           <p>
             Tweeling Bakery is a fictional business website, developed with
             WordPress using Woocommerce online store plugins. Our team of 4
@@ -135,13 +142,13 @@ function PageWorkCapstone() {
 
         <nav className="external-links">
           <a
-            className="button single-work-button livesite"
-            href="https://yukowebworks.com/capstone"
+            className="button"
+            href="https://tweelingbakery.bcitwebdeveloper.ca/"
           >
             Live Site
           </a>
           <a
-            className="button single-work-button github"
+            className="button"
             href="https://github.com/htpwebdesign/tweeling-bakery"
           >
             GitHub

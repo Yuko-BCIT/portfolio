@@ -1,6 +1,7 @@
 import Nav from "./Nav";
-import logo from "../images/logo.png";
+import { NavLink } from "react-router-dom";
 // SVGs can be imported as components
+import { ReactComponent as Logo } from "../images/logo.svg";
 import { ReactComponent as Linkedin } from "../images/linkedin.svg";
 import { ReactComponent as Github } from "../images/github.svg";
 import { ReactComponent as Email } from "../images/email.svg";
@@ -9,9 +10,9 @@ import Themes from "../utilities/themes";
 function Header() {
   return (
     <header>
-      <div className="author">
-        <img className="mylogo" src={logo} alt="logo of Yuko Web Works" />
-      </div>
+       <NavLink to="/" end >
+          <Logo className="mylogo author" />
+      </NavLink>
       <Nav />
       {/* ボタンをコンポーネンツにして  themes.jsから呼ぶ */}
       <Themes />

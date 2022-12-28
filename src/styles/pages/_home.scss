@@ -4,22 +4,37 @@
 }
 
 .logo-home {
-  width: 5rem;
+  fill: #312f2f;
+  width: 3rem;
   position: absolute;
-  top:4rem;
-  left: 50%;
+  top: 2rem;
+  right: -1rem;
   transform: translate(-50%, -50%);
 }
 
 .home h1 {
-  color: orangered;
   font-size: calc(1.5rem + 2vw);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-weight: 300;
+  margin: 10rem 0 0;
   padding: 0;
-  z-index: 10;
+}
+.orbs {
+  display: block;
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 300;
+}
+
+.home h2 {
+  font-size: calc(1.5rem + 2.5vw);
+  font-weight: 300;
+  margin: 0 0 2rem;
+}
+
+.home p {
+  font-size: calc(1rem + 0.5vw);
+  text-align: left;
+  max-width: 70vw;
+  margin: auto;
 }
 
 .home-image {
@@ -37,18 +52,16 @@
     object-fit: cover;
     object-position: top left;
   }
-}
-
-.image-container {
-  position: relative;
+  .home p {
+    max-width: 60vw;
+  }
 }
 
 .round-image {
   position: absolute;
   z-index: 10;
   img {
-    width: calc(8rem + 5vw);
-    border-radius: 50%;
+    width: calc(6rem + 3vw);
   }
   figcaption {
     color: white;
@@ -63,17 +76,19 @@
 }
 
 .round-image.lotus {
-  bottom: 5%;
-  right: 10%;
+  bottom: 2%;
+  right: 50%;
+  transform: translateX(50%);
+
 }
 
 @media (min-width: 1000px) {
   .home {
     height: 90vh;
   }
-.home h1 {
-  color: #312f2f;
-}
+  .home p {
+    max-width: 50vw;
+  }
 .logo-home {
   display: none;
 }

@@ -4,6 +4,7 @@ import capstone from "../images/capstone.jpg";
 import portfolio from "../images/portfolio.jpg";
 import movie from "../images/movie.jpg";
 import highlow from "../images/highlow.jpg";
+import kitahata from "../images/kitahata.jpg";
 
 function PageWorks() {
   return (
@@ -30,7 +31,7 @@ function PageWorks() {
           </figcaption>
         </figure>
 
-        <figure>
+        <figure className="portfolio">
           <Link to="/works/portfolio">
             <img src={portfolio} alt="screen shot of a portfolio website" />
           </Link>
@@ -62,15 +63,19 @@ function PageWorks() {
             July 2022
           </figcaption>
         </figure>
+
+        <figure>
+          <Link to="/works/welding">
+            <img src={kitahata} alt="screen shot of a welding website" />
+          </Link>
+          <figcaption>
+            Welding Company
+            <br />
+            March 2022
+          </figcaption>
+        </figure>
       </section>
 
-      <section>
-        <h2>Upcoming Projects</h2>
-        <p>
-          I'm working on a senior daycare website based in Tokyo. Check it out
-          here in early 2023!
-        </p>
-      </section>
     </main>
   );
 }

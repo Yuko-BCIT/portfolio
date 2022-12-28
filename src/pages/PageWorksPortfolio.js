@@ -18,7 +18,7 @@ function PageWorkPortfolio() {
 
       <section>
         <h2>Yuko Web Works</h2>
-        <figure className="portfolio-hero">
+        <figure className="portfolio">
           <img src={portfolio} alt="screen shot of a portfolio website" />
         </figure>
 
@@ -39,7 +39,7 @@ function PageWorkPortfolio() {
         <article>
           <h3>Overview</h3>
           <p>
-            Ths is my portfolio website using React app showcasing my works,
+            This is my portfolio website using React app showcasing my works,
             links to livesite and GitHub repositories, and a little bit about
             myself. A dark and light mode is implemented, allowing users to
             switch between background and font colors. I chose React because it

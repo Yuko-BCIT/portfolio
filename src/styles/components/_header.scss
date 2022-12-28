@@ -5,11 +5,28 @@ header nav a {
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  header nav {
+    width: 100%;
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 18rem;
+  position: fixed;
+  top: 30%;
+  left: -0.5rem;
+}
+
 .icon {
-  fill: white;
-  display: none;
+  fill: darkorange;
+  // display: none;
+  // display: inline;
   margin: 0.8rem;
-  width: 1rem;
+  width: 2rem;
 }
 
 .icon-nav {
@@ -17,55 +34,63 @@ header nav a {
   margin: 0 0.7rem;
 }
 
-.author {
-  display: none;
-  text-align: right;
-  font-size: 1rem;
+.icon-theme {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 4.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin-left: 2rem;
 }
 
-// using max width due to dark/light mode setting
+.author {
+  display: none;
+  fill: #312f2f;
+}
+
+// using max-width due to dark/light mode setting
 @media (max-width: 999px) {
   header {
-    background-color: #7b3041;
+    background-color: darkorange;
   }
 }
 
 @media (min-width: 1000px) {
+  header {
+    border-right: 0.5px solid #312f2f;
+  }
   header nav a {
     flex-direction: row;
   }
+  .icon-wrapper {
+    flex-direction: row;
+    position: static;
+    height: max-content;
+  }
   .icon {
-    display: inline;
-    width: 1.2rem;
-    fill: #312f2f;
+    width: 1.3rem;
   }
   .icon-nav {
     fill: #312f2f;
   }
+  .icon-theme {
+    right: 1rem;
+    bottom: 1rem;
+  }
   .author {
-    display: inline;
+    display: block;
     width: 4rem;
-    margin: 5rem 0 3rem;
+    margin: 1rem;
   }
 }
 
 .sun {
-  fill: gold;
-  width: 1.5rem;
-  height: 1.5rem;
-  // show pointer on hover
-  cursor: pointer;
-  margin-left: 2rem;
+  fill: white;
+  
 }
 
 .moon {
-  fill: #6672c5;
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  margin-left: 2rem;
-}
-
-.mylogo {
-  color: white;
+  fill: #312f2f;
+  rotate: 180deg;
 }

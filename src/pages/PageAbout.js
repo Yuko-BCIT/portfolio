@@ -1,8 +1,5 @@
 import me from "../images/me.jpg";
 import { NavLink } from "react-router-dom";
-import { ReactComponent as Linkedin } from "../images/linkedin.svg";
-import { ReactComponent as Github } from "../images/github.svg";
-import { ReactComponent as Email } from "../images/email.svg";
 import frenchie from "../images/frenchie.jpg";
 import { Helmet } from "react-helmet";
 
@@ -68,18 +65,6 @@ const PageAbout = () => (
         Interested in working with me? Contact me through email, LinkedIn and
         check out my GitHub repos!
       </p>
-
-      <div className="icon-wrapper">
-        <a href="mailto:yukoool@hotmail.com">
-          <Email className="icon icon-about" aria-label="email icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/yuko-k-224247184/">
-          <Linkedin className="icon icon-about" aria-label="linkedin icon" />
-        </a>
-        <a href="https://github.com/Yuko-BCIT">
-          <Github className="icon icon-about" aria-label="github icon" />
-        </a>
-      </div>
     </section>
   </main>
 );

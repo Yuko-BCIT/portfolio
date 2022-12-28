@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 5rem 4rem;
-  background-color: #e6ddde;
+  background-color: #fff;
   min-height: 100vh;
   color: #312f2f;
 }
@@ -11,27 +11,44 @@
 // dark mode(put any selector you want to change with dark mode under .darkmode)
 .darkmode {
   background-color: #312f2f;
-  color: #e6ddde;
+  color: #fff;
 
   a {
-    color: #e6ddde;
+    color: #fff;
   }
 
-  .icon,
-  .icon-nav {
-    fill: #e6ddde;
+  .author, .logo-home, .icon-nav {
+    fill: white;
+  }
+
+  .icon {
+    fill: darkorange;
   }
 
   .active {
-    color: orangered;
+    color: #BB2648;
+  }
+
+  a:hover {
+    color: darkcyan;
+    svg {
+      fill: darkcyan;
+    }
   }
 
   .other-works a {
     color: white;
-    border-radius: 43px;
-    border-radius: 43px;
     background: linear-gradient(315deg, #363333, #403d3d);
     box-shadow: -5px -5px 5px #181717, 5px 5px 5px #605b5b;
+  }
+
+  @media (min-width: 1000px) {
+    header {
+      border-right: 0.5px solid #ffffff;
+    }
+    .active {
+      color: darkorange;
+    }
   }
 }
 

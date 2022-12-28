@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { ReactComponent as Sun } from "../images/sun.svg";
-import { ReactComponent as Moon } from "../images/moon.svg";
+import { ReactComponent as Theme } from "../images/theme.svg";
 
 // setting dark/ light toggle
 function Themes() {
@@ -22,7 +21,7 @@ function Themes() {
 
   return (
     <>
-      <span className="icon-theme" onClick={ handleClick }>{darkTheme ? <Sun className="sun" /> : <Moon className="moon" />}</span>
+      <span className="icon-theme" onClick={ handleClick }>{darkTheme ? <Theme className="sun" /> : <Theme className="moon" />}</span>
     </>
   );
 }

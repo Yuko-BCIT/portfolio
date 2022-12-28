@@ -24,15 +24,11 @@ main p {
 
 a {
   text-decoration: none;
-  color: #e6ddde;
-}
-
-a:hover {
-  color: darkcyan;
+  color: #fff;
 }
 
 .external-links a:hover {
-  color: #e6ddde;
+  color: #fff;
 }
 
 a:active {
@@ -41,8 +37,31 @@ a:active {
 
 strong {
   font-size: 1.3rem;
-  color: orangered;
+  color: darkorange;
 }
+
 .active {
-  color: orangered;
+  color: #BB2648;
+  .icon-nav {
+    fill: #BB2648;
+  }
+}
+
+a:hover {
+  color: darkcyan;
+  svg {
+    fill: darkcyan;
+  }
+  .icon-nav {
+    fill: darkcyan;
+  }
+}
+
+@media (min-width: 1000px) {
+  .active {
+    color: darkorange;
+    .icon-nav {
+      fill: darkorange;
+    }
+  }
 }

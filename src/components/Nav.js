@@ -14,15 +14,15 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about">
-            <About className="icon-nav" aria-label="about icon" />
-            About
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/works">
             <Works className="icon-nav" aria-label="works icon" />
             Works
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">
+            <About className="icon-nav" aria-label="about icon" />
+            About
           </NavLink>
         </li>
       </ul>
