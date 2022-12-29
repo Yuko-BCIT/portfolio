@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import Logo from "../utilities/logo"
 import capstoneVideo from "../media/capstone.mp4";
 import capstone from "../images/capstone.jpg";
 import capxd1 from "../images/capxd1.jpg";
@@ -8,7 +9,6 @@ import { ReactComponent as PHP } from "../images/php.svg";
 import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as CSS } from "../images/css.svg";
 import { ReactComponent as Woo } from "../images/woo.svg";
-import { ReactComponent as Xd } from "../images/xd.svg";
 import { ReactComponent as Wordpress } from "../images/wordpress.svg";
 import OtherWorks from "../components/OtherWorks";
 
@@ -18,6 +18,7 @@ function PageWorkCapstone() {
       <Helmet>
         <title>Capstone Project</title>
       </Helmet>
+      <Logo />
       <h1>Capstone Project</h1>
       <section>
         <h2>Tweeling Bakery</h2>
@@ -33,7 +34,6 @@ function PageWorkCapstone() {
             <CSS className="icon-tool" />
             <Wordpress className="icon-tool wordpress" />
             <Woo className="icon-tool" />
-            <Xd className="icon-tool" />
           </div>
         </div>
       </section>

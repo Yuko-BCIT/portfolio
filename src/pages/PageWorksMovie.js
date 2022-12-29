@@ -1,10 +1,10 @@
 import Helmet from "react-helmet";
+import Logo from "../utilities/logo"
 import movie from "../images/movie.jpg";
 import moviexd from "../images/moviexd.jpg";
 import previewVideo from "../media/preview.mp4";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
-import { ReactComponent as Xd } from "../images/xd.svg";
 import { ReactComponent as Redux } from "../images/redux.svg";
 import { ReactComponent as CSS } from "../images/css.svg";
 import OtherWorks from "../components/OtherWorks";
@@ -13,8 +13,9 @@ function PageWorkMovie() {
   return (
     <main className="work-details">
       <Helmet>
-      <title>React Movie App</title>
-    </Helmet>
+        <title>React Movie App</title>
+      </Helmet>
+      <Logo />
       <h1>React Movie App</h1>
 
       <section>
@@ -33,7 +34,6 @@ function PageWorkMovie() {
             <Redux className="icon-tool" />
             <Js className="icon-tool" />
             <CSS className="icon-tool" />
-            <Xd className="icon-tool" />
           </div>
         </div>
       </section>
@@ -43,6 +43,12 @@ function PageWorkMovie() {
 
         <article>
           <h3>Overview</h3>
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={previewVideo} type="video/mp4" />
+              Preview Video
+            </video>
+          </figure>
           <p>
             Preview is a React application that pulls in movie information via
             API and allows users to sort movies, add them to favorites, view
@@ -50,13 +56,6 @@ function PageWorkMovie() {
             simulated email subscription page without sending or storing user
             information.
           </p>
-
-          <figure>
-            <video preload="auto" autoPlay muted playsInline controls>
-              <source src={previewVideo} type="video/mp4" />
-              Preview Video
-            </video>
-          </figure>
         </article>
 
         <article>

@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import Logo from "../utilities/logo"
 import highlow from "../images/highlow.jpg";
 import gameplan from "../images/gameplan.jpg";
 import highlowVideo from "../media/highlow.mp4";
@@ -15,6 +16,7 @@ function PageWorkGame() {
       <Helmet>
         <title>JavaScript Game</title>
       </Helmet>
+      <Logo />
       <h1>JavaScript Game</h1>
       <section>
         <h2>High Low</h2>
@@ -39,6 +41,12 @@ function PageWorkGame() {
 
         <article>
           <h3>Overview</h3>
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={highlowVideo} type="video/mp4" />
+              High Low Video
+            </video>
+          </figure>
           <p>
             High Low is a game which a player guesss randomly generated number
             within 10 times, and there are 3 difficulty levels to choose from. A
@@ -46,13 +54,6 @@ function PageWorkGame() {
             the game, a different image and message are displayed depending on
             whether the player wins or loses.
           </p>
-
-          <figure>
-            <video preload="auto" autoPlay muted playsInline controls>
-              <source src={highlowVideo} type="video/mp4" />
-              High Low Video
-            </video>
-          </figure>
         </article>
 
         <article>

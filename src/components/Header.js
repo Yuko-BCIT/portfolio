@@ -11,7 +11,7 @@ function Header() {
   return (
     <header>
        <NavLink to="/" end >
-          <Logo className="mylogo author" />
+          <Logo className="author" />
       </NavLink>
       <Nav />
       {/* ボタンをコンポーネンツにして  themes.jsから呼ぶ */}

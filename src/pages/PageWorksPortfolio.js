@@ -1,11 +1,11 @@
 import Helmet from "react-helmet";
+import Logo from "../utilities/logo"
 import portfolio from "../images/portfolio.jpg";
 import folioxd from "../images/folioxd.jpg";
 import codefolio from "../images/codefolio.jpg";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Css } from "../images/css.svg";
-import { ReactComponent as Xd } from "../images/xd.svg";
 import OtherWorks from "../components/OtherWorks";
 
 function PageWorkPortfolio() {
@@ -14,6 +14,7 @@ function PageWorkPortfolio() {
       <Helmet>
         <title>Portfolio</title>
       </Helmet>
+      <Logo />
       <h1>Portfolio</h1>
 
       <section>
@@ -28,7 +29,6 @@ function PageWorkPortfolio() {
             <React className="icon-tool" />
             <Js className="icon-tool" />
             <Css className="icon-tool" />
-            <Xd className="icon-tool" />
           </div>
         </div>
       </section>

@@ -1,7 +1,8 @@
 import me from "../images/me.jpg";
 import { NavLink } from "react-router-dom";
-import frenchie from "../images/frenchie.jpg";
+import bamboo from "../images/bamboo.jpg";
 import { Helmet } from "react-helmet";
+import Logo from "../utilities/logo";
 
 const PageAbout = () => (
   <main className="about">
@@ -9,6 +10,7 @@ const PageAbout = () => (
       <title>About</title>
       <meta name="description" content="About me" />
     </Helmet>
+    <Logo />
     <section>
       <h1>About</h1>
       {/* use float around image */}
@@ -49,22 +51,18 @@ const PageAbout = () => (
           <strong>I love</strong> French Bulldogs (I follow cute Frenchies on
           Instagram), bike riding, snowboarding, karaoke and ramen noodles!
         </p>
+        <p>
+          Interested in working with me? Contact me through email, LinkedIn and
+          check out my GitHub repos!
+        </p>
       </article>
 
-      <NavLink to="/works">
-        <figure className="frenchie">
-          <img src={frenchie} alt="French bulldog" />
-          <figcaption>Web Works</figcaption>
-        </figure>
-      </NavLink>
-    </section>
-
-    <section>
-      <h2>Contact Me</h2>
-      <p>
-        Interested in working with me? Contact me through email, LinkedIn and
-        check out my GitHub repos!
-      </p>
+      <figure className="lotus">
+        <NavLink to="/works">
+          <img src={bamboo} alt="French bulldog" />
+          <figcaption>Works</figcaption>
+        </NavLink>
+      </figure>
     </section>
   </main>
 );

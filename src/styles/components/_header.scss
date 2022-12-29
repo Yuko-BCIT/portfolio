@@ -18,15 +18,12 @@ header nav a {
   height: 18rem;
   position: fixed;
   top: 30%;
-  left: -0.5rem;
+  right: 0.5rem;
 }
 
 .icon {
   fill: darkorange;
-  // display: none;
-  // display: inline;
-  margin: 0.8rem;
-  width: 2rem;
+  width: 1.5rem;
 }
 
 .icon-nav {
@@ -69,6 +66,7 @@ header nav a {
     height: max-content;
   }
   .icon {
+  margin: 0.8rem;
     width: 1.3rem;
   }
   .icon-nav {

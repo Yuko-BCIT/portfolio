@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import Logo from "../utilities/logo"
 import { Link } from "react-router-dom";
 import capstone from "../images/capstone.jpg";
 import portfolio from "../images/portfolio.jpg";
@@ -16,6 +17,7 @@ function PageWorks() {
           content="Take a look at my works and see details on the procedures and links to live sites and GitHub repositories."
         />
       </Helmet>
+      <Logo />
       <h1>Works</h1>
       <h2>Click the images to see details</h2>
 
