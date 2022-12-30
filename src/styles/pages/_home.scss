@@ -1,6 +1,12 @@
 .home {
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.home section {
+  margin: auto;
 }
 
 .logo-home {
@@ -15,7 +21,6 @@
 .home h1 {
   font-size: calc(1.5rem + 2vw);
   font-weight: 300;
-  margin: 10rem 0 0;
   padding: 0;
 }
 .orbs {
@@ -65,9 +70,6 @@
 }
 
 @media (min-width: 1000px) {
-  .home {
-    height: 90vh;
-  }
   .home p {
     max-width: 50vw;
   }
