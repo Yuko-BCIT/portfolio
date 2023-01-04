@@ -55,7 +55,7 @@ header nav a {
 
 @media (min-width: 1000px) {
   header {
-    border-right: 0.5px solid #312f2f;
+    box-shadow: 0.1px 0 5px #b9acac;
   }
   header nav a {
     flex-direction: row;
