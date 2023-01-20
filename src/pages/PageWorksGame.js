@@ -1,5 +1,5 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo"
+import Logo from "../utilities/logo";
 import highlow from "../images/highlow.jpg";
 import gameplan from "../images/gameplan.jpg";
 import highlowVideo from "../media/highlow.mp4";
@@ -107,6 +107,8 @@ function PageWorkGame() {
           <a
             className="button single-work-button livesite"
             href="https://yukowebworks.com/game"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Live Site
           </a>

@@ -1,5 +1,5 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo"
+import Logo from "../utilities/logo";
 import movie from "../images/movie.jpg";
 import moviexd from "../images/moviexd.jpg";
 import previewVideo from "../media/preview.mp4";
@@ -122,12 +122,16 @@ function PageWorkMovie() {
           <a
             className="button single-work-button livesite"
             href="https://yukowebworks.com/movie-database"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Live Site
           </a>
           <a
             className="button single-work-button github"
             href="https://github.com/Yuko-BCIT/React-MovieDatabase-app"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>

@@ -10,20 +10,31 @@ import Themes from "../utilities/themes";
 function Header() {
   return (
     <header>
-       <NavLink to="/" end >
-          <Logo className="author" />
+      <NavLink to="/" end>
+        <Logo className="author" />
       </NavLink>
       <Nav />
-      {/* ボタンをコンポーネンツにして  themes.jsから呼ぶ */}
       <Themes />
       <div className="icon-wrapper">
-        <a href="mailto:yukoool@hotmail.com">
+        <a
+          href="mailto:yukoool@hotmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Email className="icon" aria-label="email icon" />
         </a>
-        <a href="https://www.linkedin.com/in/yuko-k-224247184/">
+        <a
+          href="https://www.linkedin.com/in/yuko-k-224247184/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Linkedin className="icon" aria-label="linkedin icon" />
         </a>
-        <a href="https://github.com/Yuko-BCIT">
+        <a
+          href="https://github.com/Yuko-BCIT"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Github className="icon" aria-label="github icon" />
         </a>
       </div>

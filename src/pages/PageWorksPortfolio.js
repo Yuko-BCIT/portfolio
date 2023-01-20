@@ -1,12 +1,12 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo"
+import Logo from "../utilities/logo";
 import portfolio from "../images/portfolio.jpg";
 import folioxd from "../images/folioxd.jpg";
 import codefolio from "../images/codefolio.jpg";
+import OtherWorks from "../components/OtherWorks";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
-import { ReactComponent as Css } from "../images/css.svg";
-import OtherWorks from "../components/OtherWorks";
+import { ReactComponent as CSS } from "../images/css.svg";
 
 function PageWorkPortfolio() {
   return (
@@ -28,7 +28,7 @@ function PageWorkPortfolio() {
           <div>
             <React className="icon-tool" />
             <Js className="icon-tool" />
-            <Css className="icon-tool" />
+            <CSS className="icon-tool" />
           </div>
         </div>
       </section>
@@ -101,6 +101,8 @@ function PageWorkPortfolio() {
           <a
             className="button single-work-button github"
             href="https://github.com/Yuko-BCIT/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>

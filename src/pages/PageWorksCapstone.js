@@ -1,5 +1,5 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo"
+import Logo from "../utilities/logo";
 import capstoneVideo from "../media/capstone.mp4";
 import capstone from "../images/capstone.jpg";
 import capxd1 from "../images/capxd1.jpg";
@@ -20,6 +20,7 @@ function PageWorkCapstone() {
       </Helmet>
       <Logo />
       <h1>Capstone Project</h1>
+      
       <section>
         <h2>Tweeling Bakery</h2>
         <figure>
@@ -144,12 +145,16 @@ function PageWorkCapstone() {
           <a
             className="button"
             href="https://tweelingbakery.bcitwebdeveloper.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Live Site
           </a>
           <a
             className="button"
             href="https://github.com/htpwebdesign/tweeling-bakery"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>

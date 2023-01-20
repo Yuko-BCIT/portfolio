@@ -5,13 +5,14 @@ function OtherWorks() {
 
   return (
     <>
-      <h3 className="see-other">See other works</h3>
+      <h3 className="see-other">Click to see other works</h3>
       {/* by setting NavLinks, page you're on doesn't show by editig .active */}
       <nav className="other-works">
           <NavLink to="/works/capstone">Capstone</NavLink>
           <NavLink to="/works/portfolio">Portfolio</NavLink>
           <NavLink to="/works/movie">Movie</NavLink>
           <NavLink to="/works/game">Game</NavLink>
+          <NavLink to="/works/welding">Welding</NavLink>
       </nav>
     </>
   );

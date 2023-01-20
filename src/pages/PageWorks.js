@@ -27,7 +27,7 @@ function PageWorks() {
             <img src={capstone} alt="screen shot of a bakery website" />
           </Link>
           <figcaption>
-            Capstone Project - Tweelling Bakery
+            Capstone Project - Tweeling Bakery
             <br />
             Nov 2022
           </figcaption>
@@ -71,7 +71,7 @@ function PageWorks() {
             <img src={kitahata} alt="screen shot of a welding website" />
           </Link>
           <figcaption>
-            Welding Company
+            Corporate Website - Welding Company
             <br />
             March 2022
           </figcaption>

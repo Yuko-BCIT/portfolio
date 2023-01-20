@@ -13,8 +13,8 @@
   fill: #312f2f;
   width: 3rem;
   position: absolute;
-  top: 2rem;
-  right: -1rem;
+  top: 3.5rem;
+  left: 3.5rem;
   transform: translate(-50%, -50%);
 }
 
@@ -57,7 +57,7 @@
     border-radius: 0% 55% 50% 70%;
   }
   figcaption {
-    color: white;
+    color: #fff;
     font-size: calc(1.5rem + 0.8vw);
     font-weight: 900;
     text-align: center;

@@ -8,6 +8,7 @@ import PageWorksCapstone from "../pages/PageWorksCapstone";
 import PageWorksPortfolio from "../pages/PageWorksPortfolio";
 import PageWorksMovie from "../pages/PageWorksMovie";
 import PageWorksGame from "../pages/PageWorksGame";
+import PageWorksWelding from "../pages/PageWorksWelding";
 import Scroll from "../utilities/scroll";
 import Helmet from "react-helmet";
 import "../styles/styles.scss";
@@ -33,6 +34,7 @@ function AppRouter() {
           <Route path="/works/portfolio" element={<PageWorksPortfolio />} />
           <Route path="/works/movie" element={<PageWorksMovie />} />
           <Route path="/works/game" element={<PageWorksGame />} />
+          <Route path="/works/welding" element={<PageWorksWelding />} />
         </Routes>
         <Footer />
       </div>

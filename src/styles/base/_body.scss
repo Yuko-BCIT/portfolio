@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 5rem 4rem;
-  background-color: #fff;
+  background-color: snow;
   min-height: 100vh;
   color: #312f2f;
 }
@@ -18,7 +18,7 @@
   }
 
   .author, .logo-home, .icon-nav {
-    fill: white;
+    fill: #fff;
   }
 
   .icon {
@@ -37,7 +37,7 @@
   }
 
   .other-works a {
-    color: white;
+    color: #fff;
     background: linear-gradient(315deg, #363333, #403d3d);
     box-shadow: -5px -5px 5px #181717, 5px 5px 5px #605b5b;
   }
@@ -57,7 +57,7 @@ header {
   right: 0;
   left: 0;
   z-index: 100;
-  height: 4rem;
+  height: 3.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
