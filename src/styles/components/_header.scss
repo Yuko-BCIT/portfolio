@@ -1,8 +1,13 @@
 // header and nav related styling (see _body.scss for header style changes by screen sizes)
+header {
+  box-shadow: 0.1px 0.1px 5px #b9acac;
+}
+
 header nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: inherit;
 }
 
 @media (max-width: 600px) {
@@ -27,7 +32,7 @@ header nav a {
 }
 
 .icon-nav {
-  fill: #fff;
+  fill: rgba(49, 47, 47, 0.7);
   margin: 0 0.7rem;
 }
 
@@ -43,20 +48,17 @@ header nav a {
 
 .author {
   display: none;
-  fill: #312f2f;
+  fill: #3e3b3b;
 }
 
 // using max-width due to dark/light mode setting
 @media (max-width: 999px) {
   header {
-    background-color: darkorange;
+    background-color: inherit;
   }
 }
 
 @media (min-width: 1000px) {
-  header {
-    box-shadow: 0.1px 0 5px #b9acac;
-  }
   header nav a {
     flex-direction: row;
   }
@@ -66,11 +68,8 @@ header nav a {
     height: max-content;
   }
   .icon {
-  margin: 0.7rem;
+    margin: 0.7rem;
     width: 1.3rem;
-  }
-  .icon-nav {
-    fill: #312f2f;
   }
   .icon-theme {
     right: 1rem;
@@ -80,14 +79,16 @@ header nav a {
     display: block;
     width: 4rem;
     margin: 1rem;
+
+    // logo animation
+    animation: flip 2s;
   }
 }
 
 .sun {
-  fill: #fff;
-  
+  fill: gold;
 }
 
 .moon {
-  fill: #312f2f;
+  fill: rgba(120, 77, 160, 0.8);
 }

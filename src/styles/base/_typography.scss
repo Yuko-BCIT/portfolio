@@ -1,20 +1,29 @@
 .app {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 h1 {
-  font-size: 2.5rem;
-  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.2rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 @media (min-width: 600px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding: 2.7rem 0;
   }
-}
-
-h2 {
-  text-align: center;
 }
 
 main p {
@@ -33,23 +42,24 @@ a {
 
 strong {
   font-size: 1.3rem;
-  color: darkorange;
+  font-weight: 500;
+  color: #bb2648;
 }
 
 .active {
-  color: #BB2648;
+  color: #bb2648;
   .icon-nav {
-    fill: #BB2648;
+    fill: #bb2648;
   }
 }
 
 a:hover {
-  color: darkcyan;
+  color: #bb2648;
   svg {
     fill: darkcyan;
   }
   .icon-nav {
-    fill: darkcyan;
+    fill: #bb2648;
   }
 }
 
@@ -58,6 +68,66 @@ a:hover {
     color: darkorange;
     .icon-nav {
       fill: darkorange;
+    }
+  }
+
+  a:hover {
+    color: darkcyan;
+    .icon-nav {
+      fill: darkcyan;
+    }
+  }
+}
+
+
+// dark mode(put any selector you want to change with dark mode under .darkmode)
+.darkmode {
+  background-color: #312f2f;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+  
+  .home h1 {
+    color: #d6a0a0;
+  }
+
+  .author,
+  .logo-home,
+  .icon-nav {
+    fill: #fff;
+  }
+
+  .active {
+    color: #bb2648;
+    .icon-nav {
+      fill: #bb2648;
+    }
+  }
+
+  a:hover {
+    color: #bb2648;
+  }
+
+  .other-works a {
+    color: #fff;
+    background: linear-gradient(315deg, #363333, #403d3d);
+    box-shadow: -5px -5px 5px #181717, 5px 5px 5px #605b5b;
+  }
+
+  @media (min-width: 1000px) {
+    .active {
+      color: darkorange;
+      .icon-nav {
+        fill: darkorange;
+      }
+    }
+    a:hover {
+      color: darkcyan;
+      .icon-nav {
+        fill: darkcyan;
+      }
     }
   }
 }

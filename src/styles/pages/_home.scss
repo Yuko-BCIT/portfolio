@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  // background-color: olive;
 }
 
 .home section {
@@ -10,49 +11,86 @@
 }
 
 .logo-home {
-  fill: #312f2f;
+  display: inline-block;
+  fill: #3e3b3b;
   width: 3rem;
   position: absolute;
-  top: 3.5rem;
-  left: 3.5rem;
-  transform: translate(-50%, -50%);
+  top: 0.5rem;
+  left: 0.5rem;
+  // transform: translate(-50%, -50%);
+
+  // logo animation
+  animation: flip 2s;
 }
 
 .home h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: calc(1.5rem + 2vw);
-  font-weight: 300;
+  font-weight: 900;
   padding: 0;
-}
-.orbs {
-  display: block;
-  font-size: calc(1.5rem + 2vw);
-  font-weight: 300;
+  line-height: calc(2rem + 3vw);
+  color: #5f5555;
 }
 
-// .home h2 {
-//   font-size: calc(1.5rem + 2.5vw);
-//   font-weight: 300;
-//   margin: 0 0 2rem;
-// }
-
-.home p {
+.home h2 {
   font-size: calc(1rem + 0.5vw);
+  font-weight: 400;
   text-align: center;
-  max-width: 70vw;
+  max-width: 80vw;
   margin: 2rem auto;
+  line-height: 2rem;
+
+  // text animation
+  opacity: 0;
+  animation: fadeInUp 1.3s 5s forwards;
 }
 
-@media (min-width: 600px) {
-  .home p {
-    max-width: 60vw;
+// this animation shows words letter by letter based on index
+.text-animate {
+  display: inline-block; // without this, it doesn't bounce
+  min-width: 0.8rem; // without this, space doesn't show
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+}
+@for $i from 0 through 25 {
+  .text-animate._#{$i} {
+    animation-delay: #{calc($i / 10)}s;
   }
 }
 
-.lotus {
+@media (min-width: 600px) {
+  .home h2 {
+    max-width: 70vw;
+  }
+  .logo-home {
+  left: 2.5rem;
+top: 2.5rem;
+  }
+}
+
+.call-to-action {
   position: relative;
   margin: auto;
   z-index: 10;
   width: calc(10rem + 3vw);
+
+  // bounce animation on works button
+  animation: bounce 5s linear infinite;
+  @keyframes bounce {
+    0% {
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 0.9;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(20px);
+    }
+  }
+
   img {
     border-radius: 0% 55% 50% 70%;
   }
@@ -70,12 +108,12 @@
 }
 
 @media (min-width: 1000px) {
-  .home p {
+  .home h2 {
     max-width: 50vw;
   }
-.logo-home {
-  display: none;
-}
+  .logo-home {
+    display: none;
+  }
   .home-image {
     visibility: visible;
     margin-top: 5rem;

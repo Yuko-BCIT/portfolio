@@ -20,7 +20,7 @@ function AppRouter() {
     {/* Helmet for meta tag on each pages */}
       <Helmet>
         <title>Yuko Web Works</title>
-        <meta name="description" content="I am a front-end web developer who got hands-on training at BCIT's Intense program. I enjoy working with React, CSS and design, and this portfolio website is a selection of my works that I have created." />
+        <meta name="description" content="Front end web developer with passion for building user-friendly, functional, eye-catching websites and leaning new technologies. Proficient in JavaScript, CSS, API integration and custom WordPress development." />
       </Helmet>
       <div className="app" >
         <Scroll />

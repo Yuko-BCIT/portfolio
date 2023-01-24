@@ -1,19 +1,49 @@
+.icon-about {
+  display: inline;
+  fill: darkorange;
+  width: 1.5rem;
+  margin: 1.5rem;
+}
+
+// pulse animation
+.pulse {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .me {
   float: right;
   border-radius: 10px;
-  width: 30vw;
+  width: 40vw;
   margin: 0.5rem;
+}
+
+.about {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 @media (min-width: 500px) {
   .me {
-    width: 10rem;
+    width: 11rem;
     margin: 1rem;
+  }
+  .about {
+    max-width: 80%;
   }
 }
 
-.about h2 + p {
-    margin: 3rem 0;
+@media (min-width: 700px) {
+  .about {
+    max-width: 60%;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -22,9 +52,8 @@
   }
 }
 
-.icon-about {
-  display: inline;
-  fill: darkorange;
-  width: 1.5rem;
-  margin: 1.5rem;
+@media (min-width: 1400px) {
+  .about {
+    max-width: 50%;
+  }
 }

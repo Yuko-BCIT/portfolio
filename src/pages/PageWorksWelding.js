@@ -47,6 +47,32 @@ function PageWorksWelding() {
           </p>
         </article>
 
+        <article>
+          <h3>Development</h3>
+
+          <p>
+            This is my first website that I have ever created. I didn't have any
+            experience, so I learned and developed at the same time applying new
+            learing from online courses to the website. It is purely developed
+            with HTML and CSS only. After completing the site, I purchased
+            domain and configured hosting on server with SSL
+            cerfiticate, uploaded files using cPanel.
+          </p>
+        </article>
+
+        <article>
+          <h3>Takeaway</h3>
+
+          <p>
+            This was a great experience making website for the first time all by
+            myself. It was quite different from completing online exercises, but
+            actually building real stuff was harder than I thought, but I
+            learned so much from it. I realised you learn from building things
+            more than watching hours of tutorials and my problem solving skills
+            improved.
+          </p>
+        </article>
+
         <nav className="external-links">
           <a
             className="button single-work-button livesite"

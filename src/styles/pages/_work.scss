@@ -25,7 +25,7 @@
 
 .work figure {
   position: relative;
-  margin: 0 1rem 4rem;
+  margin: 2rem 0.5rem 4rem;
   img {
     border-radius: 10px;
   }
@@ -36,16 +36,16 @@
 
 
 // image layout on different screen size
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .work figure {
-    margin: 0 2rem 4rem;
+    margin: 2rem 2rem 4rem;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .work-links {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: 1fr 1fr;
     padding: 0 1rem;
   }
@@ -57,7 +57,6 @@
 
 @media (min-width: 800px) {
   .work-links {
-    gap: 2rem;
     padding: 0 2rem;
   }
 }
@@ -69,24 +68,33 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .work-links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 // single work pages styling
-.work-details,
-.about {
-  max-width: 90%;
+.work-details {
+  max-width: 95%;
   margin: 0 auto;
 }
 
 @media (min-width: 500px) {
-  .work-details,
-  .about {
+  .work-details {
     max-width: 80%;
   }
 }
 
 @media (min-width: 700px) {
-  .work-details,
-  .about {
+  .work-details {
     max-width: 60%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .work-details {
+    max-width: 50%;
   }
 }
 
@@ -142,7 +150,7 @@
   padding: 2rem 0;
   margin: 0.5rem;
   text-align: center;
-  color: #312f2f;
+  color: #3e3b3b;
   border-radius: 10px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   box-shadow: 5px 5px 10px #bdbdbd, -5px -5px 10px #ffffff;
