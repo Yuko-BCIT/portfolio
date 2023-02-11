@@ -10,9 +10,9 @@ function Themes() {
   };
 
   useEffect(() => {
-      let elements = document.getElementsByClassName("app");
+    let elements = document.getElementsByClassName("app");
     if (darkTheme === true) {
-        // since getElementsByClassName returns an array(even there's only one element with the class, set the ) 
+      // since getElementsByClassName returns an array(even there's only one element with the class, set the )
       elements[0].classList.add("darkmode");
     } else {
       elements[0].classList.remove("darkmode");
@@ -21,7 +21,9 @@ function Themes() {
 
   return (
     <>
-      <span className="icon-theme" onClick={ handleClick }>{darkTheme ? <Theme className="sun" /> : <Theme className="moon" />}</span>
+      <div className="icon-theme" onClick={handleClick}>
+        {darkTheme ? <Theme className="light" /> : <Theme className="dark" />}
+      </div>
     </>
   );
 }

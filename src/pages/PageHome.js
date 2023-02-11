@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../utilities/logo";
+import Logo from "../components/logo";
 import lotus from "../images/lotus.jpg";
 import { useState } from "react";
 
@@ -52,33 +52,29 @@ function PageHome() {
     <main className="home">
       <Logo />
       <section>
-        <div>
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              index={0}
-            />
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={devArray}
-              index={13}
-            />
-          </h1>
-          <h2>
-            I enjoy building responsive websites and apps from scratch using
-            multiple platforms and frameworks!
-          </h2>
-        </div>
+        <h1>
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={nameArray}
+            index={0}
+          />
+          <br />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={devArray}
+            index={13}
+          />
+        </h1>
+        <h2>Bring ideas to life with code</h2>
 
         <figure className="call-to-action">
           <NavLink to="/works">
             <img src={lotus} alt="lotus illustration" />
-            <figcaption>Works</figcaption>
+            <figcaption>web works</figcaption>
           </NavLink>
         </figure>
       </section>
+
     </main>
   );
 }

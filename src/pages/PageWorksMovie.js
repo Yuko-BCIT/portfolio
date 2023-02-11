@@ -1,13 +1,16 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo";
+import Logo from "../components/logo";
 import movie from "../images/movie.jpg";
 import moviexd from "../images/moviexd.jpg";
 import previewVideo from "../media/preview.mp4";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Redux } from "../images/redux.svg";
-import { ReactComponent as CSS } from "../images/css.svg";
+import { ReactComponent as Sass } from "../images/sass.svg";
+import { ReactComponent as Xd } from "../images/xd.svg";
 import OtherWorks from "../components/OtherWorks";
+import ScrollButton from "../components/ScrollButton";
+import FadeInAnimation from "../utilities/fadeInAnimation";
 
 function PageWorkMovie() {
   return (
@@ -15,40 +18,35 @@ function PageWorkMovie() {
       <Helmet>
         <title>React Movie App</title>
       </Helmet>
+      <FadeInAnimation />
+      <ScrollButton />
       <Logo />
       <h1>React Movie App</h1>
 
       <section>
-        <h2>Preview - the Movie Database</h2>
+        <h2>Preview</h2>
 
         <figure>
           <img src={movie} alt="screen shot of a movie database website" />
         </figure>
 
         <div className="tools">
-          <h3>Tools</h3>
+          <h3>Tech Stack</h3>
 
           {/* icons */}
           <div>
             <React className="icon-tool" />
             <Redux className="icon-tool" />
             <Js className="icon-tool" />
-            <CSS className="icon-tool" />
+            <Sass className="icon-tool" />
+            <Xd className="icon-tool" />
           </div>
         </div>
       </section>
 
       <section className="project">
-        <h2>The project</h2>
-
         <article>
           <h3>Overview</h3>
-          <figure>
-            <video preload="auto" autoPlay muted playsInline controls>
-              <source src={previewVideo} type="video/mp4" />
-              Preview Video
-            </video>
-          </figure>
           <p>
             Preview is a React application that pulls in movie information via
             API and allows users to sort movies, add them to favorites, view
@@ -56,6 +54,12 @@ function PageWorkMovie() {
             simulated email subscription page without sending or storing user
             information.
           </p>
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={previewVideo} type="video/mp4" />
+              Preview Video
+            </video>
+          </figure>
         </article>
 
         <article>
@@ -136,8 +140,9 @@ function PageWorkMovie() {
             GitHub
           </a>
         </nav>
-
-        <OtherWorks />
+        <article>
+          <OtherWorks />
+        </article>
       </section>
     </main>
   );

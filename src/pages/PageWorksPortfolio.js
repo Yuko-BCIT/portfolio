@@ -1,12 +1,14 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo";
+import Logo from "../components/logo";
 import portfolio from "../images/portfolio.jpg";
 import folioxd from "../images/folioxd.jpg";
-import codefolio from "../images/codefolio.jpg";
 import OtherWorks from "../components/OtherWorks";
+import ScrollButton from "../components/ScrollButton";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
-import { ReactComponent as CSS } from "../images/css.svg";
+import { ReactComponent as Sass } from "../images/sass.svg";
+import { ReactComponent as Xd } from "../images/xd.svg";
+import FadeInAnimation from "../utilities/fadeInAnimation";
 
 function PageWorkPortfolio() {
   return (
@@ -14,28 +16,33 @@ function PageWorkPortfolio() {
       <Helmet>
         <title>Portfolio</title>
       </Helmet>
+      <FadeInAnimation />
+      <ScrollButton />
       <Logo />
       <h1>Portfolio</h1>
 
       <section>
         <h2>Yuko Web Works</h2>
-        <figure className="portfolio">
-          <img src={portfolio} alt="screen shot of a portfolio website" />
+        <figure>
+          <img
+            className="portfolio"
+            src={portfolio}
+            alt="screen shot of a portfolio website"
+          />
         </figure>
 
         <div className="tools">
-          <h3>Tools</h3>
+          <h3>Tech Stack</h3>
           <div>
             <React className="icon-tool" />
             <Js className="icon-tool" />
-            <CSS className="icon-tool" />
+            <Sass className="icon-tool" />
+            <Xd className="icon-tool" />
           </div>
         </div>
       </section>
 
       <section className="project">
-        <h2>The project</h2>
-
         <article>
           <h3>Overview</h3>
           <p>
@@ -75,10 +82,6 @@ function PageWorkPortfolio() {
             screenshots and videos to the projects and made touch-ups to the
             rest of the detailed styling.
           </p>
-
-          <figure className="wireframe">
-            <img src={codefolio} alt="screenshot of code editor" />
-          </figure>
         </article>
 
         <article>
@@ -107,8 +110,9 @@ function PageWorkPortfolio() {
             GitHub
           </a>
         </nav>
-
-        <OtherWorks />
+        <article>
+          <OtherWorks />
+        </article>
       </section>
     </main>
   );

@@ -1,16 +1,18 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo";
+import Logo from "../components/logo";
 import capstoneVideo from "../media/capstone.mp4";
 import capstone from "../images/capstone.jpg";
-import capxd1 from "../images/capxd1.jpg";
-import capxd2 from "../images/capxd2.jpg";
+import capxd from "../images/capxd.jpg";
 import trello from "../images/trello.jpg";
 import { ReactComponent as PHP } from "../images/php.svg";
 import { ReactComponent as Js } from "../images/js.svg";
-import { ReactComponent as CSS } from "../images/css.svg";
-import { ReactComponent as Woo } from "../images/woo.svg";
+import { ReactComponent as Sass } from "../images/sass.svg";
 import { ReactComponent as Wordpress } from "../images/wordpress.svg";
+import { ReactComponent as WordpressW } from "../images/wordpress-white.svg";
+import { ReactComponent as Xd } from "../images/xd.svg";
 import OtherWorks from "../components/OtherWorks";
+import ScrollButton from "../components/ScrollButton";
+import FadeInAnimation from "../utilities/fadeInAnimation";
 
 function PageWorkCapstone() {
   return (
@@ -18,9 +20,11 @@ function PageWorkCapstone() {
       <Helmet>
         <title>Capstone Project</title>
       </Helmet>
+      <FadeInAnimation />
+      <ScrollButton />
       <Logo />
       <h1>Capstone Project</h1>
-      
+
       <section>
         <h2>Tweeling Bakery</h2>
         <figure>
@@ -28,28 +32,21 @@ function PageWorkCapstone() {
         </figure>
 
         <div className="tools">
-          <h3>Tools</h3>
+          <h3>Tech Stack</h3>
           <div>
             <PHP className="icon-tool" />
+            <Sass className="icon-tool" />
             <Js className="icon-tool" />
-            <CSS className="icon-tool" />
-            <Wordpress className="icon-tool wordpress" />
-            <Woo className="icon-tool" />
+            <Wordpress className="icon-tool wordpress-b" />
+            <WordpressW className="icon-tool wordpress-w" />
+            <Xd className="icon-tool" />
           </div>
         </div>
       </section>
 
       <section className="project">
-        <h2>The project</h2>
-
         <article>
           <h3>Overview</h3>
-          <figure>
-            <video preload="auto" autoPlay muted playsInline controls>
-              <source src={capstoneVideo} type="video/mp4" />
-              High Low Video
-            </video>
-          </figure>
           <p>
             Tweeling Bakery is a fictional business website, developed with
             WordPress using Woocommerce online store plugins. Our team of 4
@@ -60,6 +57,12 @@ function PageWorkCapstone() {
             using WordPress and languages such as PHP, Javascript, CSS, and
             HTML.
           </p>
+          <figure>
+            <video preload="auto" autoPlay muted playsInline controls>
+              <source src={capstoneVideo} type="video/mp4" />
+              High Low Video
+            </video>
+          </figure>
         </article>
 
         <article>
@@ -69,11 +72,6 @@ function PageWorkCapstone() {
             site's structure and information architecture using Google Docs, and
             then writing out the content for each page.
           </p>
-
-          <figure className="wireframe">
-            <img src={capxd1} alt="wireframe of a bakery website" />
-          </figure>
-
           <p>
             We then used Adobe XD to visualize the contents of the docs in
             wireframes, and turned that into figh fidelity mockup to actually
@@ -82,9 +80,8 @@ function PageWorkCapstone() {
             deconstructed the site structure into pages, parts and templates and
             displayed onto the mockup to be ready for development.
           </p>
-
           <figure className="wireframe">
-            <img src={capxd2} alt="wireframe of a bakery website with color" />
+            <img src={capxd} alt="wireframe of a bakery website with color" />
           </figure>
         </article>
 
@@ -97,11 +94,6 @@ function PageWorkCapstone() {
             "Done" and the next task was moved to "Doing." This process made it
             easy to see who was currently working on what.
           </p>
-
-          <figure className="wireframe">
-            <img src={trello} alt="project management tool" />
-          </figure>
-
           <p>
             We used GitHub to share code, pushed and merged when the edits were
             finished to some extent, and notified members via Slack. When we
@@ -110,6 +102,9 @@ function PageWorkCapstone() {
             After finising writing the content for the site and making sure the
             functionality worked properly, we began the styling process.
           </p>
+          <figure className="wireframe">
+            <img src={trello} alt="project management tool" />
+          </figure>
         </article>
 
         <article>
@@ -159,8 +154,9 @@ function PageWorkCapstone() {
             GitHub
           </a>
         </nav>
-
-        <OtherWorks />
+        <article>
+          <OtherWorks />
+        </article>
       </section>
     </main>
   );

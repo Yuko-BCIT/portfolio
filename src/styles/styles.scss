@@ -6,11 +6,15 @@
 // components
 @use './components/header';
 @use './components/footer';
+@use './components/otherWorks';
+@use './components/skillsCube';
+@use './components/scrollButton';
 
 // pages
 @use './pages/home';
 @use './pages/about';
-@use './pages/work';
+@use './pages/works';
+@use './pages/work-details';
 
 // animate.css library
 @import 'animate.css';

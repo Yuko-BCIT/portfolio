@@ -1,12 +1,15 @@
 .app {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+  color: #312f2f;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 600;
   padding: 1.2rem 0;
+  margin-bottom: 3rem;
+  text-shadow: 1px 2px 0 #a17474, 7px 10px 3px #c9a2a254;
 }
 
 h2 {
@@ -17,6 +20,7 @@ h2 {
 
 h3 {
   font-weight: 500;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -27,8 +31,8 @@ h3 {
 }
 
 main p {
-  line-height: 2;
-  font-size: calc(16px + 0.3vw);
+  line-height: 1.7;
+  font-size: calc(15px + 0.1vw);
 }
 
 a {
@@ -41,7 +45,7 @@ a {
 }
 
 strong {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #bb2648;
 }
@@ -64,13 +68,6 @@ a:hover {
 }
 
 @media (min-width: 1000px) {
-  .active {
-    color: darkorange;
-    .icon-nav {
-      fill: darkorange;
-    }
-  }
-
   a:hover {
     color: darkcyan;
     .icon-nav {
@@ -78,7 +75,6 @@ a:hover {
     }
   }
 }
-
 
 // dark mode(put any selector you want to change with dark mode under .darkmode)
 .darkmode {
@@ -88,15 +84,26 @@ a:hover {
   a {
     color: #fff;
   }
-  
-  .home h1 {
-    color: #d6a0a0;
+
+  .home h1,
+  .home h2 {
+    color: #ede2e2;
+  }
+
+  .call-to-action {
+    img {
+      box-shadow: -7px 10px 10px -5px #000000;
+    }
   }
 
   .author,
   .logo-home,
   .icon-nav {
     fill: #fff;
+  }
+
+  .author:hover {
+    fill: darkcyan;
   }
 
   .active {
@@ -110,19 +117,7 @@ a:hover {
     color: #bb2648;
   }
 
-  .other-works a {
-    color: #fff;
-    background: linear-gradient(315deg, #363333, #403d3d);
-    box-shadow: -5px -5px 5px #181717, 5px 5px 5px #605b5b;
-  }
-
   @media (min-width: 1000px) {
-    .active {
-      color: darkorange;
-      .icon-nav {
-        fill: darkorange;
-      }
-    }
     a:hover {
       color: darkcyan;
       .icon-nav {

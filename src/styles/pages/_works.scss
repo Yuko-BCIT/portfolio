@@ -1,0 +1,92 @@
+// styling for work page and individual work pages
+.work {
+  max-height: 100%;
+  overflow: hidden;
+}
+.work p {
+  text-align: center;
+}
+
+figure img {
+  display: block;
+}
+
+.work figure {
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeInUp 1s;
+}
+
+.work figcaption {
+  background-color: #b69b9b;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.work h2 {
+  font-size: 1.2rem;
+}
+
+.work figure:hover {
+  box-shadow: 7px 7px 10px -5px #836d6d;
+  transform: translateY(-6px);
+  transition: 0.5s;
+}
+
+.work figure {
+  position: relative;
+  margin: 0 0.5rem 4rem;
+  figcaption {
+    text-align: center;
+  }
+}
+
+// image layout on different screen size
+@media (min-width: 500px) {
+  .work figure {
+    margin: 0 2rem 4rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .work h2 {
+    font-size: 1.4rem;
+  }
+
+  .work-links {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem;
+  }
+
+  .work figure {
+    margin: 0 0 3rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .work-links {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .work-links {
+    padding: 0 3rem;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .work-links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1600px) {
+  .work {
+    max-width: 90%;
+    margin: auto;
+  }
+}

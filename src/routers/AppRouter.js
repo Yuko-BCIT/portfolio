@@ -8,21 +8,22 @@ import PageWorksCapstone from "../pages/PageWorksCapstone";
 import PageWorksPortfolio from "../pages/PageWorksPortfolio";
 import PageWorksMovie from "../pages/PageWorksMovie";
 import PageWorksGame from "../pages/PageWorksGame";
-import PageWorksWelding from "../pages/PageWorksWelding";
 import Scroll from "../utilities/scroll";
 import Helmet from "react-helmet";
 import "../styles/styles.scss";
 
 function AppRouter() {
-  
   return (
     <BrowserRouter>
-    {/* Helmet for meta tag on each pages */}
+      {/* Helmet for meta tag on each pages */}
       <Helmet>
         <title>Yuko Web Works</title>
-        <meta name="description" content="Front end web developer with passion for building user-friendly, functional, eye-catching websites and leaning new technologies. Proficient in JavaScript, CSS, API integration and custom WordPress development." />
+        <meta
+          name="description"
+          content="Front end web developer with a passion for building user-friendly, functional, eye-catching websites and leaning new technologies. Proficient in JavaScript, CSS, API integration and custom WordPress development."
+        />
       </Helmet>
-      <div className="app" >
+      <div className="app">
         <Scroll />
         <Header />
         <Routes>
@@ -30,11 +31,10 @@ function AppRouter() {
           <Route path="/" exact element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/works" element={<PageWorks />} />
-          <Route path="/works/capstone" element={<PageWorksCapstone />} />
           <Route path="/works/portfolio" element={<PageWorksPortfolio />} />
+          <Route path="/works/capstone" element={<PageWorksCapstone />} />
           <Route path="/works/movie" element={<PageWorksMovie />} />
           <Route path="/works/game" element={<PageWorksGame />} />
-          <Route path="/works/welding" element={<PageWorksWelding />} />
         </Routes>
         <Footer />
       </div>

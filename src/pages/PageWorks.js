@@ -1,11 +1,10 @@
 import Helmet from "react-helmet";
-import Logo from "../utilities/logo"
+import Logo from "../components/logo";
 import { Link } from "react-router-dom";
 import capstone from "../images/capstone.jpg";
 import portfolio from "../images/portfolio.jpg";
 import movie from "../images/movie.jpg";
 import highlow from "../images/highlow.jpg";
-import kitahata from "../images/kitahata.jpg";
 
 function PageWorks() {
   return (
@@ -22,62 +21,50 @@ function PageWorks() {
       <h2>Click the images to see details</h2>
 
       <section className="work-links">
-        <figure>
-          <Link to="/works/capstone">
-            <img src={capstone} alt="screen shot of a bakery website" />
-          </Link>
-          <figcaption>
-            Capstone Project - Tweeling Bakery
-            <br />
-            Nov 2022
-          </figcaption>
-        </figure>
-
-        <figure className="portfolio">
-          <Link to="/works/portfolio">
+        <Link to="/works/portfolio">
+          <figure className="portfolio">
             <img src={portfolio} alt="screen shot of a portfolio website" />
-          </Link>
-          <figcaption>
-            Portfolio - Yuko Web Works
-            <br />
-            Nov 2022
-          </figcaption>
-        </figure>
+            <figcaption>
+              Portfolio
+              <br />
+              Yuko Web Works
+            </figcaption>
+          </figure>
+        </Link>
 
-        <figure>
-          <Link to="/works/movie">
+        <Link to="/works/capstone">
+          <figure>
+            <img src={capstone} alt="screen shot of a bakery website" />
+            <figcaption>
+              Capstone Project
+              <br />
+              Tweeling Bakery
+            </figcaption>
+          </figure>
+        </Link>
+
+        <Link to="/works/movie">
+          <figure>
             <img src={movie} alt="screen shot of a movie database website" />
-          </Link>
-          <figcaption>
-            React Movie App - Preview
-            <br />
-            Sept 2022
-          </figcaption>
-        </figure>
+            <figcaption>
+              React Movie App
+              <br />
+              Preview
+            </figcaption>
+          </figure>
+        </Link>
 
-        <figure>
-          <Link to="/works/game">
+        <Link to="/works/game">
+          <figure>
             <img src={highlow} alt="screen shot of a game website" />
-          </Link>
-          <figcaption>
-            JavaScript Game - High Low
-            <br />
-            July 2022
-          </figcaption>
-        </figure>
-
-        <figure>
-          <Link to="/works/welding">
-            <img src={kitahata} alt="screen shot of a welding website" />
-          </Link>
-          <figcaption>
-            Corporate Website - Welding Company
-            <br />
-            March 2022
-          </figcaption>
-        </figure>
+            <figcaption>
+              JavaScript Game
+              <br />
+              High Low
+            </figcaption>
+          </figure>
+        </Link>
       </section>
-
     </main>
   );
 }

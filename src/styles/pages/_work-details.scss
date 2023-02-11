@@ -1,0 +1,191 @@
+// single work pages
+.work-details {
+  max-width: 95%;
+  width: 100%;
+  margin: auto;
+  h1 {
+    font-size: 1.3rem;
+  }
+  video {
+    box-shadow: 0 0 10px 2px #737373;
+    border-radius: 10px;
+  }
+}
+
+// fix fadeInRight animation glitch
+.project {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+// project hidden before triggered on scroll
+.project article {
+  visibility: hidden;
+}
+// wordpress logo on capstone
+.tools .wordpress-w {
+  display: none;
+}
+
+.project article {
+  border-radius: 30px;
+  margin-bottom: 3rem;
+  padding: 1rem 0.7rem;
+  p {
+    padding: 0 1rem;
+  }
+}
+
+// alternate background colors on project page
+.project article:nth-child(odd) {
+  background-color: #fffaf3;
+}
+.project article:nth-child(even) {
+  border: 1px solid #3e3b3b;
+}
+//  no background styling on other works article
+.project article:nth-last-child(1) {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+
+.darkmode {
+  .project article:nth-child(odd) {
+    background-color: #000000;
+  }
+  .project article:nth-child(even) {
+    border: 1px solid #ffefd5;
+  }
+  .project article:nth-last-child(1) {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+  }
+  // switch wordpress logo color by themes
+  .wordpress-b {
+    display: none;
+  }
+  .wordpress-w {
+    display: initial;
+  }
+}
+
+@media (min-width: 350px) {
+  .work-details h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 400px) {
+  .work-details h1 {
+    font-size: 1.8rem;
+  }
+}
+
+// // page width
+@media (min-width: 500px) {
+  .work-details {
+    max-width: 80%;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .work-details h1 {
+    font-size: 2.5rem;
+    padding: 2.7rem 0;
+  }
+  .project article {
+    padding: 2rem;
+    p {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .work-details {
+    max-width: 70%;
+  }
+}
+@media (min-width: 1300px) {
+  // avoid project screenshot get too large
+  .work-details figure:nth-child(2) {
+    max-width: 85%;
+    margin: auto;
+  }
+  .work-details {
+    max-width: 48rem;
+  }
+}
+
+@media (min-width: 1500px) {
+}
+
+.work-details figure img {
+  border-radius: 10px;
+}
+
+.portfolio {
+  border: 0.5px solid #b69b9b;
+}
+
+.project h2 {
+  margin: 3rem 0;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  // animate.css animation
+  animation: fadeInUp 1s;
+}
+
+.icon-tool {
+  margin: 0.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  border: 2px solid #bb2648;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 500px) {
+  // .tools {
+  //   margin-bottom: 5rem;
+  // }
+  .icon-tool {
+    margin: 0.7rem;
+    width: 3rem;
+  }
+}
+
+.button {
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+  width: 40%;
+  border: 2px solid #bb2648;
+  color: #bb2648;
+  padding: 0.5rem;
+}
+.darkmode {
+  .button {
+    color: #bb2648;
+  }
+}
+
+.external-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem auto;
+  a:hover {
+    background-color: #bb2648;
+    color: white;
+  }
+}

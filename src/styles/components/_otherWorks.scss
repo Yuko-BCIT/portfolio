@@ -1,0 +1,48 @@
+// other works component
+.other-works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.other-works .active {
+  display: none;
+}
+
+.other-works a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #3e3b3b;
+  border-radius: 99px;
+//   background: linear-gradient(145deg, #d5cbcb, #fef2f2);
+  background: #ffdc17;
+  box-shadow: 5px 5px 10px #bbb3b3;
+}
+
+.darkmode {
+  .other-works a {
+    color: #fff;
+    // background: linear-gradient(315deg, #363333, #403d3d);
+    background: #8e38c7cc;
+    box-shadow: 5px 5px 5px #181717;
+  }
+}
+
+@media (min-width: 1000px) {
+  .other-works a {
+    margin: 1rem;
+  }
+}
+
+.other-works a:hover {
+  color: darkcyan;
+  animation: headShake 1s;
+}
+
+.see-other,
+.other-works {
+  text-align: center;
+}

@@ -4,6 +4,9 @@
   width: 1.5rem;
   margin: 1.5rem;
 }
+.about p {
+  margin-bottom: 2rem;
+}
 
 // pulse animation
 .pulse {
@@ -21,8 +24,8 @@
 .me {
   float: right;
   border-radius: 10px;
-  width: 40vw;
-  margin: 0.5rem;
+  width: 35vw;
+  margin: 0 0 0 0.5rem;
 }
 
 .about {
@@ -46,14 +49,8 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .about .icon-wrapper {
-    display: none;
-  }
-}
-
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .about {
-    max-width: 50%;
+    max-width: 48rem;
   }
 }
