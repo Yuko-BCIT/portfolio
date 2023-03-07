@@ -1,6 +1,8 @@
+@use "../base/variables" as *;
+
 .icon-about {
   display: inline;
-  fill: darkorange;
+  fill: $orange;
   width: 1.5rem;
   margin: 1.5rem;
 }
@@ -23,8 +25,7 @@
 
 .me {
   float: right;
-  border-radius: 10px;
-  width: 35vw;
+  width: 40vw;
   margin: 0 0 0 0.5rem;
 }
 
@@ -35,21 +36,14 @@
 
 @media (min-width: 500px) {
   .me {
-    width: 11rem;
-    margin: 1rem;
+    max-width: 15rem;
   }
   .about {
     max-width: 80%;
   }
 }
 
-@media (min-width: 700px) {
-  .about {
-    max-width: 60%;
-  }
-}
-
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
   .about {
     max-width: 48rem;
   }

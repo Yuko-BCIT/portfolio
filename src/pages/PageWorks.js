@@ -1,10 +1,11 @@
 import Helmet from "react-helmet";
 import Logo from "../components/logo";
 import { Link } from "react-router-dom";
-import capstone from "../images/capstone.jpg";
+import capstone from "../images/tweeling.jpg";
 import portfolio from "../images/portfolio.jpg";
 import movie from "../images/movie.jpg";
 import highlow from "../images/highlow.jpg";
+import ScrollButton from "../components/ScrollButton";
 
 function PageWorks() {
   return (
@@ -13,21 +14,23 @@ function PageWorks() {
         <title>Works</title>
         <meta
           name="description"
-          content="Take a look at my works and see details on the procedures and links to live sites and GitHub repositories."
+          content="Click the images to see the project details such as videos, overviews, 
+          development process, takeaways, and links to live sites and GitHub repositories."
         />
       </Helmet>
+      <ScrollButton />
       <Logo />
       <h1>Works</h1>
       <h2>Click the images to see details</h2>
 
       <section className="work-links">
-        <Link to="/works/portfolio">
-          <figure className="portfolio">
-            <img src={portfolio} alt="screen shot of a portfolio website" />
+        <Link to="/works/movie">
+          <figure>
+            <img src={movie} alt="screen shot of a movie database website" />
             <figcaption>
-              Portfolio
+              React Movie App
               <br />
-              Yuko Web Works
+              Preview
             </figcaption>
           </figure>
         </Link>
@@ -43,13 +46,13 @@ function PageWorks() {
           </figure>
         </Link>
 
-        <Link to="/works/movie">
-          <figure>
-            <img src={movie} alt="screen shot of a movie database website" />
+        <Link to="/works/portfolio">
+          <figure className="portfolio">
+            <img src={portfolio} alt="screen shot of a portfolio website" />
             <figcaption>
-              React Movie App
+              Portfolio
               <br />
-              Preview
+              Yuko Web Works
             </figcaption>
           </figure>
         </Link>

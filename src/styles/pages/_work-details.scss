@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 // single work pages
 .work-details {
   max-width: 95%;
@@ -22,13 +24,12 @@
 .project article {
   visibility: hidden;
 }
-// wordpress logo on capstone
+// switch wordpress logo color by themes
 .tools .wordpress-w {
   display: none;
 }
 
 .project article {
-  border-radius: 30px;
   margin-bottom: 3rem;
   padding: 1rem 0.7rem;
   p {
@@ -38,11 +39,9 @@
 
 // alternate background colors on project page
 .project article:nth-child(odd) {
-  background-color: #fffaf3;
+  background-color: #fffafa;
 }
-.project article:nth-child(even) {
-  border: 1px solid #3e3b3b;
-}
+
 //  no background styling on other works article
 .project article:nth-last-child(1) {
   background-color: transparent;
@@ -51,12 +50,15 @@
 }
 
 .darkmode {
+  .work-details {
+    video {
+      box-shadow: 0 0 10px 2px $black;
+    }
+  }
   .project article:nth-child(odd) {
-    background-color: #000000;
+    background-color: $black;
   }
-  .project article:nth-child(even) {
-    border: 1px solid #ffefd5;
-  }
+
   .project article:nth-last-child(1) {
     background-color: transparent;
     border: none;
@@ -105,23 +107,10 @@
   }
 }
 
-@media (min-width: 700px) {
-  .work-details {
-    max-width: 70%;
-  }
-}
-@media (min-width: 1300px) {
-  // avoid project screenshot get too large
-  .work-details figure:nth-child(2) {
-    max-width: 85%;
-    margin: auto;
-  }
+@media (min-width: 1000px) {
   .work-details {
     max-width: 48rem;
   }
-}
-
-@media (min-width: 1500px) {
 }
 
 .work-details figure img {
@@ -129,7 +118,7 @@
 }
 
 .portfolio {
-  border: 0.5px solid #b69b9b;
+  border: 0.5px solid $beige;
 }
 
 .project h2 {
@@ -150,15 +139,12 @@
   margin: 0.5rem;
   width: 2.5rem;
   display: inline-block;
-  border: 2px solid #bb2648;
+  border: 2px solid $magenta;
   padding: 0.5rem;
   border-radius: 10px;
 }
 
 @media (min-width: 500px) {
-  // .tools {
-  //   margin-bottom: 5rem;
-  // }
   .icon-tool {
     margin: 0.7rem;
     width: 3rem;
@@ -168,15 +154,17 @@
 .button {
   font-weight: 500;
   border-radius: 8px;
+  font-weight: 600;
   text-align: center;
   width: 40%;
-  border: 2px solid #bb2648;
-  color: #bb2648;
+  border: 2px solid $magenta;
+  color: $magenta;
   padding: 0.5rem;
 }
+
 .darkmode {
   .button {
-    color: #bb2648;
+    color: $magenta;
   }
 }
 
@@ -184,8 +172,19 @@
   display: flex;
   justify-content: space-evenly;
   margin: 3rem auto;
-  a:hover {
-    background-color: #bb2648;
-    color: white;
+  a:hover,
+  a:active {
+    font-weight: 700;
+    color: $white;
+    background-color: $orange;
+    border: 2px solid $orange;
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2rem transparent;
+  }
+}
+// pulse animation https://codepen.io/giana/pen/BZaGyP
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #{adjust-hue(#ff0000, 45deg)};
   }
 }

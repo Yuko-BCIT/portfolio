@@ -1,8 +1,7 @@
 import Helmet from "react-helmet";
 import Logo from "../components/logo";
-import capstoneVideo from "../media/capstone.mp4";
 import capstone from "../images/capstone.jpg";
-import capxd from "../images/capxd.jpg";
+import capstoneVideo from "../media/capstone.mp4";
 import trello from "../images/trello.jpg";
 import { ReactComponent as PHP } from "../images/php.svg";
 import { ReactComponent as Js } from "../images/js.svg";
@@ -19,6 +18,13 @@ function PageWorkCapstone() {
     <main className="work-details">
       <Helmet>
         <title>Capstone Project</title>
+        <meta
+          name="description"
+          content="Tweeling Bakery is a multi-purpose e-commerce website designed to
+            help a business start online sales, increase local customers, and
+            hire new team members. Developed by a team of 4 using WordPress
+            &#40;PHP, JavaScript, Sass and MySQL&#41; with Woocommerce plugins."
+        />
       </Helmet>
       <FadeInAnimation />
       <ScrollButton />
@@ -28,7 +34,10 @@ function PageWorkCapstone() {
       <section>
         <h2>Tweeling Bakery</h2>
         <figure>
-          <img src={capstone} alt="screen shot of a bakery website" />
+          <video autoPlay muted playsInline controls poster={capstone}>
+            <source src={capstoneVideo} type="video/mp4" />
+            Tweeling Bakery Video
+          </video>
         </figure>
 
         <div className="tools">
@@ -48,91 +57,62 @@ function PageWorkCapstone() {
         <article>
           <h3>Overview</h3>
           <p>
-            Tweeling Bakery is a fictional business website, developed with
-            WordPress using Woocommerce online store plugins. Our team of 4
-            worked together to create the structure, content, and designed the
-            website, requested by fictional clients to allow more local
-            customers to learn about their business and products, place orders,
-            and get them delivered to their doors. Then we developed the website
-            using WordPress and languages such as PHP, Javascript, CSS, and
-            HTML.
+            Tweeling Bakery is a multi-purpose e-commerce website designed to
+            help a business start online sales, increase local customers, and
+            hire new team members. Developed by a team of 4 using WordPress
+            &#40;PHP, JavaScript, Sass and MySQL&#41; with Woocommerce plugins.
           </p>
-          <figure>
-            <video preload="auto" autoPlay muted playsInline controls>
-              <source src={capstoneVideo} type="video/mp4" />
-              High Low Video
-            </video>
-          </figure>
-        </article>
-
-        <article>
-          <h3>Design</h3>
-          <p>
-            We shared files and proceeded with the design, first determining the
-            site's structure and information architecture using Google Docs, and
-            then writing out the content for each page.
-          </p>
-          <p>
-            We then used Adobe XD to visualize the contents of the docs in
-            wireframes, and turned that into figh fidelity mockup to actually
-            insert images and colors. We tried several colors, logos, icons and
-            chose which ones would best fit the image of the site. Then we
-            deconstructed the site structure into pages, parts and templates and
-            displayed onto the mockup to be ready for development.
-          </p>
-          <figure className="wireframe">
-            <img src={capxd} alt="wireframe of a bakery website with color" />
-          </figure>
         </article>
 
         <article>
           <h3>Development</h3>
           <p>
-            Using Trello, a project management tool, we divided tasks into
-            bite-size pieces and had each person in charge of one page to avoid
-            merge conflicts. When a task was completed, the task was dragged to
-            "Done" and the next task was moved to "Doing." This process made it
-            easy to see who was currently working on what.
-          </p>
-          <p>
-            We used GitHub to share code, pushed and merged when the edits were
-            finished to some extent, and notified members via Slack. When we
-            wanted to edit pages other than our own, we made sure that no two
-            people edited the same file at the same time for smooth merging.
-            After finising writing the content for the site and making sure the
-            functionality worked properly, we began the styling process.
+            We used GitHub to version control source code, each of us working on
+            different branch. Trello &#40;Agile methodology&#41; made it easier
+            to divide tasks into small pieces, visualize who is working on what,
+            and tackle one task after another.
           </p>
           <figure className="wireframe">
-            <img src={trello} alt="project management tool" />
+            <img src={trello} alt="project management tool" loading="lazy" />
           </figure>
-        </article>
-
-        <article>
-          <h3>My Role</h3>
           <p>
-            I was active in coming up with design ideas and tried out different
-            layouts and colors on XD. In coding, I was in charge of the location
-            page and registered the project on Google Map API, then wrote codes
-            to call API to receive map and location information of the fictional
-            shops. Then I created a JavaScript file, a PHP template file to call
-            the map on multiple pages. I also setup Stripe account and tested
-            payments, configured the backend settings such as delivery areas,
-            options and rates, tax settings, etc.
+            I was in charge of developing the location page and integrating
+            Google Map APIs into the website. Created a JavaScript file to fetch
+            map data, then wrote PHP code to call the JavaScript file and make
+            shops' information clickable &#40;addresses and phone numbers&#41;
+            on the map. To make the code reusable, I put it in a PHP template
+            file and called it on multiple pages.
+          </p>
+          <p>
+            My role also included styling landing page, testing the site on
+            multiple browsers and devices, setting up Stripe account and testing
+            payments, and configuring the backend settings such as delivery
+            areas, options and rates, and tax settings.
           </p>
         </article>
 
         <article>
           <h3>Takeaways</h3>
           <p>
-            Although our team worked primarily remotely, we were able to
-            communicate proactively using Slack and respond immediately to any
-            suggestions or problems. We also made effective use of file sharing
-            so that everyone could brainstorm the ideas they had, so we could
-            choose the best ones from a variety of ideas. We were able to have
-            an experience similar to that of doing actual work situation. I
-            learned to be proactive in picking up tasks, and to be responsible
-            for what I do. This project taught me the importance and fun of
-            teamwork creating a work together.
+            Although our team worked mostly remotely, we were able to
+            communicate proactively using Trello and Slack responding
+            immediately to questions and problems. The team also made effective
+            use of file sharing on every stage from design to coding, and
+            everyone perticipated in brainstorming ideas to choose the best of
+            the best.
+          </p>
+          <p>
+            We learned to be proactive in picking up tasks and responsible for
+            getting them done under strict deadline and requirements. When
+            someone got stuck in solving a problem, we gathered our knowledge
+            and resources, helped each other and solved the problem.
+          </p>
+          <p>
+            With 4 people working together, sometimes disagreements arose.
+            However, we were open to discussions and resolved conflicts while
+            respecting and encouraging each other. This project taught me that
+            through open communication and mutual respect as a team, we can
+            create great work that I could not have done on my own.
           </p>
         </article>
 

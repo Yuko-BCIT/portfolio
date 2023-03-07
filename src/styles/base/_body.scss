@@ -1,9 +1,10 @@
-// site structure
+@use "variables" as *;
+
 .app {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 6rem 3rem;
-  background-color: #ede2e2;
+  background-color: $light;
   min-height: 100vh;
 }
 
@@ -71,14 +72,6 @@ footer {
       justify-content: flex-start;
       margin: 0;
     }
-    li {
-      margin: 0rem 0 6rem 4rem;
-      font-size: 1.5rem;
-    }
-
-    a {
-      color: #3e3b3b;
-    }
   }
 
   main {
@@ -96,6 +89,14 @@ footer {
   }
 }
 
-img, video, .work figure {
-  box-shadow: 0 0 5px 0 #979797;
+img,
+.work figure {
+  box-shadow: 2px 2px 3px 1px #948a8a;
+}
+
+.darkmode {
+  img,
+  .work figure {
+    box-shadow: 3px 3px 3px 1px $black;
+  }
 }

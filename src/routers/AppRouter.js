@@ -8,6 +8,7 @@ import PageWorksCapstone from "../pages/PageWorksCapstone";
 import PageWorksPortfolio from "../pages/PageWorksPortfolio";
 import PageWorksMovie from "../pages/PageWorksMovie";
 import PageWorksGame from "../pages/PageWorksGame";
+import PageNotFound from "../pages/PageNotFound";
 import Scroll from "../utilities/scroll";
 import Helmet from "react-helmet";
 import "../styles/styles.scss";
@@ -35,6 +36,7 @@ function AppRouter() {
           <Route path="/works/capstone" element={<PageWorksCapstone />} />
           <Route path="/works/movie" element={<PageWorksMovie />} />
           <Route path="/works/game" element={<PageWorksGame />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </div>

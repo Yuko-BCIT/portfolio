@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 // other works component
 .other-works {
   display: flex;
@@ -15,19 +17,30 @@
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   text-align: center;
-  color: #3e3b3b;
+  color: $gray;
   border-radius: 99px;
-//   background: linear-gradient(145deg, #d5cbcb, #fef2f2);
-  background: #ffdc17;
+  background: $white;
   box-shadow: 5px 5px 10px #bbb3b3;
+}
+
+.other-works a:hover,
+.other-works a:active {
+  font-weight: 600;
+  color: $white;
+  background: $beige;
+  animation: headShake 1s;
 }
 
 .darkmode {
   .other-works a {
-    color: #fff;
-    // background: linear-gradient(315deg, #363333, #403d3d);
-    background: #8e38c7cc;
+    color: $white;
+    background: #6b6a6a;
     box-shadow: 5px 5px 5px #181717;
+  }
+  .other-works a:hover,
+  .other-works a:active {
+    color: $gray;
+    background: $white;
   }
 }
 
@@ -35,11 +48,6 @@
   .other-works a {
     margin: 1rem;
   }
-}
-
-.other-works a:hover {
-  color: darkcyan;
-  animation: headShake 1s;
 }
 
 .see-other,

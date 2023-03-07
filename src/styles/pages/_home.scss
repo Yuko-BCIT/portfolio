@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 .home {
   text-align: center;
   position: relative;
@@ -11,7 +13,7 @@
 
 .logo-home {
   display: inline-block;
-  fill: #3e3b3b;
+  fill: $gray;
   width: 3rem;
   position: absolute;
   top: 0.5rem;
@@ -22,13 +24,13 @@
 }
 
 .home h1 {
-  font-family: Georgia, serif;
+  font-family: $serif;
   font-size: calc(1.5rem + 2vw);
   font-weight: 900;
   padding: 0;
-  margin-bottom: 0; //undo the typograthy's margin-bottom
+  margin-bottom: 0; //undo the typography's margin-bottom
   line-height: calc(2rem + 3vw);
-  color: #5f5555;
+  color: $light-gray;
   text-shadow: none;
 }
 
@@ -38,7 +40,7 @@
   text-align: center;
   max-width: 80vw;
   margin: 2rem auto;
-  color: #5f5555;
+  color: $gray;
   line-height: 2rem;
 
   // text animation
@@ -54,6 +56,7 @@
   animation: bounceIn 1s;
   animation-fill-mode: forwards;
 }
+// iterate through text index from [0] to [25] and delay animation after each letter displays
 @for $i from 0 through 25 {
   .text-animate._#{$i} {
     animation-delay: #{calc($i / 10)}s;
@@ -65,8 +68,8 @@
     max-width: 70vw;
   }
   .logo-home {
-  left: 2.5rem;
-top: 2.5rem;
+    left: 2.5rem;
+    top: 2.5rem;
   }
 }
 
@@ -94,11 +97,11 @@ top: 2.5rem;
 
   img {
     border-radius: 0% 55% 50% 70%;
-    box-shadow: -7px 10px 10px -5px #836d6d;
+    box-shadow: -5px 7px 10px -5px #836d6d;
   }
   figcaption {
-    color: #fff;
-    font-size: calc(1.3rem + 0.8vw);
+    color: $white;
+    font-size: calc(1.5rem + 0.8vw);
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
@@ -108,7 +111,6 @@ top: 2.5rem;
     transform: translate(-50%, -50%);
   }
 }
-
 
 @media (min-width: 1000px) {
   .home h2 {

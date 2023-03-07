@@ -1,7 +1,6 @@
 import Helmet from "react-helmet";
 import Logo from "../components/logo";
 import portfolio from "../images/portfolio.jpg";
-import folioxd from "../images/folioxd.jpg";
 import OtherWorks from "../components/OtherWorks";
 import ScrollButton from "../components/ScrollButton";
 import { ReactComponent as React } from "../images/react.svg";
@@ -15,6 +14,13 @@ function PageWorkPortfolio() {
     <main className="work-details">
       <Helmet>
         <title>Portfolio</title>
+        <meta
+          name="description"
+          content="This is my portfolio showcasing my projects and a little bit about
+            myself. I used React because components reduce code repetition, it
+            supports a variety of great libraries, and I wanted to improve my
+            React skills."
+        />
       </Helmet>
       <FadeInAnimation />
       <ScrollButton />
@@ -46,63 +52,59 @@ function PageWorkPortfolio() {
         <article>
           <h3>Overview</h3>
           <p>
-            This is my portfolio website using React app showcasing my works,
-            links to livesite and GitHub repositories, and a little bit about
-            myself. A dark and light mode is implemented, allowing users to
-            switch between background and font colors. I chose React because it
-            allows me to divide structures into components, avoiding repetition
-            of the same code, it supports a variety of great libraries which
-            make it fun to use React.
+            This is my portfolio showcasing my projects and a little bit about
+            myself. I used React because components reduce code repetition, it
+            supports a variety of great libraries, and I wanted to improve my
+            React skills.
           </p>
-        </article>
-
-        <article>
-          <h3>Design</h3>
-          <p>
-            Made a style guide to determine fonts, colors, and a rough design,
-            documented the content plan, created a wireframe in Adobe XD based
-            on that plan, and rearranged the site structure based on user
-            experience (bottom navigation for mobile, switchable to dark mode
-            for energy saving.)
-          </p>
-
-          <figure className="wireframe">
-            <img src={folioxd} alt="wireframe of a portfolio website" />
-          </figure>
         </article>
 
         <article>
           <h3>Development</h3>
           <p>
-            Using Create React App, I divided the structure into components,
-            first styling the header, footer, and main layout in the order
-            mobile, tablet then desktop, and finished styling to some extent.
-            After that I wrote contents, added photos, icons and after those
-            were completed, I added dark mode. Finally I added supportive
-            screenshots and videos to the projects and made touch-ups to the
-            rest of the detailed styling.
+            The main feature of this application is the light/dark mode toggled
+            by a user, since I enjoy using this feature on other websites for
+            browsing at night time. I triggered onClick event to add a className
+            to change styling with useEffect.
+          </p>
+          <p>
+            Using various components, I created a fade-in animation for the text
+            and a "back to top" button that appears when scrolling to a certain
+            point. Importing these components into the target pages made it easy
+            to reuse the functions.
+          </p>
+          <p>
+            For SEO purposes, I also imported react-helmet on each page and
+            added title and metadata to increase search hits.
           </p>
         </article>
 
         <article>
           <h3>Takeaways</h3>
           <p>
-            Based on the previous experience, the styling was done in a
-            mobile-first manner, which made it smooth and efficient. However,
-            most of the styling was done before the content, which took some
-            time, and the content was put on the back burner. Also, I tried to
-            add various features before writing the content, but ended up not
-            using them which delayed the development. As I learned in the
-            project management class, when time is limited, "nice-to-have
-            features" should come last and do what matters most in the early
-            stages of the project. In the next project, I would like to proceed
-            in the following order: content, styling, and nice-to-have features.
+            Learning from the movie database experience, I approached the
+            styling in a mobile-first manner. As a result, it took less time to
+            make the app responsive. And I challanged implementing bottom/side
+            navigation for the first time and I struggled a bit to structure
+            pages, but it was a great learning experience.
+          </p>
+          <p>
+            My classmates and I shared each others portfolios and I got to see
+            the cool features they were using, which was very inspiring and
+            taught me the importance of learning from each other.
+          </p>
+          <p>
+            Time management was extremely difficult since I had to work on our
+            final group project simultaneously, so I need to work on this skill.
+            When adding new features, I go through extensive research to make it
+            work and my coding skills are improving, so I would like to keep my
+            portfolio evolving and learn from it.
           </p>
         </article>
 
         <nav className="external-links">
           <a
-            className="button single-work-button github"
+            className="button"
             href="https://github.com/Yuko-BCIT/portfolio"
             target="_blank"
             rel="noopener noreferrer"

@@ -1,15 +1,17 @@
+@use "variables" as *;
 .app {
-  font-family: "Montserrat", sans-serif;
+  font-family: $sans-serif;
   font-weight: 400;
-  color: #312f2f;
+  color: $dark;
 }
 
 h1 {
+  font-family: $serif;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.2rem 0;
   margin-bottom: 3rem;
-  text-shadow: 1px 2px 0 #a17474, 7px 10px 3px #c9a2a254;
+  text-shadow: 1px 1px 0 #a17474, 7px 10px 3px #c9a2a254;
 }
 
 h2 {
@@ -37,91 +39,83 @@ main p {
 
 a {
   text-decoration: none;
-  color: #fff;
-}
-
-.external-links a:hover {
-  color: #fff;
-}
-
-strong {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #bb2648;
+  color: $white;
 }
 
 .active {
-  color: #bb2648;
+  color: $magenta;
   .icon-nav {
-    fill: #bb2648;
+    fill: $magenta;
   }
 }
 
-a:hover {
-  color: #bb2648;
+// hover on icons on mobile
+a:hover,
+a:active {
+  color: $magenta;
   svg {
-    fill: darkcyan;
+    fill: $cyan;
   }
   .icon-nav {
-    fill: #bb2648;
+    fill: $magenta;
   }
 }
 
+// hover on icons on desktop
 @media (min-width: 1000px) {
-  a:hover {
-    color: darkcyan;
+  a:hover,
+  a:active {
+    color: $cyan;
     .icon-nav {
-      fill: darkcyan;
+      fill: $cyan;
     }
   }
 }
 
 // dark mode(put any selector you want to change with dark mode under .darkmode)
 .darkmode {
-  background-color: #312f2f;
-  color: #fff;
+  background-color: $dark;
+  color: $white;
 
   a {
-    color: #fff;
+    color: $white;
   }
 
   .home h1,
   .home h2 {
-    color: #ede2e2;
+    color: $white;
   }
 
   .call-to-action {
     img {
-      box-shadow: -7px 10px 10px -5px #000000;
+      box-shadow: -5px 7px 10px -5px $black;
     }
   }
 
   .author,
   .logo-home,
   .icon-nav {
-    fill: #fff;
-  }
-
-  .author:hover {
-    fill: darkcyan;
+    fill: $white;
   }
 
   .active {
-    color: #bb2648;
+    color: $magenta;
     .icon-nav {
-      fill: #bb2648;
+      fill: $magenta;
     }
   }
 
-  a:hover {
-    color: #bb2648;
+  a:hover,
+  a:active {
+    color: $magenta;
   }
 
   @media (min-width: 1000px) {
-    a:hover {
-      color: darkcyan;
+    a:hover,
+    a:active {
+      color: $cyan;
       .icon-nav {
-        fill: darkcyan;
+        fill: $cyan;
       }
     }
   }

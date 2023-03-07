@@ -7,7 +7,7 @@ function ScrollButton() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       // when scrolled to 1500px vertically, scroll button appears
-      if (window.scrollY > 1500) {
+      if (window.scrollY > 1000) {
         setBackToTop(true);
       } else {
         setBackToTop(false);

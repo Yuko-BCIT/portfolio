@@ -1,5 +1,6 @@
 // base
 @use './base/reset';
+@use './base/variables';
 @use './base/body';
 @use './base/typography';
 
@@ -15,6 +16,7 @@
 @use './pages/about';
 @use './pages/works';
 @use './pages/work-details';
+@use './pages/notFound';
 
 // animate.css library
 @import 'animate.css';

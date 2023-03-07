@@ -1,4 +1,5 @@
-// styling for work page and individual work pages
+@use "../base/variables" as *;
+
 .work {
   max-height: 100%;
   overflow: hidden;
@@ -18,8 +19,8 @@ figure img {
 }
 
 .work figcaption {
-  background-color: #b69b9b;
-  color: #fff;
+  background-color: $beige;
+  color: $white;
   font-weight: 500;
   padding: 0.5rem 0;
 }
@@ -28,10 +29,24 @@ figure img {
   font-size: 1.2rem;
 }
 
-.work figure:hover {
-  box-shadow: 7px 7px 10px -5px #836d6d;
-  transform: translateY(-6px);
-  transition: 0.5s;
+.work {
+  figure:hover,
+  figure:active,
+  figure:focus {
+    box-shadow: 7px 7px 10px -5px #836d6d;
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+}
+
+.darkmode {
+  .work {
+    figure:hover,
+    figure:active,
+    figure:focus {
+      box-shadow: 7px 7px 10px $black;
+    }
+  }
 }
 
 .work figure {
@@ -79,7 +94,7 @@ figure img {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .work-links {
     grid-template-columns: 1fr 1fr 1fr;
   }

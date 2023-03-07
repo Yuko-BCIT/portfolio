@@ -5,12 +5,6 @@ function Footer() {
 
   const location = useLocation().pathname;
 
-  /*
-
-   className={ `{<PageAbout /> === "active"} ? "footer-about" : null` }
-
-  */
-
   return (
     <footer className={location === '/' ? 'footer-about' : null}  >
       <p>Yuko Web Works &copy;{getYear()}</p>
