@@ -4,6 +4,8 @@
   height: 100%;
   margin: auto;
   padding: 1rem 0 11rem;
+  // this fixes z-index bug on Safari, cube being on top of header
+  perspective: 1000px;
 }
 
 .cube-spinner {
@@ -16,20 +18,10 @@
     height: 150px;
     background-color: #ffffffb3;
     box-shadow: 0 0 10px 0 #f2ffab;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
   }
 }
 
-// darkmode background color
-.darkmode {
-  .cube-spinner div {
-    background-color: #fee4e4b3;
-    box-shadow: 0 0 10px 0 #ffffe0;
-  }
-}
 .face1 {
   transform: translateZ(75px);
 }
@@ -73,5 +65,4 @@
 
 .click-the-cube {
   text-align: center;
-  font-weight: 600;
 }

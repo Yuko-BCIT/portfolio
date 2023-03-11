@@ -124,7 +124,7 @@ header nav li {
       color: $light-gray;
     }
     li {
-      margin: 0 0 13vh 0;
+      margin: 0 0 10vh 0;
     }
   }
 
@@ -151,7 +151,6 @@ header nav li {
     display: block;
     width: 4rem;
     margin: 1rem 0;
-
     // logo animation
     animation: flip 2s;
   }
@@ -160,13 +159,13 @@ header nav li {
 .light {
   fill: #ffd700;
   transform: rotateY(180deg);
-  border-radius: 8px;
+  border-radius: 7px;
   background-color: $dark;
 }
 .dark {
-  fill: #800080;
+  fill: $gray;
   background-color: $light;
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 // pop-up contact links
@@ -175,6 +174,9 @@ header nav li {
 }
 @media (min-width: 1000px) {
   .on-off-links {
+    display: none;
+  }
+  .icon-nav {
     display: none;
   }
 }

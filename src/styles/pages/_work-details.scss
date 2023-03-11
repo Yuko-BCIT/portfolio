@@ -2,8 +2,8 @@
 
 // single work pages
 .work-details {
-  max-width: 95%;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   margin: auto;
   h1 {
     font-size: 1.3rem;
@@ -12,6 +12,14 @@
     box-shadow: 0 0 10px 2px #737373;
     border-radius: 10px;
   }
+  h2 + figure {
+    margin: 0 1rem;
+  }
+}
+
+// switch wordpress logo color by themes
+.tools .wordpress-w {
+  display: none;
 }
 
 // fix fadeInRight animation glitch
@@ -20,29 +28,18 @@
   overflow: hidden;
 }
 
-// project hidden before triggered on scroll
 .project article {
+  // project hidden before triggered on scroll
   visibility: hidden;
-}
-// switch wordpress logo color by themes
-.tools .wordpress-w {
-  display: none;
-}
-
-.project article {
-  margin-bottom: 3rem;
-  padding: 1rem 0.7rem;
-  p {
-    padding: 0 1rem;
-  }
+  padding: 1rem;
 }
 
 // alternate background colors on project page
 .project article:nth-child(odd) {
-  background-color: #fffafa;
+  background-color: $white;
 }
 
-//  no background styling on other works article
+// undo background styling on other works article
 .project article:nth-last-child(1) {
   background-color: transparent;
   border: none;
@@ -56,7 +53,7 @@
     }
   }
   .project article:nth-child(odd) {
-    background-color: $black;
+    background-color: $olive;
   }
 
   .project article:nth-last-child(1) {
@@ -70,6 +67,23 @@
   }
   .wordpress-w {
     display: initial;
+  }
+}
+
+.button {
+  font-weight: 500;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  width: 40%;
+  border: 2px solid $magenta;
+  color: $magenta;
+  padding: 0.5rem;
+}
+
+.darkmode {
+  .button {
+    color: $magenta;
   }
 }
 
@@ -87,10 +101,12 @@
 // // page width
 @media (min-width: 500px) {
   .work-details {
-    max-width: 80%;
     h1 {
       font-size: 2rem;
     }
+  }
+  .project article {
+    padding: 2rem;
   }
 }
 
@@ -99,17 +115,21 @@
     font-size: 2.5rem;
     padding: 2.7rem 0;
   }
-  .project article {
-    padding: 2rem;
-    p {
-      padding: 0;
+}
+@media (min-width: 700px) {
+  .work-details {
+    h2 + figure {
+      max-width: 40rem;
+      margin: 0 auto;
     }
   }
 }
-
-@media (min-width: 1000px) {
-  .work-details {
-    max-width: 48rem;
+@media (min-width: 1100px) {
+  .project article {
+    padding: 4rem calc(50vw - 30rem);
+  }
+  .button {
+    width: 25rem;
   }
 }
 
@@ -148,23 +168,6 @@
   .icon-tool {
     margin: 0.7rem;
     width: 3rem;
-  }
-}
-
-.button {
-  font-weight: 500;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  width: 40%;
-  border: 2px solid $magenta;
-  color: $magenta;
-  padding: 0.5rem;
-}
-
-.darkmode {
-  .button {
-    color: $magenta;
   }
 }
 

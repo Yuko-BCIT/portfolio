@@ -30,21 +30,16 @@
 }
 
 .about {
-  max-width: 90%;
+  max-width: 60rem;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
 @media (min-width: 500px) {
   .me {
-    max-width: 15rem;
+    max-width: 13rem;
   }
   .about {
-    max-width: 80%;
-  }
-}
-
-@media (min-width: 1000px) {
-  .about {
-    max-width: 48rem;
+    padding: 0 2rem;
   }
 }

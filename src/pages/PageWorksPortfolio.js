@@ -8,6 +8,10 @@ import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Sass } from "../images/sass.svg";
 import { ReactComponent as Xd } from "../images/xd.svg";
 import FadeInAnimation from "../utilities/fadeInAnimation";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import folioCode1 from "../code/folioCode1";
+import folioCode2 from "../code/folioCode2";
 
 function PageWorkPortfolio() {
   return (
@@ -67,15 +71,35 @@ function PageWorkPortfolio() {
             browsing at night time. I triggered onClick event to add a className
             to change styling with useEffect.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {folioCode1}
+            </SyntaxHighlighter>
+          </div>
           <p>
-            Using various components, I created a fade-in animation for the text
-            and a "back to top" button that appears when scrolling to a certain
-            point. Importing these components into the target pages made it easy
-            to reuse the functions.
+            I created a fade-in animation for projects' text and a "back to top"
+            button that appears when scrolling to a certain point. Creating
+            various components like these and importing into the target pages
+            made it easy to reuse the functions and features.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {folioCode2}
+            </SyntaxHighlighter>
+          </div>
           <p>
-            For SEO purposes, I also imported react-helmet on each page and
-            added title and metadata to increase search hits.
+            Colors and fonts were put in Sass variables and it made it easy to
+            make changes to color themes. For SEO purposes, react-helmet was
+            imported and title and metadata were added to each page to increase
+            search hits.
           </p>
         </article>
 
@@ -103,12 +127,7 @@ function PageWorkPortfolio() {
         </article>
 
         <nav className="external-links">
-          <a
-            className="button"
-            href="https://github.com/Yuko-BCIT/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="button" href="https://github.com/Yuko-BCIT/portfolio">
             GitHub
           </a>
         </nav>

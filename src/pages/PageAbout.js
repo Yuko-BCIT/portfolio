@@ -42,13 +42,13 @@ const PageAbout = () => (
           Other than coding, I love French Bulldogs &#40;I follow cute Frenchies
           on Instagram&#41;, bike riding, snowboarding, karaoke and travelling
           the world. My favorite places are Thailand and Bali.
-          <br />I would love to hear from you! Contact me through email,
+          <br />I would love to hear from you&#128522; Contact me through email,
           LinkedIn and check out my GitHub repos!
         </p>
       </article>
       <article>
         <Skills />
-        <p className="click-the-cube">Click &#127922; and see my projects!</p>
+        <p className="click-the-cube">Click &#127922; and see my projects</p>
       </article>
     </section>
   </main>

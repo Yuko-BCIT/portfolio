@@ -1,7 +1,5 @@
-import { ReactComponent as Rocket } from "../images/rocket.svg";
-import { useState, useEffect } from "react";
-
-function ScrollButton() {
+const folioCode2 =
+`function ScrollButton() {
   const [backToTop, setBackToTop] = useState(false);
 
   useEffect(() => {
@@ -21,16 +19,6 @@ function ScrollButton() {
       behavior: "smooth",
     });
   };
-  return (
-    <>
-      {backToTop && (
-        <div className="top" onClick={scrollUp}>
-          top
-          <Rocket />
-        </div>
-      )}
-    </>
-  );
-}
+`;
 
-export default ScrollButton;
+export default folioCode2

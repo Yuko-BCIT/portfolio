@@ -21,7 +21,8 @@ function AppRouter() {
         <title>Yuko Web Works</title>
         <meta
           name="description"
-          content="Front end web developer with a passion for building user-friendly, functional, eye-catching websites and leaning new technologies. Proficient in JavaScript, CSS, API integration and custom WordPress development."
+          content="Front end web developer with a passion for building user-friendly, functional, eye-catching websites and 
+          leaning new technologies. Proficient in JavaScript, CSS, API integration and custom WordPress development."
         />
       </Helmet>
       <div className="app">

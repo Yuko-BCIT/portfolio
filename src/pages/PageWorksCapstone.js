@@ -1,6 +1,6 @@
 import Helmet from "react-helmet";
 import Logo from "../components/logo";
-import capstone from "../images/capstone.jpg";
+import capstone from "../images/tweeling.jpg";
 import capstoneVideo from "../media/capstone.mp4";
 import trello from "../images/trello.jpg";
 import { ReactComponent as PHP } from "../images/php.svg";
@@ -12,6 +12,10 @@ import { ReactComponent as Xd } from "../images/xd.svg";
 import OtherWorks from "../components/OtherWorks";
 import ScrollButton from "../components/ScrollButton";
 import FadeInAnimation from "../utilities/fadeInAnimation";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import capCode1 from "../code/capCode1";
+import capCode2 from "../code/capCode2";
 
 function PageWorkCapstone() {
   return (
@@ -33,11 +37,9 @@ function PageWorkCapstone() {
 
       <section>
         <h2>Tweeling Bakery</h2>
+
         <figure>
-          <video autoPlay muted playsInline controls poster={capstone}>
-            <source src={capstoneVideo} type="video/mp4" />
-            Tweeling Bakery Video
-          </video>
+          <img src={capstone} alt="screen shot of a bakery website" />
         </figure>
 
         <div className="tools">
@@ -62,6 +64,12 @@ function PageWorkCapstone() {
             hire new team members. Developed by a team of 4 using WordPress
             &#40;PHP, JavaScript, Sass and MySQL&#41; with Woocommerce plugins.
           </p>
+          <figure>
+            <video autoPlay muted playsInline controls poster={capstone}>
+              <source src={capstoneVideo} type="video/mp4" />
+              Tweeling Bakery Video
+            </video>
+          </figure>
         </article>
 
         <article>
@@ -76,13 +84,38 @@ function PageWorkCapstone() {
             <img src={trello} alt="project management tool" loading="lazy" />
           </figure>
           <p>
-            I was in charge of developing the location page and integrating
-            Google Map APIs into the website. Created a JavaScript file to fetch
-            map data, then wrote PHP code to call the JavaScript file and make
-            shops' information clickable &#40;addresses and phone numbers&#41;
-            on the map. To make the code reusable, I put it in a PHP template
-            file and called it on multiple pages.
+            I was in charge of developing the location page and integrating APIs
+            into the website. I registered our project with Google Maps Platform
+            and restricted API key usage to our URL only to prevent malicious
+            usage. And created a JavaScript file based on the documentation to
+            fetch map data,
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              wrapLines
+              style={shadesOfPurple}
+            >
+              {capCode1}
+            </SyntaxHighlighter>
+          </div>
+          <p>
+            then wrote PHP code to call the JavaScript file and make shops'
+            information clickable &#40;addresses and phone numbers&#41; on the
+            map. To make the code reusable, I put it in a PHP template file and
+            called it on multiple pages.
+          </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="php"
+              wrapLongLines
+              wrapLines
+              style={shadesOfPurple}
+            >
+              {capCode2}
+            </SyntaxHighlighter>
+          </div>
           <p>
             My role also included styling landing page, testing the site on
             multiple browsers and devices, setting up Stripe account and testing
@@ -98,8 +131,7 @@ function PageWorkCapstone() {
             communicate proactively using Trello and Slack responding
             immediately to questions and problems. The team also made effective
             use of file sharing on every stage from design to coding, and
-            everyone perticipated in brainstorming ideas to choose the best of
-            the best.
+            everyone perticipated in brainstorming ideas to choose the best.
           </p>
           <p>
             We learned to be proactive in picking up tasks and responsible for
@@ -120,16 +152,12 @@ function PageWorkCapstone() {
           <a
             className="button"
             href="https://tweelingbakery.bcitwebdeveloper.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Live Site
           </a>
           <a
             className="button"
             href="https://github.com/htpwebdesign/tweeling-bakery"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             GitHub
           </a>

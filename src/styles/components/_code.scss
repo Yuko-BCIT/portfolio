@@ -1,0 +1,23 @@
+// syntaxhighlighter container styling
+.code {
+  max-height: 20rem;
+  overflow: auto;
+  // hide scroll bar on MS Edge
+  -ms-overflow-style: none;
+  // Firefox
+  scrollbar-width: none;
+}
+//  Chrome, Safari
+.code::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 1000px) {
+  pre {
+    font-size: 0.9rem;
+  }
+}

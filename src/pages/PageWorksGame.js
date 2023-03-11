@@ -10,6 +10,10 @@ import { ReactComponent as Jquery } from "../images/jquery.svg";
 import OtherWorks from "../components/OtherWorks";
 import ScrollButton from "../components/ScrollButton";
 import FadeInAnimation from "../utilities/fadeInAnimation";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import gameCode1 from "../code/gameCode1";
+import gameCode2 from "../code/gameCode2";
 
 function PageWorkGame() {
   return (
@@ -31,11 +35,9 @@ function PageWorkGame() {
       <h1>JavaScript Game</h1>
       <section>
         <h2>High Low</h2>
+
         <figure>
-          <video autoPlay muted playsInline controls poster={highlow}>
-            <source src={highlowVideo} type="video/mp4" />
-            High Low Video
-          </video>
+        <img src={highlow} alt="screen shot of a game website" />
         </figure>
 
         <div className="tools">
@@ -60,6 +62,12 @@ function PageWorkGame() {
             lives, and at the end of the game, different images and messages are
             displayed depending on whether the player wins or loses.
           </p>
+          <figure>
+            <video autoPlay muted playsInline controls poster={highlow}>
+              <source src={highlowVideo} type="video/mp4" />
+              High Low Video
+            </video>
+          </figure>
         </article>
 
         <article>
@@ -68,12 +76,30 @@ function PageWorkGame() {
             Using JavaScript and jQuery, I wrote functions that would generate
             random numbers depending on the levels using conditional statements.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {gameCode1}
+            </SyntaxHighlighter>
+          </div>
           <p>
             Functions triggered by onclick events were added to generate
             appropriate error messages for missing or invalid input. When the
             inputs are valid, functions were further divided into multiple
             conditionals to display appropriate messages for each case.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {gameCode2}
+            </SyntaxHighlighter>
+          </div>
           <p>
             When I got stuck on writing code, I had one-on-one zoom meetings
             with the instructor to ensure I solved the code problems one by one
@@ -100,20 +126,10 @@ function PageWorkGame() {
         </article>
 
         <nav className="external-links">
-          <a
-            className="button"
-            href="https://yukowebworks.com/game"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="button" href="https://yukowebworks.com/game">
             Live Site
           </a>
-          <a
-            className="button"
-            href="https://github.com/Yuko-BCIT/game"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="button" href="https://github.com/Yuko-BCIT/game">
             GitHub
           </a>
         </nav>

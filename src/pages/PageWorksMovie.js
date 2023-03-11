@@ -10,6 +10,11 @@ import { ReactComponent as Xd } from "../images/xd.svg";
 import OtherWorks from "../components/OtherWorks";
 import ScrollButton from "../components/ScrollButton";
 import FadeInAnimation from "../utilities/fadeInAnimation";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import movieCode1 from "../code/movieCode1";
+import movieCode2 from "../code/movieCode2";
+import movieCode3 from "../code/movieCode3";
 
 function PageWorkMovie() {
   return (
@@ -34,10 +39,7 @@ function PageWorkMovie() {
         <h2>Preview</h2>
 
         <figure>
-          <video autoPlay muted playsInline controls poster={movie}>
-            <source src={previewVideo} type="video/mp4" />
-            Preview Video
-          </video>
+          <img src={movie} alt="screen shot of a movie database website" />
         </figure>
 
         <div className="tools">
@@ -60,10 +62,16 @@ function PageWorkMovie() {
           <p>
             "Preview - the movie database" is a React web application that
             fetches movie information from an API, allowing users to browse,
-            sort, see details, and favorite the latest movies every time they
-            access. React router was used for the fast page loading, and Redux
-            allows users to save their favorites until they delete cookies.
+            sort, see details, and favorite the latest movies. React router was
+            used for the fast page loading, and Redux allows users to save their
+            favorites until they delete cookies.
           </p>
+          <figure>
+            <video autoPlay muted playsInline controls poster={movie}>
+              <source src={previewVideo} type="video/mp4" />
+              Preview Video
+            </video>
+          </figure>
         </article>
 
         <article>
@@ -73,6 +81,15 @@ function PageWorkMovie() {
             TMDB API to display posters, titles, release dates, summaries, and
             ratings, referring to the API documentations.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {movieCode1}
+            </SyntaxHighlighter>
+          </div>
           <p>
             When a user clicks on add to favorite button, movies are shown on
             favorites page, but when the page is refreshed, favorites disappear.
@@ -80,11 +97,29 @@ function PageWorkMovie() {
             remember the state, so favorites are stored as long as cookies are
             not deleted.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {movieCode2}
+            </SyntaxHighlighter>
+          </div>
           <p>
             Also added an extra feature to simulate email subscription without
             sending or storing user input, using onSubmit event and
-            preventDefault function.
+            preventDefault method.
           </p>
+          <div className="code">
+            <SyntaxHighlighter
+              language="javascript"
+              wrapLongLines
+              style={shadesOfPurple}
+            >
+              {movieCode3}
+            </SyntaxHighlighter>
+          </div>
         </article>
 
         <article>
@@ -107,19 +142,12 @@ function PageWorkMovie() {
         </article>
 
         <nav className="external-links">
-          <a
-            className="button"
-            href="https://yukowebworks.com/movie-database"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="button" href="https://yukowebworks.com/movie-database">
             Live Site
           </a>
           <a
             className="button"
             href="https://github.com/Yuko-BCIT/React-MovieDatabase-app"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             GitHub
           </a>

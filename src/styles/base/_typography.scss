@@ -63,12 +63,9 @@ a:active {
 
 // hover on icons on desktop
 @media (min-width: 1000px) {
-  a:hover,
-  a:active {
-    color: $cyan;
-    .icon-nav {
-      fill: $cyan;
-    }
+  .active {
+    color: $light-gray;
+    text-decoration: underline 2px wavy $orange;
   }
 }
 
@@ -76,7 +73,6 @@ a:active {
 .darkmode {
   background-color: $dark;
   color: $white;
-
   a {
     color: $white;
   }
@@ -105,18 +101,17 @@ a:active {
     }
   }
 
-  a:hover,
-  a:active {
-    color: $magenta;
-  }
-
-  @media (min-width: 1000px) {
     a:hover,
     a:active {
-      color: $cyan;
+      color: $magenta;
       .icon-nav {
-        fill: $cyan;
+        fill: $magenta;
       }
+  }
+  
+  @media (min-width: 1000px) {
+    .active {
+      color: $white;
     }
   }
 }
