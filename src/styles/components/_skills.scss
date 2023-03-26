@@ -1,10 +1,37 @@
-// skills cube
+@use "../base/variables" as *;
+
+.home-skills {
+  max-width: 60rem;
+  margin: 8rem auto;
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  .tech-list {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+  }
+  span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0 0.3rem;
+    color: #ff00ff;
+  }
+}
+
 .cube {
   width: 50%;
   height: 100%;
   margin: auto;
-  padding: 1rem 0 11rem;
-  // this fixes z-index bug on Safari, cube being on top of header
+  padding: 2rem 2rem 12rem;
+
+  // fixes z-index issue on Safari, cube stacking on top of header
   perspective: 1000px;
 }
 
@@ -63,6 +90,23 @@
   }
 }
 
-.click-the-cube {
-  text-align: center;
+@media (min-width: 500px) {
+  .home-skills {
+    span {
+      margin: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .home-skills {
+    article {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .tech-list {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
 }

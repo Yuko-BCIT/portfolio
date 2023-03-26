@@ -1,7 +1,7 @@
 import Helmet from "react-helmet";
 import Logo from "../components/logo";
 import capstone from "../images/tweeling.jpg";
-import capstoneVideo from "../media/capstone.mp4";
+import locationVideo from "../media/location.mp4";
 import trello from "../images/trello.jpg";
 import { ReactComponent as PHP } from "../images/php.svg";
 import { ReactComponent as Js } from "../images/js.svg";
@@ -64,12 +64,6 @@ function PageWorkCapstone() {
             hire new team members. Developed by a team of 4 using WordPress
             &#40;PHP, JavaScript, Sass and MySQL&#41; with Woocommerce plugins.
           </p>
-          <figure>
-            <video autoPlay muted playsInline controls poster={capstone}>
-              <source src={capstoneVideo} type="video/mp4" />
-              Tweeling Bakery Video
-            </video>
-          </figure>
         </article>
 
         <article>
@@ -116,6 +110,16 @@ function PageWorkCapstone() {
               {capCode2}
             </SyntaxHighlighter>
           </div>
+          <p>
+            Embedded maps styled with Snazzy Map and matched to the site's
+            theme. Location pins are clickable and display shop information.
+          </p>
+          <figure>
+            <video autoPlay muted playsInline loop>
+              <source src={locationVideo} type="video/mp4" />
+              Tweeling Bakery location Video
+            </video>
+          </figure>
           <p>
             My role also included styling landing page, testing the site on
             multiple browsers and devices, setting up Stripe account and testing

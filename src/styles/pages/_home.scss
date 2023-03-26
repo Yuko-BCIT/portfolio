@@ -1,122 +1,181 @@
 @use "../base/variables" as *;
 
 .home {
+  padding-bottom: 8rem;
+}
+
+// remove mobile navigation padding
+@media (min-width: 1000px) {
+  .home {
+    padding-bottom: 2rem;
+  }
+}
+
+.above-fold {
   text-align: center;
   position: relative;
   display: flex;
   align-items: center;
+  min-height: calc(100vh - 3rem);
 }
 
-.home section {
+.above-fold article {
   margin: auto;
 }
 
-.logo-home {
-  display: inline-block;
-  fill: $gray;
-  width: 3rem;
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-
-  // logo animation
-  animation: flip 2s;
-}
-
-.home h1 {
+.above-fold h1 {
   font-family: $serif;
   font-size: calc(1.5rem + 2vw);
   font-weight: 900;
   padding: 0;
-  margin-bottom: 0; //undo the typography's margin-bottom
+  margin-bottom: 0; //undo the typography's margin-bottom on h1s
   line-height: calc(2rem + 3vw);
   color: $light-gray;
   text-shadow: none;
+  position: relative;
 }
 
-.home h2 {
+.above-fold h2 {
   font-size: calc(1.2rem + 0.5vw);
   font-weight: 400;
   text-align: center;
-  max-width: 80vw;
   margin: 2rem auto;
-  color: $gray;
-  line-height: 2rem;
-
+  color: $orange;
+  background: -webkit-linear-gradient(0deg, #00d2bd, $orange, #ff0080);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
   // text animation
   opacity: 0;
-  animation: fadeInUp 1s 5.5s forwards;
-}
-
-// this animation shows words letter by letter based on index
-.text-animate {
-  display: inline-block; // without this, it doesn't bounce
-  min-width: 0.8rem; // without this, white space doesn't show
-  opacity: 0;
-  animation: bounceIn 1s;
-  animation-fill-mode: forwards;
-}
-// iterate through text index from [0] to [25] and delay animation after each letter displays
-@for $i from 0 through 25 {
-  .text-animate._#{$i} {
-    animation-delay: #{calc($i / 10)}s;
-  }
+  animation: fadeIn 1s 5.5s forwards;
 }
 
 @media (min-width: 600px) {
-  .home h2 {
+  .above-fold h2 {
     max-width: 70vw;
-  }
-  .logo-home {
-    left: 2.5rem;
-    top: 2.5rem;
-  }
-}
-
-.call-to-action {
-  position: relative;
-  margin: auto;
-  z-index: 10;
-  width: calc(10rem + 3vw);
-
-  // bounce animation on works button
-  animation: bounce 5s linear infinite;
-  @keyframes bounce {
-    0% {
-      transform: translateY(20px);
-    }
-    50% {
-      opacity: 0.9;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(20px);
-    }
-  }
-
-  img {
-    border-radius: 0% 55% 50% 70%;
-    box-shadow: -5px 7px 10px -5px #836d6d;
-  }
-  figcaption {
-    color: $white;
-    font-size: calc(1.5rem + 0.8vw);
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 
 @media (min-width: 1000px) {
-  .home h2 {
-    max-width: 50vw;
+  .above-fold {
+    min-height: 100vh;
   }
-  .logo-home {
-    display: none;
+}
+
+.home p {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .home p {
+    padding: 0 2rem;
+  }
+}
+
+.darkmode {
+  .above-fold h1,
+  .above-fold h2 {
+    color: $white;
+  }
+}
+
+.home-works {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    animation: wave 3s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 0%,
+        16% 1%,
+        32% 1%,
+        50% 0,
+        66% 0,
+        84% 1%,
+        100% 2%,
+        100% 100%,
+        0% 100%
+      );
+    }
+    50% {
+      clip-path: polygon(
+        0 2%,
+        16% 1%,
+        33% 0,
+        48% 0,
+        67% 1%,
+        84% 1%,
+        100% 0,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+  figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: max-content;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: $white;
+    color: $dark;
+    padding: 1rem;
+    border-radius: 99px;
+  }
+}
+
+.home-about {
+  background: $beige2;
+  color: $white;
+  max-width: 50rem;
+  margin: 0 1rem;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  // centers .button-about while keeping inline-block (make only the button clickable)
+  text-align: center;
+  p {
+    text-align: left; // keep other text-align left
+  }
+  .button-about {
+    display: inline-block;
+    margin: 1.5rem auto;
+    padding: 0.3rem 1rem;
+    color: $dark;
+    background-color: $white;
+    border-radius: 99px;
+    border: none;
+  }
+}
+
+@media (min-width: 850px) {
+  .home-about {
+    margin: 0 auto;
+  }
+}
+
+.home {
+  .button-about:hover,
+  .button-about:active,
+  figcaption:hover,
+  figcaption:active {
+    color: $white;
+    background-color: $orange;
+    font-weight: 500;
   }
 }

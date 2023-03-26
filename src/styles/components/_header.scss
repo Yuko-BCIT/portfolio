@@ -17,6 +17,10 @@ header nav li {
 }
 
 .darkmode {
+  header {
+  box-shadow: 1px 1px 5px $black;
+
+  }
   header nav li {
     color: $white;
   }
@@ -28,9 +32,18 @@ header nav li {
   height: 12vw;
 }
 
+a:hover,
+a:active {
+  .icon {
+    fill: $cyan;
+    transform: rotate(360deg);
+    transition: 2s;
+  }
+}
+
 .icon-nav {
   fill: $light-gray;
-  width: 1.2rem;
+  width: 1rem;
   margin: 0 0.7rem;
 }
 
@@ -38,12 +51,9 @@ header nav li {
   position: fixed;
   right: 0.5rem;
   bottom: 3.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
-  .dark,
-  .light {
-    width: 2rem;
-    height: 2rem;
-  }
 }
 
 .author {
@@ -51,12 +61,35 @@ header nav li {
   fill: $gray;
 }
 
+.logo-main {
+  display: inline-block;
+  fill: $gray;
+  width: 3rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
 @media (min-width: 600px) {
+  .logo-main {
+    left: 2.5rem;
+    top: 2.5rem;
+  }
+  .icon-nav {
+    width: 1.2rem;
+  }
   header nav a,
   header nav li {
     font-size: 1rem;
   }
 }
+
+@media (min-width: 1000px) {
+  .logo-main {
+    display: none;
+  }
+}
+
 // maximize header nav on mobile
 @media (max-width: 1000px) {
   header nav {
@@ -98,7 +131,7 @@ header nav li {
   .icon-wrapper {
     flex-direction: column;
     top: 50%;
-    right: 0.3rem;
+    right: 0.2rem;
     transform: translateY(-50%);
     height: 15rem;
     width: 2.5rem;
@@ -138,8 +171,8 @@ header nav li {
   }
 
   .icon-theme {
-    right: 1rem;
-    bottom: 1rem;
+    right: 1.2rem;
+    bottom: 1.5rem;
     padding: 0;
   }
 
@@ -151,21 +184,19 @@ header nav li {
     display: block;
     width: 4rem;
     margin: 1rem 0;
-    // logo animation
-    animation: flip 2s;
   }
 }
 
 .light {
-  fill: #ffd700;
+  fill: $yellow;
   transform: rotateY(180deg);
-  border-radius: 7px;
+  border-radius: 6px;
   background-color: $dark;
 }
 .dark {
   fill: $gray;
   background-color: $light;
-  border-radius: 7px;
+  border-radius: 6px;
 }
 
 // pop-up contact links

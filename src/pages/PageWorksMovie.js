@@ -66,12 +66,6 @@ function PageWorkMovie() {
             used for the fast page loading, and Redux allows users to save their
             favorites until they delete cookies.
           </p>
-          <figure>
-            <video autoPlay muted playsInline controls poster={movie}>
-              <source src={previewVideo} type="video/mp4" />
-              Preview Video
-            </video>
-          </figure>
         </article>
 
         <article>
@@ -106,6 +100,13 @@ function PageWorkMovie() {
               {movieCode2}
             </SyntaxHighlighter>
           </div>
+          <p>Feature to add and remove favorites</p>
+          <figure>
+            <video autoPlay muted playsInline loop>
+              <source src={previewVideo} type="video/mp4" />
+              Preview Video
+            </video>
+          </figure>
           <p>
             Also added an extra feature to simulate email subscription without
             sending or storing user input, using onSubmit event and
@@ -129,8 +130,8 @@ function PageWorkMovie() {
             such as heavy content in the Home component, but it was a good
             starting point to learn this great technology and I completely
             enjoyed working with React. API was also new to me and the learning
-            curve was quite steep, but I was happy and thrilled when the movie
-            poster showed up.
+            curve was very steep, but I was happy and thrilled when the movie
+            posters showed up.
           </p>
           <p>
             It was quite different from Vanilla JavaScript, but I studied

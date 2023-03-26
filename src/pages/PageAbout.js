@@ -1,6 +1,5 @@
 import me from "../images/me.jpg";
 import { Helmet } from "react-helmet";
-import Skills from "../components/SkillsCube";
 import Logo from "../components/logo";
 
 const PageAbout = () => (
@@ -35,20 +34,12 @@ const PageAbout = () => (
           my journey began.
         </p>
         <p>
-          The technologies I enjoy working with are React, JavaScript, APIs,
-          CSS, WordPress and I'm keen on learning new ones.
-        </p>
-        <p>
           Other than coding, I love French Bulldogs &#40;I follow cute Frenchies
           on Instagram&#41;, bike riding, snowboarding, karaoke and travelling
           the world. My favorite places are Thailand and Bali.
           <br />I would love to hear from you&#128522; Contact me through email,
           LinkedIn and check out my GitHub repos!
         </p>
-      </article>
-      <article>
-        <Skills />
-        <p className="click-the-cube">Click &#127922; and see my projects</p>
       </article>
     </section>
   </main>

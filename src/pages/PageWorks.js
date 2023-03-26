@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import capstone from "../images/tweeling.jpg";
 import portfolio from "../images/portfolio.jpg";
 import movie from "../images/movie.jpg";
+import bali from "../images/bali.jpg";
+import woo from "../images/woo.jpg";
 import highlow from "../images/highlow.jpg";
 import ScrollButton from "../components/ScrollButton";
 
@@ -67,6 +69,29 @@ function PageWorks() {
             </figcaption>
           </figure>
         </Link>
+
+        <a href="https://yukowebworks.com/woostore">
+          <figure>
+            <img src={woo} alt="screen shot of e-commerce website" />
+            <figcaption>
+              Online Store
+              <br />
+              WooStore
+            </figcaption>
+          </figure>
+        </a>
+
+        <a href="https://yukowebworks.com/bali">
+          <figure>
+            <img src={bali} alt="screen shot of Bali website" />
+            <figcaption>
+              Favorite City
+              <br />
+              Bali
+            </figcaption>
+          </figure>
+        </a>
+        
       </section>
     </main>
   );

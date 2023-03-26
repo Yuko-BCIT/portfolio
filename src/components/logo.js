@@ -5,7 +5,7 @@ function Logo() {
   return (
     <div>
       <Link to="/">
-        <Logol className="logo-home" />
+        <Logol className="logo-main" />
       </Link>
     </div>
   );

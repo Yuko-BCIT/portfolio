@@ -8,9 +8,12 @@
 @use './components/code';
 @use './components/header';
 @use './components/footer';
+@use './components/letters';
 @use './components/otherWorks';
-@use './components/skillsCube';
+@use './components/skills';
 @use './components/scrollButton';
+@use './components/bubbles';
+@use './components/downArrow';
 
 // pages
 @use './pages/home';

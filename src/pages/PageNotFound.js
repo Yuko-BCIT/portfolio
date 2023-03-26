@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Home } from "../images/home.svg";
+import Logo from "../components/logo";
 
 const PageNotFound = () => {
   return (
     <main className="notfound">
+      <Logo />
       <h1>
         404<br />
         Page Not Found

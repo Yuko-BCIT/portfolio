@@ -1,0 +1,15 @@
+@import "../base/variables";
+
+.text-animate {
+  display: inline-block; // without this, it doesn't bounce
+  min-width: 0.8rem; // without this, white space doesn't show
+  opacity: 0;
+  animation: bounceIn 1s;
+  animation-fill-mode: forwards;
+}
+// iterate through text index from [0] to [25] and delay animation after each letter displays
+@for $i from 0 through 25 {
+  .text-animate._#{$i} {
+    animation-delay: #{calc($i / 10)}s;
+  }
+}

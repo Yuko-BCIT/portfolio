@@ -36,12 +36,14 @@
 
 // alternate background colors on project page
 .project article:nth-child(odd) {
-  background-color: $white;
+  background-color: $beige2;
+  color: $white;
 }
 
 // undo background styling on other works article
 .project article:nth-last-child(1) {
   background-color: transparent;
+  color: $gray;
   border: none;
   margin: 0;
 }
@@ -58,6 +60,7 @@
 
   .project article:nth-last-child(1) {
     background-color: transparent;
+    color: $white;
     border: none;
     margin: 0;
   }
@@ -72,18 +75,18 @@
 
 .button {
   font-weight: 500;
-  border-radius: 8px;
+  border-radius: 99px;
   font-weight: 600;
   text-align: center;
   width: 40%;
-  border: 2px solid $magenta;
-  color: $magenta;
+  border: 2px solid $orange2;
+  color: $orange2;
   padding: 0.5rem;
 }
 
 .darkmode {
   .button {
-    color: $magenta;
+    color: $orange2;
   }
 }
 
@@ -126,10 +129,11 @@
 }
 @media (min-width: 1100px) {
   .project article {
-    padding: 4rem calc(50vw - 30rem);
+    padding: 4rem calc(50vw - 33rem);
   }
   .button {
-    width: 25rem;
+    font-size: 1.1rem;
+    width: 23rem;
   }
 }
 
@@ -159,7 +163,7 @@
   margin: 0.5rem;
   width: 2.5rem;
   display: inline-block;
-  border: 2px solid $magenta;
+  border: 2px solid $orange2;
   padding: 0.5rem;
   border-radius: 10px;
 }
@@ -174,7 +178,7 @@
 .external-links {
   display: flex;
   justify-content: space-evenly;
-  margin: 3rem auto;
+  margin: 3rem auto 1rem;
   a:hover,
   a:active {
     font-weight: 700;

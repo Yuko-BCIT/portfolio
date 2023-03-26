@@ -14,28 +14,26 @@
 
 .other-works a {
   display: inline-block;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
   text-align: center;
   color: $gray;
   border-radius: 99px;
   background: $white;
-  box-shadow: 5px 5px 10px #bbb3b3;
+  box-shadow: 0 0 10px #bbb3b3;
 }
 
 .other-works a:hover,
 .other-works a:active {
-  font-weight: 700;
   color: $white;
-  background: $beige;
+  background: $magenta;
   animation: headShake 1s;
 }
 
 .darkmode {
   .other-works a {
     color: $white;
-    background: #6b6a6a;
-    box-shadow: 5px 5px 5px #181717;
+    background: $black;
   }
   .other-works a:hover,
   .other-works a:active {

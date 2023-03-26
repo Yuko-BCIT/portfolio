@@ -1,0 +1,21 @@
+@import "../base/variables";
+
+.down-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeIn 1s 6.5s forwards;
+  svg {
+    width: 2rem;
+    margin: auto;
+    fill: $light-gray;
+  }
+}
+
+.darkmode {
+  .down-arrow svg {
+    fill: $white;
+  }
+}

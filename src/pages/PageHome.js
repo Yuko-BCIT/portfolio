@@ -1,80 +1,64 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../components/logo";
-import lotus from "../images/lotus.jpg";
-import { useState } from "react";
+import hero from "../images/hero.jpg";
+import Letters from "../components/Letters";
+import Bubbles from "../components/Bubbles";
+import Skills from "../components/Skills";
+import ScrollButton from "../components/ScrollButton";
+import DownArrow from "../components/DownArrow";
 
 function PageHome() {
-  const [letterClass, setLetterClass] = useState("text-animate");
-  const nameArray = [
-    "Y",
-    "u",
-    "k",
-    "o",
-    "  ",
-    "K",
-    "i",
-    "t",
-    "a",
-    "h",
-    "a",
-    "t",
-    "a",
-  ];
-  const devArray = [
-    "W",
-    "e",
-    "b",
-    "  ",
-    "D",
-    "e",
-    "v",
-    "e",
-    "l",
-    "o",
-    "p",
-    "e",
-    "r",
-  ];
-
-  const AnimatedLetters = ({ letterClass, strArray, index }) => {
-    return (
-      <span>
-        {strArray.map((char, i) => (
-          <span key={char + i} className={`${letterClass} _${i + index}`}>
-            {char}
-          </span>
-        ))}
-      </span>
-    );
-  };
-
   return (
     <main className="home">
       <Logo />
-      <section>
-        <h1>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={nameArray}
-            index={0}
-          />
-          <br />
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={devArray}
-            index={13}
-          />
-        </h1>
-        <h2>Bring ideas to life with code</h2>
+      <ScrollButton />
 
-        <figure className="call-to-action">
-          <NavLink to="/works">
-            <img src={lotus} alt="lotus illustration" />
-            <figcaption>web works</figcaption>
-          </NavLink>
+      <section className="above-fold">
+        <Bubbles />
+
+        <article>
+          <h1>
+            <Letters />
+          </h1>
+          <h2>Bring ideas to life with code</h2>
+          <DownArrow />
+        </article>
+      </section>
+
+      <section className="home-works">
+        <figure>
+          <img src={hero} alt="collection of works" />
+          <Link to="/works">
+            <figcaption>View all works</figcaption>
+          </Link>
         </figure>
       </section>
 
+      <section className="home-skills">
+        <h2>Tech Skills</h2>
+
+        <article>
+          <Skills />
+        </article>
+        <p>
+          The technologies I enjoy working with are React, JavaScript, API, CSS,
+          WordPress and I'm keen on learning new ones. Click the &#127922; and
+          see my works!
+        </p>
+      </section>
+
+      <section className="home-about">
+        <h2>About</h2>
+        <p>
+          With a strong background in customer service, I gained hands-on
+          experience at BCIT and became a web developer. I am passionate about
+          creating user-friendly, functional, and eye-catching websites and
+          apps.
+        </p>
+        <Link to="/about">
+          <p className="button-about">Learn more</p>
+        </Link>
+      </section>
     </main>
   );
 }

@@ -34,7 +34,7 @@ h3 {
 
 main p {
   line-height: 1.7;
-  font-size: calc(15px + 0.1vw);
+  font-size: calc(15px + 0.2vw);
 }
 
 a {
@@ -43,30 +43,10 @@ a {
 }
 
 .active {
-  color: $magenta;
-  .icon-nav {
-    fill: $magenta;
-  }
-}
-
-// hover on icons on mobile
-a:hover,
-a:active {
-  color: $magenta;
-  svg {
-    fill: $cyan;
-  }
-  .icon-nav {
-    fill: $magenta;
-  }
-}
-
-// hover on icons on desktop
-@media (min-width: 1000px) {
-  .active {
-    color: $light-gray;
-    text-decoration: underline 2px wavy $orange;
-  }
+  text-decoration: wavy underline $orange2 1.5px;
+  // solve iOS bug
+  text-decoration-thickness: 1.5px;
+  -webkit-text-decoration: wavy underline $orange2;
 }
 
 // dark mode(put any selector you want to change with dark mode under .darkmode)
@@ -76,42 +56,10 @@ a:active {
   a {
     color: $white;
   }
-
-  .home h1,
-  .home h2 {
-    color: $white;
-  }
-
-  .call-to-action {
-    img {
-      box-shadow: -5px 7px 10px -5px $black;
-    }
-  }
-
+  
   .author,
-  .logo-home,
+  .logo-main,
   .icon-nav {
     fill: $white;
-  }
-
-  .active {
-    color: $magenta;
-    .icon-nav {
-      fill: $magenta;
-    }
-  }
-
-    a:hover,
-    a:active {
-      color: $magenta;
-      .icon-nav {
-        fill: $magenta;
-      }
-  }
-  
-  @media (min-width: 1000px) {
-    .active {
-      color: $white;
-    }
   }
 }
