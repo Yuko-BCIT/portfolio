@@ -1,8 +1,6 @@
 import Helmet from "react-helmet";
-import Logo from "../components/logo";
 import portfolio from "../images/portfolio.jpg";
 import OtherWorks from "../components/OtherWorks";
-import ScrollButton from "../components/ScrollButton";
 import { ReactComponent as React } from "../images/react.svg";
 import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Sass } from "../images/sass.svg";
@@ -17,19 +15,17 @@ function PageWorkPortfolio() {
   return (
     <main className="work-details">
       <Helmet>
-        <title>Portfolio</title>
+        <title>Web Portfolio</title>
         <meta
           name="description"
-          content="This is my portfolio showcasing my projects and a little bit about
+          content="This is my web portfolio showcasing my projects and a little bit about
             myself. I used React because components reduce code repetition, it
             supports a variety of great libraries, and I wanted to improve my
             React skills."
         />
       </Helmet>
       <FadeInAnimation />
-      <ScrollButton />
-      <Logo />
-      <h1>Portfolio</h1>
+      <h1>Web Portfolio</h1>
 
       <section>
         <h2>Yuko Web Works</h2>
@@ -127,7 +123,11 @@ function PageWorkPortfolio() {
         </article>
 
         <nav className="external-links">
-          <a className="button" href="https://github.com/Yuko-BCIT/portfolio">
+          <a
+            tabIndex={0}
+            className="button"
+            href="https://github.com/Yuko-BCIT/portfolio"
+          >
             GitHub
           </a>
         </nav>

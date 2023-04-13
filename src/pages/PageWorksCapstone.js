@@ -1,5 +1,4 @@
 import Helmet from "react-helmet";
-import Logo from "../components/logo";
 import capstone from "../images/tweeling.jpg";
 import locationVideo from "../media/location.mp4";
 import trello from "../images/trello.jpg";
@@ -10,7 +9,6 @@ import { ReactComponent as Wordpress } from "../images/wordpress.svg";
 import { ReactComponent as WordpressW } from "../images/wordpress-white.svg";
 import { ReactComponent as Xd } from "../images/xd.svg";
 import OtherWorks from "../components/OtherWorks";
-import ScrollButton from "../components/ScrollButton";
 import FadeInAnimation from "../utilities/fadeInAnimation";
 import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -31,8 +29,6 @@ function PageWorkCapstone() {
         />
       </Helmet>
       <FadeInAnimation />
-      <ScrollButton />
-      <Logo />
       <h1>Capstone Project</h1>
 
       <section>
@@ -80,9 +76,9 @@ function PageWorkCapstone() {
           <p>
             I was in charge of developing the location page and integrating APIs
             into the website. I registered our project with Google Maps Platform
-            and restricted API key usage to our URL only to prevent malicious
-            usage. And created a JavaScript file based on the documentation to
-            fetch map data,
+            and restricted API key to our URL only to prevent malicious usage.
+            And created a JavaScript file based on the documentation to fetch
+            map data,
           </p>
           <div className="code">
             <SyntaxHighlighter
@@ -154,12 +150,14 @@ function PageWorkCapstone() {
 
         <nav className="external-links">
           <a
+            tabIndex={0}
             className="button"
             href="https://tweelingbakery.bcitwebdeveloper.ca/"
           >
             Live Site
           </a>
           <a
+            tabIndex={0}
             className="button"
             href="https://github.com/htpwebdesign/tweeling-bakery"
           >

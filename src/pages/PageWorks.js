@@ -1,5 +1,4 @@
 import Helmet from "react-helmet";
-import Logo from "../components/logo";
 import { Link } from "react-router-dom";
 import capstone from "../images/tweeling.jpg";
 import portfolio from "../images/portfolio.jpg";
@@ -7,7 +6,6 @@ import movie from "../images/movie.jpg";
 import bali from "../images/bali.jpg";
 import woo from "../images/woo.jpg";
 import highlow from "../images/highlow.jpg";
-import ScrollButton from "../components/ScrollButton";
 
 function PageWorks() {
   return (
@@ -20,13 +18,24 @@ function PageWorks() {
           development process, takeaways, and links to live sites and GitHub repositories."
         />
       </Helmet>
-      <ScrollButton />
-      <Logo />
       <h1>Works</h1>
-      <h2>Click the images to see details</h2>
+      <h2>Featured Projects</h2>
+      <p>Click and see the project details and development process</p>
 
       <section className="work-links">
-        <Link to="/works/movie">
+        <Link to="/works/portfolio" tabIndex={0}>
+          <figure>
+            <img className="portfolio"
+            src={portfolio} alt="screen shot of a portfolio website" />
+            <figcaption>
+              Web Portfolio
+              <br />
+              Yuko Web Works
+            </figcaption>
+          </figure>
+        </Link>
+
+        <Link to="/works/movie" tabIndex={0}>
           <figure>
             <img src={movie} alt="screen shot of a movie database website" />
             <figcaption>
@@ -37,7 +46,7 @@ function PageWorks() {
           </figure>
         </Link>
 
-        <Link to="/works/capstone">
+        <Link to="/works/capstone" tabIndex={0}>
           <figure>
             <img src={capstone} alt="screen shot of a bakery website" />
             <figcaption>
@@ -48,18 +57,7 @@ function PageWorks() {
           </figure>
         </Link>
 
-        <Link to="/works/portfolio">
-          <figure className="portfolio">
-            <img src={portfolio} alt="screen shot of a portfolio website" />
-            <figcaption>
-              Portfolio
-              <br />
-              Yuko Web Works
-            </figcaption>
-          </figure>
-        </Link>
-
-        <Link to="/works/game">
+        <Link to="/works/game" tabIndex={0}>
           <figure>
             <img src={highlow} alt="screen shot of a game website" />
             <figcaption>
@@ -69,8 +67,12 @@ function PageWorks() {
             </figcaption>
           </figure>
         </Link>
+      </section>
 
-        <a href="https://yukowebworks.com/woostore">
+      <h2>More projects</h2>
+      <p>Click and see the live sites</p>
+      <section className="work-links more-projects">
+        <a href="https://yukowebworks.com/woostore" tabIndex={0}>
           <figure>
             <img src={woo} alt="screen shot of e-commerce website" />
             <figcaption>
@@ -81,7 +83,7 @@ function PageWorks() {
           </figure>
         </a>
 
-        <a href="https://yukowebworks.com/bali">
+        <a href="https://yukowebworks.com/bali" tabIndex={0}>
           <figure>
             <img src={bali} alt="screen shot of Bali website" />
             <figcaption>
@@ -91,7 +93,6 @@ function PageWorks() {
             </figcaption>
           </figure>
         </a>
-        
       </section>
     </main>
   );

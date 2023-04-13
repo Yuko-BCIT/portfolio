@@ -24,10 +24,10 @@ function ScrollButton() {
   return (
     <>
       {backToTop && (
-        <div className="top" onClick={scrollUp}>
+        <button className="top" onClick={scrollUp}>
           top
           <Rocket />
-        </div>
+        </button>
       )}
     </>
   );

@@ -1,5 +1,4 @@
 import Helmet from "react-helmet";
-import Logo from "../components/logo";
 import highlow from "../images/highlow.jpg";
 import highlowVideo from "../media/highlow.mp4";
 import { ReactComponent as Html } from "../images/html.svg";
@@ -8,7 +7,6 @@ import { ReactComponent as Js } from "../images/js.svg";
 import { ReactComponent as Bootstrap } from "../images/bootstrap.svg";
 import { ReactComponent as Jquery } from "../images/jquery.svg";
 import OtherWorks from "../components/OtherWorks";
-import ScrollButton from "../components/ScrollButton";
 import FadeInAnimation from "../utilities/fadeInAnimation";
 import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -30,8 +28,6 @@ function PageWorkGame() {
         />
       </Helmet>
       <FadeInAnimation />
-      <ScrollButton />
-      <Logo />
       <h1>JavaScript Game</h1>
       <section>
         <h2>High Low</h2>
@@ -129,10 +125,10 @@ function PageWorkGame() {
         </article>
 
         <nav className="external-links">
-          <a className="button" href="https://yukowebworks.com/game">
+          <a tabIndex={0} className="button" href="https://yukowebworks.com/game">
             Live Site
           </a>
-          <a className="button" href="https://github.com/Yuko-BCIT/game">
+          <a tabIndex={0} className="button" href="https://github.com/Yuko-BCIT/game">
             GitHub
           </a>
         </nav>

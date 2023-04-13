@@ -15,21 +15,21 @@
     width: 90%;
     margin: auto;
   }
-  span {
+  li {
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0.5rem;
     border-radius: 5px;
     margin: 0 0.3rem;
-    color: #ff00ff;
+    color: $pink;
   }
 }
 
 .cube {
-  width: 50%;
+  width: 100%;
   height: 100%;
   margin: auto;
-  padding: 2rem 2rem 12rem;
+  padding: 2rem 6rem 12rem;
 
   // fixes z-index issue on Safari, cube stacking on top of header
   perspective: 1000px;
@@ -92,7 +92,7 @@
 
 @media (min-width: 500px) {
   .home-skills {
-    span {
+    li {
       margin: 0.5rem;
     }
   }

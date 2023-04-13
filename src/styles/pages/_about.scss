@@ -1,26 +1,36 @@
 @use "../base/variables" as *;
 
-.icon-about {
-  display: inline;
-  fill: $orange;
-  width: 1.5rem;
-  margin: 1.5rem;
-}
-.about p {
-  margin-bottom: 2rem;
+.about {
+  margin: 0;
+  padding: 0;
 }
 
-// pulse animation
-.pulse {
-  animation: pulse 1s infinite ease-in-out alternate;
+.about h1 {
+  position: fixed;
+  top: 42vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  color: #ffbb00;
+  font-family: $sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #642db5;
+  z-index: 3;
 }
-@keyframes pulse {
-  from {
-    transform: scale(0.7);
-  }
-  to {
-    transform: scale(1);
-  }
+
+.scroll-text {
+  position: relative;
+  top: 40vh;
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.about p {
+  margin-bottom: 2rem;
 }
 
 .me {
@@ -29,17 +39,76 @@
   margin: 0 0 0 0.5rem;
 }
 
-.about {
-  max-width: 60rem;
-  padding: 0 1rem;
+.about section {
+  background: $light;
+  padding: 0 1rem 2rem;
   margin: 0 auto;
+  min-height: calc(100vh - 3rem);
+  z-index: 5;
 }
 
 @media (min-width: 500px) {
   .me {
     max-width: 13rem;
   }
-  .about {
-    padding: 0 2rem;
+  .about section {
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .about section {
+    padding: 0 calc(50vw - 33rem) 1rem;
+  }
+}
+
+// hidden circle container
+.about-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 3rem);
+  background: url("/images/about.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: circle(0px at center);
+  -webkit-clip-path: circle(0px at center);
+}
+
+// main content
+.about section {
+  position: relative;
+  margin-top: 140vh;
+}
+
+@media (min-width: 500px) {
+  .about section {
+    margin-top: 180vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  .about h1 {
+    left: calc(50% + 5rem);
+  }
+  .about-container {
+    // move half width of the header to the right
+    left: 5rem;
+    height: 100vh;
+  }
+  .about section {
+    min-height: calc(100vh - 5rem);
+  }
+}
+
+.darkmode {
+  .about,
+  .about section {
+    background: $dark;
+  }
+  .about h1 {
+    color: $white;
+    text-shadow: 2px 2px 0 #eb095c;
   }
 }

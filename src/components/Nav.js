@@ -35,38 +35,38 @@ function Nav() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" end>
+            <NavLink to="/" end tabIndex={0}>
               <Home className="icon-nav" aria-label="home icon" />
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/works">
+            <NavLink to="/works" tabIndex={0}>
               <Works className="icon-nav" aria-label="works icon" />
               Works
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about">
+            <NavLink to="/about" tabIndex={0}>
               <About className="icon-nav" aria-label="about icon" />
               About
             </NavLink>
           </li>
 
-          {/* add classname and setShow() on click */}
-          <li
-            className={`on-off-links
-           $
+          {/* add classname and setShow() */}
+          <li className="on-off-links">
+            <button 
+            className={`
            ${show ? "open" : ""}`}
-            onClick={() => setShow(!show)}
+            onClick ={() => setShow(!show)}
           >
             <At className="icon-nav" aria-label="contact icon" />
             Contact
-          </li>
+          </button></li>
         </ul>
       </nav>
       {/* show pop-up links on click */}
-      {show && <Contact />}
+      {show && <Contact/>}
     </>
   );
 }

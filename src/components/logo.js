@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 function Logo() {
   return (
-    <div>
+    <>
+    {/* logo under 1000px screen width */}
       <Link to="/">
         <Logol className="logo-main" />
       </Link>
-    </div>
+    </>
   );
 }
 

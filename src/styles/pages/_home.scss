@@ -16,6 +16,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  // subtract the footer height on mobile
   min-height: calc(100vh - 3rem);
 }
 
@@ -25,12 +26,12 @@
 
 .above-fold h1 {
   font-family: $serif;
-  font-size: calc(1.5rem + 2vw);
-  font-weight: 900;
+  font-size: calc(1.8rem + 2vw);
+  font-weight: 600;
   padding: 0;
   margin-bottom: 0; //undo the typography's margin-bottom on h1s
   line-height: calc(2rem + 3vw);
-  color: $light-gray;
+  color: $gray;
   text-shadow: none;
   position: relative;
 }
@@ -40,12 +41,13 @@
   font-weight: 400;
   text-align: center;
   margin: 2rem auto;
-  color: $orange;
+
+  // gradient text
   background: -webkit-linear-gradient(0deg, #00d2bd, $orange, #ff0080);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
+
   // text animation
   opacity: 0;
   animation: fadeIn 1s 5.5s forwards;
@@ -84,12 +86,12 @@
 
 .home-works {
   position: relative;
-
   img {
+    display: block;
     width: 100%;
     height: 600px;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
     animation: wave 3s ease-in-out infinite;
   }
 
@@ -123,7 +125,8 @@
     }
   }
 
-  figcaption {
+  // view all works button
+  a {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -131,22 +134,32 @@
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     width: max-content;
-    font-size: 1.3rem;
+    color: $black;
+    font-size: calc(1.3rem + 0.5vw);
     font-weight: 500;
     background: $white;
-    color: $dark;
     padding: 1rem;
     border-radius: 99px;
+    border: 1px solid $gray;
+  }
+}
+
+@media (min-width: 1000px) {
+  .home-works {
+    img {
+      height: 700px;
+    }
   }
 }
 
 .home-about {
-  background: $beige2;
+  background: #e5efff;
+  box-shadow: 0 0 15px #f6d8d8;
   color: $white;
+  color: $black;
   max-width: 50rem;
   margin: 0 1rem;
   padding: 0.5rem 0;
-  border-radius: 5px;
   // centers .button-about while keeping inline-block (make only the button clickable)
   text-align: center;
   p {
@@ -157,9 +170,10 @@
     margin: 1.5rem auto;
     padding: 0.3rem 1rem;
     color: $dark;
+    font-weight: 500;
     background-color: $white;
     border-radius: 99px;
-    border: none;
+    border: 1px solid $gray;
   }
 }
 
@@ -170,12 +184,12 @@
 }
 
 .home {
+  .home-works a:hover,
+  .home-works a:active,
   .button-about:hover,
-  .button-about:active,
-  figcaption:hover,
-  figcaption:active {
+  .button-about:active {
     color: $white;
     background-color: $orange;
-    font-weight: 500;
+    border: 1px solid $orange;
   }
 }

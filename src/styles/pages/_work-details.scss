@@ -9,11 +9,14 @@
     font-size: 1.3rem;
   }
   video {
-    box-shadow: 0 0 10px 2px #737373;
+    box-shadow: 0 0 6px #737373;
     border-radius: 10px;
   }
   h2 + figure {
     margin: 0 1rem;
+  }
+  img {
+    box-shadow: 2px 2px 3px 1px #948a8a;
   }
 }
 
@@ -36,14 +39,12 @@
 
 // alternate background colors on project page
 .project article:nth-child(odd) {
-  background-color: $beige2;
-  color: $white;
+  background-color: $beige;
 }
 
 // undo background styling on other works article
 .project article:nth-last-child(1) {
   background-color: transparent;
-  color: $gray;
   border: none;
   margin: 0;
 }
@@ -53,14 +54,16 @@
     video {
       box-shadow: 0 0 10px 2px $black;
     }
+    img {
+      box-shadow: 3px 3px 3px 1px $black;
+    }
   }
   .project article:nth-child(odd) {
-    background-color: $olive;
+    background-color: $black;
   }
 
   .project article:nth-last-child(1) {
     background-color: transparent;
-    color: $white;
     border: none;
     margin: 0;
   }
@@ -74,9 +77,8 @@
 }
 
 .button {
-  font-weight: 500;
+  font-weight: 700;
   border-radius: 99px;
-  font-weight: 600;
   text-align: center;
   width: 40%;
   border: 2px solid $orange2;
@@ -84,10 +86,13 @@
   padding: 0.5rem;
 }
 
-.darkmode {
-  .button {
-    color: $orange2;
-  }
+.button:hover,
+.button:active {
+  color: $white;
+  background-color: $orange;
+  border: 2px solid $orange;
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2rem transparent;
 }
 
 @media (min-width: 350px) {
@@ -95,6 +100,7 @@
     font-size: 1.5rem;
   }
 }
+
 @media (min-width: 400px) {
   .work-details h1 {
     font-size: 1.8rem;
@@ -116,7 +122,7 @@
 @media (min-width: 600px) {
   .work-details h1 {
     font-size: 2.5rem;
-    padding: 2.7rem 0;
+    padding: 2.2rem 0;
   }
 }
 @media (min-width: 700px) {
@@ -127,6 +133,7 @@
     }
   }
 }
+
 @media (min-width: 1100px) {
   .project article {
     padding: 4rem calc(50vw - 33rem);
@@ -139,10 +146,6 @@
 
 .work-details figure img {
   border-radius: 10px;
-}
-
-.portfolio {
-  border: 0.5px solid $beige;
 }
 
 .project h2 {
@@ -179,17 +182,9 @@
   display: flex;
   justify-content: space-evenly;
   margin: 3rem auto 1rem;
-  a:hover,
-  a:active {
-    font-weight: 700;
-    color: $white;
-    background-color: $orange;
-    border: 2px solid $orange;
-    animation: pulse 1s;
-    box-shadow: 0 0 0 2rem transparent;
-  }
 }
-// pulse animation https://codepen.io/giana/pen/BZaGyP
+
+// link button pulse animation https://codepen.io/giana/pen/BZaGyP
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 #{adjust-hue(#ff0000, 45deg)};

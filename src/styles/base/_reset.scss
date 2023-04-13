@@ -360,8 +360,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-/* write above every time to write css. better margin padding wetting 
-  save this syntax as a default (make shortcut?)and reuse it */
 
 embed,
 iframe,
@@ -391,4 +389,10 @@ figure {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
 }

@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Logo from "../components/logo";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageHome from "../pages/PageHome";
@@ -21,15 +22,15 @@ function AppRouter() {
         <title>Yuko Web Works</title>
         <meta
           name="description"
-          content="Front end web developer with a passion for building user-friendly, functional, eye-catching websites and 
-          leaning new technologies. Proficient in JavaScript, CSS, API integration and custom WordPress development."
+          content="Web developer with a passion for building user-friendly, functional, and eye-catching websites
+          and apps. Proficient in React, JavaScript, CSS, API and custom WordPress development."
         />
       </Helmet>
       <div className="app">
         <Scroll />
+        <Logo />
         <Header />
         <Routes>
-          {/* put all the internal links, regardless of NavLink or not */}
           <Route path="/" exact element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/works" element={<PageWorks />} />

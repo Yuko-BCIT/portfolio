@@ -10,12 +10,12 @@
     display: block;
     position: absolute;
     bottom: -100px;
-    background: #ffffff99;
+    background: #ffffff66;
     animation: bubbles 25s linear infinite;
   }
   div:hover,
   div:active {
-    background: #c7ece580;
+    background: #d7f0fa;
   }
 }
 
@@ -28,7 +28,7 @@
   100% {
     opacity: 0;
     border-radius: 99px;
-    transform: translateY(-1500px) rotate(720deg);
+    transform: translateY(-1500px) rotate(900deg);
   }
 }
 

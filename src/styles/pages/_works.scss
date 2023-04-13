@@ -6,34 +6,41 @@
 }
 .work p {
   text-align: center;
+  max-width: 70rem;
+  padding: 0 1rem 1rem;
+  margin: auto;
 }
 
-figure img {
-  display: block;
-}
-
-.work figure {
-  border-radius: 10px;
-  overflow: hidden;
-  animation: fadeInUp 1s;
+.work {
+  img {
+    display: block;
+    border-radius: 10px 10px 0 0;
+  }
+  figure {
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 1s;
+    box-shadow: 0 0 3px $darkbeige;
+  }
 }
 
 .work figcaption {
   background-color: $beige;
-  color: $white;
+  color: $black;
   font-weight: 500;
   padding: 0.5rem 0;
 }
 
 .work h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family: $serif;
 }
 
 .work {
   figure:hover,
   figure:active,
   figure:focus {
-    box-shadow: 7px 7px 10px -5px #836d6d;
+    box-shadow: 7px 7px 10px -5px $darkbeige;
     transform: translateY(-10px);
     transition: 0.5s;
   }
@@ -45,6 +52,13 @@ figure img {
     figure:active,
     figure:focus {
       box-shadow: 7px 7px 10px $black;
+    }
+    figure {
+      box-shadow: 0 0 5px $black;
+    }
+    figcaption {
+      color: $white;
+      background-color: $black;
     }
   }
 }

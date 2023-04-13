@@ -8,7 +8,7 @@ function Header() {
   return (
     <header>
       <NavLink to="/" end>
-        <Logo className="author" />
+        <Logo className="author"/>
       </NavLink>
       <Nav /> 
       <Themes />

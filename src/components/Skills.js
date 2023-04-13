@@ -10,23 +10,23 @@ function Skills() {
   // skills section on Home
   return (
     <>
-      <div className="tech-list">
-        <span>React</span>
-        <span>JavaScript</span>
-        <span>API</span>
-        <span>Redux</span>
-        <span>jQuery</span>
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Sass</span>
-        <span>Bootstrap</span>
-      </div>
+      <ul className="tech-list">
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>API</li>
+        <li>Redux</li>
+        <li>jQuery</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Sass</li>
+        <li>Bootstrap</li>
+      </ul>
 
       {/* rotating skills cube */}
-      <div className="cube">
-        <NavLink to="/works">
+      <NavLink to="/works" tabIndex={0}>
+        <div className="cube">
           <div className="cube-spinner">
             <div className="face1">
               <Wordpress />
@@ -47,20 +47,20 @@ function Skills() {
               <HTML />
             </div>
           </div>
-        </NavLink>
-      </div>
+        </div>
+      </NavLink>
 
-      <div className="tech-list">
-        <span>npm</span>
-        <span>gulp</span>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Photoshop</span>
-        <span>Adobe XD</span>
-        <span>WordPress</span>
-        <span>WooCommerce</span>
-        <span>Shopify</span>
-      </div>
+      <ul className="tech-list">
+        <li>npm</li>
+        <li>gulp</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Photoshop</li>
+        <li>Adobe XD</li>
+        <li>WordPress</li>
+        <li>WooCommerce</li>
+        <li>Shopify</li>
+      </ul>
     </>
   );
 }

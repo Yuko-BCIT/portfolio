@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
-import Logo from "../components/logo";
 import hero from "../images/hero.jpg";
 import Letters from "../components/Letters";
 import Bubbles from "../components/Bubbles";
 import Skills from "../components/Skills";
-import ScrollButton from "../components/ScrollButton";
 import DownArrow from "../components/DownArrow";
 
 function PageHome() {
   return (
     <main className="home">
-      <Logo />
-      <ScrollButton />
-
       <section className="above-fold">
         <Bubbles />
 
@@ -28,8 +23,8 @@ function PageHome() {
       <section className="home-works">
         <figure>
           <img src={hero} alt="collection of works" />
-          <Link to="/works">
-            <figcaption>View all works</figcaption>
+          <Link to="/works" tabIndex={0}>
+            View all works
           </Link>
         </figure>
       </section>
@@ -55,7 +50,7 @@ function PageHome() {
           creating user-friendly, functional, and eye-catching websites and
           apps.
         </p>
-        <Link to="/about">
+        <Link to="/about" tabIndex={0}>
           <p className="button-about">Learn more</p>
         </Link>
       </section>

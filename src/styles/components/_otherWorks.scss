@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .other-works .active {
@@ -20,14 +20,7 @@
   color: $gray;
   border-radius: 99px;
   background: $white;
-  box-shadow: 0 0 10px #bbb3b3;
-}
-
-.other-works a:hover,
-.other-works a:active {
-  color: $white;
-  background: $magenta;
-  animation: headShake 1s;
+  box-shadow: 0 0 5px #c0a194;
 }
 
 .darkmode {
@@ -35,13 +28,18 @@
     color: $white;
     background: $black;
   }
-  .other-works a:hover,
-  .other-works a:active {
-    color: $gray;
-    background: $white;
-  }
 }
 
+.other-works a:visited {
+  color: $pink;
+}
+
+.other-works a:hover,
+.other-works a:active {
+  color: $white;
+  background: $orange;
+  animation: headShake 1s;
+}
 @media (min-width: 1000px) {
   .other-works a {
     margin: 1rem;

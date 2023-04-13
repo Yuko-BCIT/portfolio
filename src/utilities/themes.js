@@ -21,9 +21,9 @@ function Themes() {
 
   return (
     <>
-      <div className="icon-theme" onClick={handleClick}>
+      <button className="icon-theme" onClick={handleClick}>
         {darkTheme ? <Theme className="light" /> : <Theme className="dark" />}
-      </div>
+      </button>
     </>
   );
 }

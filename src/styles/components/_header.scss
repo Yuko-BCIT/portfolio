@@ -1,27 +1,23 @@
 @use "../base/variables" as *;
 
-// header and nav related styling (see _body.scss for header style changes by screen sizes)
+// header and nav related styling (see _body.scss for header structure changes by screen sizes)
 header {
-  box-shadow: 0.1px 0.1px 5px #b9acac;
+  box-shadow: 0.1px 0.1px 5px #897777;
   background-color: $light;
 }
 
 header nav a,
-header nav li {
+header nav li button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: $gray;
   font-size: 0.8rem;
   font-weight: 400;
 }
 
 .darkmode {
-  header {
-  box-shadow: 1px 1px 5px $black;
-
-  }
-  header nav li {
+  header nav a,
+  header nav li button {
     color: $white;
   }
 }
@@ -42,7 +38,7 @@ a:active {
 }
 
 .icon-nav {
-  fill: $light-gray;
+  fill: $gray;
   width: 1rem;
   margin: 0 0.7rem;
 }
@@ -56,30 +52,26 @@ a:active {
   cursor: pointer;
 }
 
-.author {
-  display: none;
-  fill: $gray;
-}
-
+// logo on mobile screen
 .logo-main {
-  display: inline-block;
-  fill: $gray;
-  width: 3rem;
   position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 0.7rem;
+  left: 0.7rem;
+  width: 2rem;
+  fill: $black;
+  z-index: 200;
 }
 
 @media (min-width: 600px) {
   .logo-main {
-    left: 2.5rem;
-    top: 2.5rem;
+    width: 2.5rem;
+    top: 1rem;
   }
   .icon-nav {
     width: 1.2rem;
   }
   header nav a,
-  header nav li {
+  header nav li button {
     font-size: 1rem;
   }
 }
@@ -115,15 +107,6 @@ a:active {
   border: 0.5px solid #a19999;
 }
 
-.darkmode {
-  header {
-    background-color: $dark;
-  }
-  .icon-wrapper {
-    box-shadow: 3px 3px 3px $black;
-  }
-}
-
 @media (min-width: 500px) {
   header nav {
     max-width: 35rem;
@@ -146,6 +129,11 @@ a:active {
   }
 }
 
+// logo on header
+.author {
+  display: none;
+}
+
 @media (min-width: 1000px) {
   header nav {
     max-width: auto;
@@ -153,8 +141,8 @@ a:active {
       flex-direction: row;
       font-family: $serif;
       font-size: 1.4rem;
-      font-weight: 600;
-      color: $light-gray;
+      font-weight: 700;
+      color: $gray;
     }
     li {
       margin: 0 0 10vh 0;
@@ -173,7 +161,6 @@ a:active {
   .icon-theme {
     right: 1.2rem;
     bottom: 1.5rem;
-    padding: 0;
   }
 
   .icon {
@@ -182,7 +169,8 @@ a:active {
 
   .author {
     display: block;
-    width: 4rem;
+    fill: $black;
+    width: 2.5rem;
     margin: 1rem 0;
   }
 }
@@ -194,37 +182,29 @@ a:active {
   background-color: $dark;
 }
 .dark {
-  fill: $gray;
+  fill: #a100a1;
   background-color: $light;
   border-radius: 6px;
 }
 
-// pop-up contact links
-.on-off-links {
+// pop-up contact links on mobile
+.on-off-links button {
   cursor: pointer;
 }
+.open {
+  color: $orange2;
+  svg {
+    fill: $orange2;
+  }
+}
+
 @media (min-width: 1000px) {
   .on-off-links {
     display: none;
   }
+  // turn off nav icons
   .icon-nav {
     display: none;
-  }
-}
-
-// highlight contact icon(on mobile) when open
-.open {
-  color: $orange;
-  svg {
-    fill: $orange;
-  }
-}
-.darkmode {
-  .open {
-    color: $orange;
-    svg {
-      fill: $orange;
-    }
   }
 }
 
@@ -240,4 +220,23 @@ header {
 }
 .icon-wrapper {
   z-index: 100;
+}
+
+.darkmode {
+  header {
+    background-color: $dark;
+    box-shadow: 1px 1px 5px $black;
+  }
+  .icon-wrapper {
+    box-shadow: 3px 3px 3px $black;
+  }
+  .logo-main {
+    fill: $white;
+  }
+  .open {
+    color: $orange2;
+    svg {
+      fill: $orange2;
+    }
+  }
 }
