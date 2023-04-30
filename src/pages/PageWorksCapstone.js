@@ -1,6 +1,8 @@
 import Helmet from "react-helmet";
+import capstoneS from "../images/tweeling-s.jpg";
 import capstone from "../images/tweeling.jpg";
 import locationVideo from "../media/location.mp4";
+import trelloS from "../images/trello-s.jpg";
 import trello from "../images/trello.jpg";
 import { ReactComponent as PHP } from "../images/php.svg";
 import { ReactComponent as Js } from "../images/js.svg";
@@ -35,7 +37,11 @@ function PageWorkCapstone() {
         <h2>Tweeling Bakery</h2>
 
         <figure>
-          <img src={capstone} alt="screen shot of a bakery website" />
+          <img
+            srcSet={`${capstoneS} 1000w, ${capstone} 1400w`}
+            src={capstone}
+            alt="screen shot of a bakery website"
+          />
         </figure>
 
         <div className="tools">
@@ -71,7 +77,12 @@ function PageWorkCapstone() {
             and tackle one task after another.
           </p>
           <figure className="wireframe">
-            <img src={trello} alt="project management tool" loading="lazy" />
+            <img
+              srcSet={`${trelloS} 1000w, ${trello} 2000w`}
+              src={trello}
+              alt="project management tool"
+              loading="lazy"
+            />
           </figure>
           <p>
             I was in charge of developing the location page and integrating APIs

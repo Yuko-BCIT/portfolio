@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import highlowS from "../images/highlow-s.jpg";
 import highlow from "../images/highlow.jpg";
 import highlowVideo from "../media/highlow.mp4";
 import { ReactComponent as Html } from "../images/html.svg";
@@ -33,7 +34,11 @@ function PageWorkGame() {
         <h2>High Low</h2>
 
         <figure>
-          <img src={highlow} alt="screen shot of a game website" />
+          <img
+            srcSet={`${highlowS} 1000w, ${highlow} 1400w`}
+            src={highlow}
+            alt="screen shot of a game website"
+          />
         </figure>
 
         <div className="tools">
@@ -125,10 +130,18 @@ function PageWorkGame() {
         </article>
 
         <nav className="external-links">
-          <a tabIndex={0} className="button" href="https://yukowebworks.com/game">
+          <a
+            tabIndex={0}
+            className="button"
+            href="https://yukowebworks.com/game"
+          >
             Live Site
           </a>
-          <a tabIndex={0} className="button" href="https://github.com/Yuko-BCIT/game">
+          <a
+            tabIndex={0}
+            className="button"
+            href="https://github.com/Yuko-BCIT/game"
+          >
             GitHub
           </a>
         </nav>

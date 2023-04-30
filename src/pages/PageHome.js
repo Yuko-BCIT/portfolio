@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import hero from "../images/hero.jpg";
+import heroS from "../images/keyboard-s.jpg";
+import heroM from "../images/keyboard-m.jpg";
+import hero from "../images/keyboard.jpg";
+import aboutS from "../images/mountains-s.jpg";
+import aboutM from "../images/mountains-m.jpg";
+import about from "../images/mountains.jpg";
 import Letters from "../components/Letters";
 import Bubbles from "../components/Bubbles";
 import Skills from "../components/Skills";
@@ -22,7 +27,11 @@ function PageHome() {
 
       <section className="home-works">
         <figure>
-          <img src={hero} alt="collection of works" />
+          <img
+            srcSet={`${heroS} 1000w, ${heroM} 1500w, ${hero} 2000w`}
+            src={hero}
+            alt="computer keyboard and cell phone on a desk"
+          />
           <Link to="/works" tabIndex={0}>
             View all works
           </Link>
@@ -43,16 +52,25 @@ function PageHome() {
       </section>
 
       <section className="home-about">
-        <h2>About</h2>
-        <p>
-          With a strong background in customer service, I gained hands-on
-          experience at BCIT and became a web developer. I am passionate about
-          creating user-friendly, functional, and eye-catching websites and
-          apps.
-        </p>
-        <Link to="/about" tabIndex={0}>
-          <p className="button-about">Learn more</p>
-        </Link>
+        <figure>
+          <img
+            srcSet={`${aboutS} 1000w, ${aboutM} 1500w, ${about} 2000w`}
+            src={about}
+            alt="beautiful mountains and lake"
+          />
+        </figure>
+        <div>
+          <h2>About</h2>
+          <p>
+            I am a web developer based in Vancouver. With attention to detail
+            and creativity, I'm passionate about creating user-friendly,
+            functional, and eye-catching websites and apps. When I'm not coding,
+            I enjoy exploring nature and checking out local eateries.
+          </p>
+          <Link to="/about" tabIndex={0}>
+            <p className="button-about">Learn more</p>
+          </Link>
+        </div>
       </section>
     </main>
   );

@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import portfolioS from "../images/portfolio-s.jpg";
 import portfolio from "../images/portfolio.jpg";
 import OtherWorks from "../components/OtherWorks";
 import { ReactComponent as React } from "../images/react.svg";
@@ -32,6 +33,7 @@ function PageWorkPortfolio() {
         <figure>
           <img
             className="portfolio"
+            srcSet={`${portfolioS} 1000w, ${portfolio} 1400w`}
             src={portfolio}
             alt="screen shot of a portfolio website"
           />

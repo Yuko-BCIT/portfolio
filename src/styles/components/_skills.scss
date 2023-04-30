@@ -2,7 +2,7 @@
 
 .home-skills {
   max-width: 60rem;
-  margin: 8rem auto;
+  margin: 3rem auto;
   article {
     display: flex;
     flex-direction: column;
@@ -100,6 +100,7 @@
 
 @media (min-width: 750px) {
   .home-skills {
+    margin: 8rem auto;
     article {
       flex-direction: row;
       align-items: flex-start;

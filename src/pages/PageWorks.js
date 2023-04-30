@@ -1,11 +1,17 @@
 import Helmet from "react-helmet";
 import { Link } from "react-router-dom";
-import capstone from "../images/tweeling.jpg";
+import portfolioS from "../images/portfolio-s.jpg";
 import portfolio from "../images/portfolio.jpg";
+import movieS from "../images/movie-s.jpg";
 import movie from "../images/movie.jpg";
-import bali from "../images/bali.jpg";
-import woo from "../images/woo.jpg";
+import capstoneS from "../images/tweeling-s.jpg";
+import capstone from "../images/tweeling.jpg";
+import highlowS from "../images/highlow-s.jpg";
 import highlow from "../images/highlow.jpg";
+import wooS from "../images/woo-s.jpg";
+import woo from "../images/woo.jpg";
+import baliS from "../images/bali-s.jpg";
+import bali from "../images/bali.jpg";
 
 function PageWorks() {
   return (
@@ -25,8 +31,12 @@ function PageWorks() {
       <section className="work-links">
         <Link to="/works/portfolio" tabIndex={0}>
           <figure>
-            <img className="portfolio"
-            src={portfolio} alt="screen shot of a portfolio website" />
+            <img
+              className="portfolio"
+              srcSet={`${portfolioS} 1000w, ${portfolio} 1400w`}
+              src={portfolio}
+              alt="screen shot of a portfolio website"
+            />
             <figcaption>
               Web Portfolio
               <br />
@@ -37,7 +47,11 @@ function PageWorks() {
 
         <Link to="/works/movie" tabIndex={0}>
           <figure>
-            <img src={movie} alt="screen shot of a movie database website" />
+            <img
+              srcSet={`${movieS} 1000w, ${movie} 1400w`}
+              src={movie}
+              alt="screen shot of a movie database website"
+            />
             <figcaption>
               React Movie App
               <br />
@@ -48,7 +62,11 @@ function PageWorks() {
 
         <Link to="/works/capstone" tabIndex={0}>
           <figure>
-            <img src={capstone} alt="screen shot of a bakery website" />
+            <img
+              srcSet={`${capstoneS} 1000w, ${capstone} 1400w`}
+              src={capstone}
+              alt="screen shot of a bakery website"
+            />
             <figcaption>
               Capstone Project
               <br />
@@ -59,7 +77,11 @@ function PageWorks() {
 
         <Link to="/works/game" tabIndex={0}>
           <figure>
-            <img src={highlow} alt="screen shot of a game website" />
+            <img
+              srcSet={`${highlowS} 1000w, ${highlow} 1400w`}
+              src={highlow}
+              alt="screen shot of a game website"
+            />
             <figcaption>
               JavaScript Game
               <br />
@@ -74,7 +96,11 @@ function PageWorks() {
       <section className="work-links more-projects">
         <a href="https://yukowebworks.com/woostore" tabIndex={0}>
           <figure>
-            <img src={woo} alt="screen shot of e-commerce website" />
+            <img
+              srcSet={`${wooS} 1000w, ${woo} 1400w`}
+              src={woo}
+              alt="screen shot of e-commerce website"
+            />
             <figcaption>
               Online Store
               <br />
@@ -85,7 +111,11 @@ function PageWorks() {
 
         <a href="https://yukowebworks.com/bali" tabIndex={0}>
           <figure>
-            <img src={bali} alt="screen shot of Bali website" />
+            <img
+              srcSet={`${baliS} 1000w, ${bali} 1400w`}
+              src={bali}
+              alt="screen shot of Bali website"
+            />
             <figcaption>
               Favorite City
               <br />

@@ -35,7 +35,7 @@
 
 .me {
   float: right;
-  width: 40vw;
+  width: 30vw;
   margin: 0 0 0 0.5rem;
 }
 
@@ -49,7 +49,7 @@
 
 @media (min-width: 500px) {
   .me {
-    max-width: 13rem;
+    max-width: 10rem;
   }
   .about section {
     padding: 0 2rem 2rem;
@@ -108,7 +108,6 @@
     background: $dark;
   }
   .about h1 {
-    color: $white;
     text-shadow: 2px 2px 0 #eb095c;
   }
 }

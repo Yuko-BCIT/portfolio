@@ -19,7 +19,7 @@ function AppRouter() {
     <BrowserRouter>
       {/* Helmet for meta tag on each pages */}
       <Helmet>
-        <title>Yuko Web Works</title>
+        <title>Yuko Kitahata</title>
         <meta
           name="description"
           content="Web developer with a passion for building user-friendly, functional, and eye-catching websites

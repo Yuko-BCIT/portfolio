@@ -1,4 +1,5 @@
 import Helmet from "react-helmet";
+import movieS from "../images/movie-s.jpg";
 import movie from "../images/movie.jpg";
 import previewVideo from "../media/preview.mp4";
 import { ReactComponent as React } from "../images/react.svg";
@@ -35,7 +36,11 @@ function PageWorkMovie() {
         <h2>Preview</h2>
 
         <figure>
-          <img src={movie} alt="screen shot of a movie database website" />
+          <img
+            srcSet={`${movieS} 1000w, ${movie} 1400w`}
+            src={movie}
+            alt="screen shot of a movie database website"
+          />
         </figure>
 
         <div className="tools">
@@ -139,10 +144,15 @@ function PageWorkMovie() {
         </article>
 
         <nav className="external-links">
-          <a tabIndex={0} className="button" href="https://yukowebworks.com/movie-database">
+          <a
+            tabIndex={0}
+            className="button"
+            href="https://yukowebworks.com/movie-database"
+          >
             Live Site
           </a>
-          <a tabIndex={0}
+          <a
+            tabIndex={0}
             className="button"
             href="https://github.com/Yuko-BCIT/React-MovieDatabase-app"
           >

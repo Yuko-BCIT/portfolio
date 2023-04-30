@@ -36,10 +36,10 @@ const PageAbout = () => {
           <h2>Hello! &#128075;</h2>
           <img className="me" src={me} alt="smiling lady" />
           <p>
-            I'm Yuko, which means "sweet lady" in Japanese. Despite my
-            gentle nature, I enjoy adventures and challenges. Customer service
-            has been my passion for years, but the pandemic motivated me to make
-            a drastic career change and gain hands-on experience in BCIT's Front
+            I'm Yuko, which means "sweet lady" in Japanese. Despite my gentle
+            nature, I enjoy adventures and challenges. Customer service has been
+            my passion for years, but the pandemic motivated me to make a
+            drastic career change and gain hands-on experience in BCIT's Front
             End Web Developer program.
           </p>
           <p>
