@@ -1,5 +1,7 @@
 import Helmet from "react-helmet";
 import { Link } from "react-router-dom";
+import clockS from "../images/clock-s.jpg";
+import clock from "../images/clock.jpg";
 import portfolioS from "../images/portfolio-s.jpg";
 import portfolio from "../images/portfolio.jpg";
 import movieS from "../images/movie-s.jpg";
@@ -29,6 +31,20 @@ function PageWorks() {
       <p>Click and see the project details and development process</p>
 
       <section className="work-links">
+        <Link to="/works/worldclock" tabIndex={0}>
+          <figure>
+            <img
+              srcSet={`${clockS} 1000w, ${clock} 1400w`}
+              src={clock}
+              alt="screen shot of a world clock website"
+            />
+            <figcaption>
+              API Application
+              <br />
+              World Clock
+            </figcaption>
+          </figure>
+        </Link>
         <Link to="/works/portfolio" tabIndex={0}>
           <figure>
             <img
