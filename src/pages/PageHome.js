@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import heroS from "../images/keyboard-s.jpg";
 import heroM from "../images/keyboard-m.jpg";
@@ -13,6 +14,13 @@ import DownArrow from "../components/DownArrow";
 function PageHome() {
   return (
     <main className="home">
+      <Helmet>
+        <title>Yuko Kitahata</title>
+        <meta
+          name="description"
+          content="Web developer with a passion for building user-friendly, responsive, and functional websites and apps. Proficient in React, JavaScript, CSS, API integration and custom WordPress development."
+        />
+      </Helmet>
       <section className="above-fold">
         <Bubbles />
 
