@@ -99,6 +99,13 @@ function PageWorkPortfolio() {
             imported and title and metadata were added to each page to increase
             search hits.
           </p>
+          <p>
+            One of my favorite features is the on/off contact button on mobile
+            devices. It allows me to access my contact information from any page
+            without having to switch pages. I believe it is user friendly and
+            placing this feature in the mobile navigation would give me more
+            access to it. Click to find out!
+          </p>
         </article>
 
         <article>
